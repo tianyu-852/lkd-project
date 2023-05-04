@@ -1,0 +1,334 @@
+.banner-momdule {
+  @include element-size(100%, 360rpx, 0);
+}
+
+.content-module {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 360rpx + 24rpx);
+  margin-top: -24rpx;
+  padding: 30rpx;
+  border-radius: 24rpx 24rpx 0 0;
+  background: $bx-color-f;
+  overflow-y: auto;
+  .content-vip-box {
+    border-radius: 20rpx;
+    overflow: hidden;
+    margin-bottom: 30rpx;
+    background: #fffbf2;
+    .vipType-nav-wrap {
+      @include flex-xy-layout(flex-start);
+      .type-nav-item {
+        flex: 1;
+        height: 80rpx;
+        background: #FFEABB;
+        .type-nav-inner {
+          @include font-style(30rpx);
+          @include flex-xy-layout;
+          position: relative;
+          height: 100%;
+          width: 100%;
+          color: #B09458;
+          background: #fffbf2;
+          .bottom-line {
+            @include element-size(40rpx, 4rpx, 2rpx);
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            background: #825300;
+          }
+        }
+        &.type-nav-item-active {
+          background: #fffbf2;
+          .type-nav-inner {
+            @include font-style(30rpx, 500);
+            color: #7A5505;
+            background: #FFEABB;
+            border-top-left-radius: 20rpx;
+            border-top-right-radius: 20rpx;
+          }
+        }
+        &.type-nav-item-prev {
+          background: #FFEABB;
+          .type-nav-inner {
+            background: #fffbf2;
+            border-bottom-right-radius: 20rpx;
+          }
+        }
+        &.type-nav-item-next {
+          background: #FFEABB;
+          .type-nav-inner {
+            background: #fffbf2;
+            border-bottom-left-radius: 20rpx;
+          }
+        }
+      }
+    }
+    // 子类型导航
+    .vipType-subNav-wrap {
+      border-radius: 20rpx 20rpx 0 0;
+      padding: 16rpx 24rpx;
+      min-height: 224rpx;
+      background: #FFEABB;
+      &.vipType-subNav-wrap-first { border-top-left-radius: 0; }
+      &.vipType-subNav-wrap-last { border-top-right-radius: 0; }
+      .vip-serve-desc {
+        @include font-style(28rpx);
+        text-align: center;
+        color: #825300;
+      }
+      .vip-serve-menu {
+        @include flex-xy-layout(flex-start);
+        margin: 16rpx 0;
+        .vip-serve-item {
+          @include flex-y-layout;
+          @include font-style(32rpx, 500);
+          flex: 1;
+          position: relative;
+          height: 100rpx;
+          border-radius: 12rpx;
+          border: 2rpx solid #FFFEFD;
+          color: #BDA778;
+          background: #FFFEFD;
+          margin-right: 20rpx;
+          &:last-child { margin-right: 0; }
+          &.vip-serve-item-active {
+            position: relative;
+            border: 2rpx solid #7F5400;
+            color: #7F5400;
+          }
+          .vip-serve-tag {
+            @include element-size(120rpx, 32rpx, 8rpx);
+            @include flex-xy-layout;
+            @include font-style(24rpx);
+            color: #fff;
+            background: #FE5F48;
+          }
+          .checked-image {
+            @include element-size(32rpx, 32rpx, 0);
+            position: absolute;
+            bottom: -2rpx;
+            right: -2rpx;
+          }
+        }
+      }
+      .vip-serve-income {
+        @include font-style(28rpx);
+        text-align: center;
+        color: #825300;
+      }
+    }
+  }
+  // 优惠输入区域
+  .discount-module {
+    .discount-item {
+      margin-bottom: 25rpx;
+      &:last-child { margin-bottom: 0; }
+      .discount-item-title {
+        @include font-style(30rpx, 500);
+        margin-bottom: 10rpx;
+      }
+      .discount-item-desc {
+        @include font-style(30rpx);
+        color: #FE5F48;
+      }
+      .discount-item-input {
+        padding-bottom: 10rpx;
+        border-bottom: 2rpx solid #EDEDED;
+      }
+      .discount-input-wrap {
+        @include flex-xy-layout(flex-start);
+        padding-bottom: 10rpx;
+        border-bottom: 2rpx solid #EDEDED;
+        .discount-item-input {
+          flex: 1;
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+        .offset-checkbox {
+          @include font-style(30rpx);
+          color: #333;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  .share-btn, .pay-btn {
+    @include element-size(auto, 80rpx, 40rpx);
+    @include font-style(36rpx, 500);
+    @include flex-xy-layout;
+    color: #FFF1CB;
+    background: linear-gradient(90deg, #5C5951 0%, #49453D 100%);
+    margin-top: 30rpx;
+  }
+  .share-btn-wrap {
+    @include flex-xy-layout(flex-start);
+    .share-btn {
+      @include element-size(auto, 80rpx, 10rpx);
+      @include font-style(30rpx);
+      @include flex-xy-layout;
+      flex: 1;
+      color: #FFF1CB;
+      background: #333;
+      &:last-child { margin-left: 20rpx; }
+    }
+  }
+  .content-item {
+    .content-item-title {
+      @include font-style(36rpx, 500);
+      margin-bottom: 30rpx;
+    }
+    .content-explain-row {
+      @include flex-xy-layout(flex-start);
+      margin-bottom: 30rpx;
+      .content-explain-row-item {
+        @include flex-xy-layout;
+        @include font-style(30rpx);
+        .circle-gou {
+          @include flex-xy-layout;
+          @include element-size(28rpx, 28rpx);
+          margin-right: 16rpx;
+          background: linear-gradient(180deg, #FFDC8D 0%, #FFECC2 100%);
+        }
+      }
+    }
+  }
+}
+
+.upopup-pubPhone-box {
+  padding: 30rpx 24rpx;
+  .mode-header {
+    @include font-style(32rpx, 500);
+    text-align: center;
+    margin-bottom: 30rpx;
+  }
+  .pay-title {
+    @include font-style(30rpx);
+    color: #999;
+    text-align: center;
+  }
+  .pay-money {
+    @include font-style(50rpx, 500);
+    text-align: center;
+    .money {
+      @include font-style(80rpx, 500);
+    }
+  }
+  .line-hor {
+    height: 2rpx;
+    background: #EDEDED;
+    margin: 32rpx 0;
+  }
+  .mode-wrap {
+    .mode-item {
+      @include flex-xy-layout(flex-start, flex-start);
+      margin-bottom: 50rpx;
+      .mode-icon {
+        @include element-size(40rpx, 40rpx, 0);
+        margin-top: 4rpx;
+        margin-right: 20rpx;
+      }
+      .info-wrap {
+        flex: 1;
+        .info-name {
+          @include font-style(32rpx, 500);
+        }
+        .info-desc {
+          @include font-style(28rpx);
+          @include flex-xy-layout(flex-start);
+          color: #999;
+        }
+      }
+      .checkbox {
+        margin-left: auto;
+        margin-right: -30rpx;
+      }
+    }
+  }
+  .pay-btn {
+    @include element-size(auto, 80rpx, 40rpx);
+    @include font-style(36rpx, 500);
+    @include flex-xy-layout;
+    color: #fff;
+    background: #0085FF;
+  }
+}
+
+// 支付密码
+.upopup-passwrod-box {
+  padding: 30rpx;
+  .header-passwrod {
+    @include flex-xy-layout;
+    @include font-style(34rpx, 500);
+    margin-bottom: 60rpx;
+  }
+  .withdraw-money {
+    @include flex-xy-layout;
+    @include font-style(70rpx, 500);
+    margin-bottom: 40rpx;
+  }
+}
+
+// 选择律师
+.upopup-lawyer-box {
+  padding: 20rpx;
+  min-height: 400rpx;
+  .header-lawyer {
+    @include flex-xy-layout;
+    @include font-style(34rpx, 500);
+    margin-bottom: 30rpx;
+  }
+  .lawyer-item {
+    @include flex-xy-layout(flex-start);
+    margin-bottom: 20px;
+    .lawyer-title {
+      @include font-style(30rpx, 500);
+      margin-right: 10rpx;
+    }
+    .input-wrap {
+      @include element-size(auto, 70rpx, 0);
+      @include flex-y-center;
+      position: relative;
+      flex: 1;
+      margin-right: 10rpx;
+      .input-text {
+        border: 2rpx solid #D8D8D8;
+        padding: 4rpx;
+        height: 40rpx;
+      }
+      .search-wrap {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        height: 500rpx;
+        // overflow-y: auto;
+        background: #fff;
+        background: $bx-color-f;
+        .search-item {
+          @include flex-y-layout(flex-start);
+          border-bottom: 2rpx solid #EDEDED;
+          // height: 100rpx;
+          padding: 10rpx 0;
+          .search-name {
+            @include font-style(30rpx);
+          }
+          .search-num {
+            @include font-style(26rpx);
+            color: $bx-color-9;
+          }
+        }
+      }
+    }
+  }
+  .share-btn {
+    @include element-size(auto, 80rpx, 40rpx);
+    @include font-style(36rpx, 500);
+    @include flex-xy-layout;
+    color: #fff;
+    background: #0085FF;
+    margin-top: 30rpx;
+  }
+}

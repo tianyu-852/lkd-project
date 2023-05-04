@@ -1,0 +1,174 @@
+
+.xiaoshou {
+  @include flex-xy-layout(flex-start);
+  @include font-style(30rpx);
+  margin-left: 40rpx;
+}
+
+.contract-express-module {
+  @include flex-y-layout;
+  margin-top: 180rpx;
+  .express-title {
+    @include font-style(30rpx, 500);
+    margin-bottom: 20rpx;
+  }
+  .preview-btn {
+    @include element-size(280rpx, 80rpx, 10rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    color: $xs-color-f;
+    background: #0085FF;
+  }
+}
+
+.upload-module {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 500rpx;
+  background: $xs-color-f;
+  padding: 0 24rpx;
+  .upload-title {
+    @include font-style(28rpx, 500);
+    margin-top: 20rpx;
+    margin-bottom: 30rpx;
+  }
+  .image-wrap {
+    @include flex-xy-layout(flex-start);
+    .image-item {
+      @include flex-xy-layout;
+      @include element-size(200rpx, 200rpx, 16rpx);
+      position: relative;
+      background: #F5F5F5;
+      .image {
+        width: 100%;
+        height: 100%;
+        border-radius: 16rpx;
+      }
+    }
+  }
+}
+
+.btns-module {
+  @include flex-xy-layout(flex-end);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 24rpx;
+  padding-top: 20rpx;
+  background: $xs-color-f;
+  .refuse-btn {
+    @include element-size(auto, 80rpx, 40rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    flex: 1;
+    color: $xs-color-6;
+    border: 1rpx solid #979797;
+    margin-right: 24rpx;
+  }
+  .submit-btn {
+    @include element-size(auto, 80rpx, 40rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    flex: 1;
+    color: $xs-color-f;
+    background: #0085FF;
+  }
+}
+
+// 同意 popup
+.upopup-agree-box {
+  background: #0085FF;
+  .agree-header {
+    position: relative;
+    height: 120rpx;
+    .icon-del {
+      @include element-size(30rpx, 30rpx, 0);
+      position: absolute;
+      top: 20rpx;
+      right: 20rpx;
+      padding: 10rpx;
+    }
+    .contract-name {
+      @include multi-line-ellipsis;
+      @include font-style(32rpx);
+      position: absolute;
+      left: 32rpx;
+      right: 32rpx;
+      bottom: 15rpx;
+      color: $xs-color-f;
+    }
+  }
+  .input-wrap {
+    padding: 0 32rpx;
+    background: $xs-color-f;
+    border-radius: 24rpx;
+    padding-bottom: 32rpx;
+    .input-item {
+      @include flex-xy-layout(flex-start);
+      height: 102rpx;
+      border-bottom: 2rpx solid #EDEDED;
+      .input-key {
+        @include font-style(30rpx);
+        color: $xs-color-9;
+        width: 150rpx;
+        margin-right: 32rpx;
+      }
+      .input-value {
+        @include flex-xy-layout(flex-start);
+        @include font-style(30rpx);
+        flex: 1;
+        .input {
+          flex: 1;
+          @include font-style(30rpx);
+        }
+      }
+    }
+    .confirm-btn {
+      @include element-size(auto, 80rpx, 16rpx);
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      color: $xs-color-f;
+      background: #0085FF;
+      margin-top: 30rpx;
+    }
+  }
+}
+
+// 驳回 popup
+.upopup-refuse-box {
+  padding: 30rpx;
+  .refuse-header {
+    position: relative;
+    height: 60rpx;
+    border-bottom: 2rpx solid #EDEDED;;
+    margin-bottom: 23rpx;
+    .icon-del {
+      @include element-size(48rpx, 48rpx, 0);
+      position: absolute;
+      top: 0rpx;
+      right: 0rpx;
+    }
+    .contract-name {
+      @include multi-line-ellipsis;
+      @include font-style(32rpx);
+    }
+  }
+  .textarea-wrap {
+    @include element-size(100%, 200rpx, 0);
+    .textarea {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .confirm-btn {
+    @include element-size(auto, 80rpx, 16rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    color: $xs-color-f;
+    background: #0085FF;
+    margin-top: 30rpx;
+  }
+}

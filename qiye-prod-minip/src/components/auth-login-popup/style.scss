@@ -1,0 +1,42 @@
+.upopup-login-box {
+  // @include flex-y-layout;
+  padding: 40rpx;
+  min-height: 200rpx;
+  .upopup-login-title {
+    @include font-style(36rpx, 500);
+    margin-bottom: 40rpx;
+  }
+  .protocol-heade-img {
+    @include element-size(100%, 160rpx, 0);
+    margin-bottom: 50rpx;
+  }
+  .protocol-content {
+    @include font-style(26rpx);
+    line-height: 42rpx;
+  }
+  .btn-wrap {
+    @include flex-xy-layout(flex-start);
+    margin-top: 60rpx;
+    .refuse-btn {
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      width: 190rpx;
+      height: 90rpx;
+      margin-right: 30rpx;
+      border-radius: 16rpx;
+      color: $qy-color-6;
+      background: #F5F5F5;
+    }
+    .btn-label {
+      flex: 1;
+      .auth-btn {
+        @include flex-xy-layout;
+        @include font-style(32rpx);
+        height: 90rpx;
+        border-radius: 16rpx;
+        color: $qy-color-f;
+        background: #0085FF;
+      }
+    }
+  }
+}

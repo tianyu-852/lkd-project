@@ -1,0 +1,153 @@
+.profile-info-module {
+  @include flex-xy-layout(flex-start);
+  background: $qy-color-f;
+  padding: 0 32rpx;
+  height: 200rpx;
+  margin-bottom: 16rpx;
+  .profile-info-left {
+    @include element-size(140rpx, 140rpx);
+    border: 10rpx solid #EFEFEF;
+    margin-right: 30rpx;
+  }
+  .profile-info-middle {
+    flex: 1;
+    .profile-name {
+      @include font-style(32rpx, 500);
+      margin-bottom: 5rpx;
+    }
+  }
+  .profile-info-right {
+    @include flex-xy-layout(flex-start);
+    @include font-style(28rpx, 500);
+    padding: 20rpx 0;
+    color: $qy-color-9;
+    margin-left: auto;
+    .arrow-img {
+      @include element-size(30rpx, 30rpx, 0);
+      margin-left: 20rpx;
+    }
+  }
+}
+
+
+.company-info-module {
+  background: $qy-color-f;
+  padding: 40rpx;
+  margin-bottom: 16rpx;
+  .company-info-header {
+    @include flex-xy-layout(space-between);
+    margin-bottom: 30rpx;
+    .info-header-left {
+      @include flex-xy-layout(flex-start);
+      @include font-style(32rpx, 500);
+      .divider-ver {
+        @include element-size(6rpx, 24rpx, 3rpx);
+        background: #0085FF;
+        margin-right: 20rpx;
+      }
+    }
+    .info-header-right {
+      @include flex-xy-layout(flex-start);
+      @include font-style(28rpx, 500);
+      color: #0085FF;
+      .icon-camera {
+        @include element-size(40rpx, 40rpx, 0);
+      }
+    }
+  }
+  .company-info-cellWrap {
+    .info-cell-item {
+      @include flex-xy-layout(flex-start);
+      min-height: 90rpx;
+      .cell-left {
+        @include font-style(32rpx, 400);
+        width: 130rpx;
+        margin-right: 60rpx;
+      }
+      .cell-right {
+        @include font-style(32rpx, 400);
+        @include multi-line-ellipsis;
+        flex: 1;
+      }
+    }
+  }
+  .company-license-wrap {
+    @include element-size(auto, 240rpx, 10rpx);
+    margin-top: 30rpx;
+    .license-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10rpx;
+    }
+  }
+}
+
+.user-info-module {
+  background: $qy-color-f;
+  padding: 40rpx;
+  .user-info-header {
+    @include flex-xy-layout(space-between);
+    margin-bottom: 30rpx;
+    .info-header-left {
+      @include flex-xy-layout(flex-start);
+      @include font-style(32rpx, 500);
+      .divider-ver {
+        @include element-size(6rpx, 24rpx, 3rpx);
+        background: #0085FF;
+        margin-right: 20rpx;
+      }
+    }
+  }
+  .user-info-cellWrap {
+    .info-cell-item {
+      @include flex-xy-layout(flex-start);
+      min-height: 90rpx;
+      .cell-left {
+        @include font-style(32rpx, 400);
+        width: 130rpx;
+        margin-right: 60rpx;
+      }
+      .cell-right {
+        @include font-style(32rpx, 400);
+        flex: 1;
+      }
+    }
+  }
+}
+
+.prove-btns {
+  @include flex-xy-layout(flex-start);
+  margin: 0 24rpx;
+  margin-top: 40rpx;
+  .share-btn {
+    @include flex-y-layout;
+    @include element-size(96rpx, 96rpx);
+    @include font-style(24rpx, 500);
+    color: $qy-color-f;
+    background: linear-gradient(90deg, #48A8FF 0%, #0085FF 100%, #0085FF 100%);
+    .icon-share {
+      @include element-size(34rpx, 34rpx, 0);
+    }
+  }
+  .prove-btn {
+    @include flex-xy-layout;
+    @include element-size(auto, 96rpx, 48rpx);
+    @include font-style(36rpx, 500);
+    flex: 1;
+    margin-left: 24rpx;
+    color: $qy-color-f;
+    background: linear-gradient(90deg, #48A8FF 0%, #0085FF 100%, #0085FF 100%);
+  }
+}
+
+.cannot-prove {
+  @include font-style(28rpx);
+  margin-top: 24rpx;
+  text-align: center;
+  color: $qy-color-9;
+  .contact-btn {
+    color: #0085FF;
+    text-decoration: underline;
+  }
+}
+

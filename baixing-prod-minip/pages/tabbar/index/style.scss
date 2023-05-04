@@ -1,0 +1,350 @@
+
+.navbar-slot {
+  .search-module {
+    @include flex-xy-layout(flex-start);
+    @include element-size(auto, 68rpx, 40rpx);
+    flex: 1;
+    background: #F5F5F5;
+    padding-left: 24rpx;
+    .loc-city {
+      @include font-style(28rpx);
+      margin-left: 10rpx;
+    }
+    .divide-line {
+      @include font-style(28rpx);
+      margin: 0 20rpx;
+      color: #D8D8D8;
+    }
+    .search-box {
+      @include flex-xy-layout(flex-start);
+      .search-text {
+        @include font-style(28rpx);
+        margin-left: 10rpx;
+        color: #999;
+      }
+    }
+  }
+  
+  .free-btn {
+    @include flex-xy-layout;
+    @include element-size(150rpx, 60rpx, 34rpx);
+    @include font-style(28rpx);
+    background: #0085FF;
+    color: #fff;
+    margin-left: 24rpx;
+  }
+}
+
+
+.header-module {
+  margin: 0 24rpx;
+  margin-bottom: 20rpx;
+  .header-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24rpx;
+    // margin-bottom: 30rpx;
+    .main-item {
+      @include flex-y-layout;
+      position: relative;
+      background: #FFFFFF;
+      height: 230rpx;
+      box-shadow: 0 10rpx 40rpx 0 rgba(0,59,112,0.08);
+      border-radius: 30rpx;
+      overflow: hidden;
+      .main-title {
+        @include font-style(36rpx, 600);
+        margin-bottom: 8rpx;
+      }
+      .main-subtitle {
+        @include font-style(24rpx);
+        color: #999;
+      }
+      .free-tag {
+        @include element-size(90rpx, 36rpx, 0);
+        @include font-style(26rpx, 500);
+        @include flex-xy-layout;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        background: #FE5F48;
+        border-radius: 0 0 30rpx 0;
+      }
+    }
+  }
+  .advert-banner-wrap {
+    @include element-size(100%, 140rpx, 20rpx);
+    margin-top: 30rpx;
+  }
+  .header-menu {
+    @include flex-xy-layout(space-around);
+    .menu-item {
+      @include flex-y-layout;
+      @include font-style(26rpx);
+    }
+  }
+}
+
+.dynamic-tab-module {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  .tab-wrap {
+    flex: 1;
+    overflow: hidden;
+    padding-top: 20rpx;
+    padding-right: 50rpx;
+    background: #fff;
+  }
+  .menu-btn {
+    @include element-size(94rpx, 40rpx, 0);
+    position: absolute;
+    right: 0;
+    top: 20rpx;
+  }
+}
+
+.dynamic-swiper-module {
+  height: 100vh;
+  .dynamic-swiper {
+    width: 100%;
+    height: 100%;
+    .dynamic-swiper-item {
+      .dynamic-scroll-view {
+        width: 100%;
+        height: 100%;
+        background: #F5F5F5;
+        .dynamic-item {
+          &:last-child { margin-bottom: 0; }
+          margin-bottom: 16rpx;
+          .dynamic-item-wrap {
+            padding: 30rpx;
+            background: #ffff;
+            .dynamic-header {
+              @include flex-xy-layout(flex-start);
+              margin-bottom: 20rpx;
+              .user-avatar {
+                @include element-size(72rpx, 72rpx, 10rpx);
+                margin-right: 24rpx;
+              }
+              .user-info {
+                .dynamic-name {
+                  @include font-style(30rpx)
+                }
+                .dynamic-loc {
+                  @include font-style(24rpx);
+                  color: #999;
+                }
+              }
+            }
+            .dynamic-body {
+              @include font-style(34rpx);
+              line-height: 56rpx;
+              margin-bottom: 16rpx;
+              .more-btn {
+                margin-left: 12rpx;
+                color: #507DAF;
+              }
+            }
+            .dynamic-images {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              grid-gap: 15rpx;
+              margin-bottom: 26rpx;
+              .dynamic-image {
+                position: relative;
+                .image-tag {
+                  @include flex-xy-layout;
+                  @include font-style(24rpx);
+                  position: absolute;
+                  right: 12rpx;
+                  bottom: 12rpx;
+                  height: 32rpx;
+                  padding: 0 16rpx;
+                  color: #fff;
+                  background: rgba(0,0,0,0.72);
+                  border-radius: 16rpx;
+                }
+              }
+            }
+            .dynamic-footer {
+              @include flex-xy-layout(flex-start);
+              @include font-style(28rpx);
+              color: #999;
+              .footer-item {
+                @include flex-xy-layout(flex-start);
+                margin-right: 100rpx;
+              }
+            }
+          }
+          .advert-module {
+            margin-top: 16rpx;
+            padding: 24rpx;
+            background: linear-gradient(180deg, #E6F3FF 0%, #FFFFFF 100%);
+            .advert-header {
+              @include flex-xy-layout(flex-start);
+              @include font-style(32rpx, 500);
+              margin-bottom: 26rpx;
+              .advert-header-icon {
+                @include element-size(44rpx, 44rpx, 0);
+                margin-right: 12rpx;
+              }
+            }
+            .scroll-x.recommend-scroll-x {
+              .scroll-x-item {
+                margin-right: 56rpx;
+                &:last-child { margin-right: 0; }
+                .recommend-item-wrap {
+                  @include flex-y-layout;
+                  .lawyer-avatar {
+                    @include element-size(120rpx, 120rpx, 20rpx);
+                  }
+                  .lawyer-nickname {
+                    @include flex-xy-layout(flex-start);
+                    @include font-style(28rpx, 500);
+                    margin-top: 10rpx;
+                    .youxuan-tag {
+                      @include element-size(28rpx, 28rpx, 8rpx);
+                      @include flex-xy-layout;
+                      @include font-style(20rpx, 500);
+                      color: #fff;
+                      background: #FE5F48;
+                      margin-left: 4rpx;
+                    }
+                  }
+                  .lawyer-loc {
+                    @include font-style(24rpx);
+                    color: #999;
+                  }
+                }
+              }
+            }
+            .advert-wrap {
+              @include flex-xy-layout(space-between);
+              padding: 0 26rpx;
+              .recommend-item-wrap {
+                @include flex-y-layout;
+                .lawyer-avatar {
+                  @include element-size(120rpx, 120rpx, 20rpx);
+                }
+                .lawyer-nickname {
+                  @include flex-xy-layout(flex-start);
+                  @include font-style(28rpx, 500);
+                  margin-top: 10rpx;
+                  .youxuan-tag {
+                    @include element-size(28rpx, 28rpx, 8rpx);
+                    @include flex-xy-layout;
+                    @include font-style(20rpx, 500);
+                    color: #fff;
+                    background: #FE5F48;
+                    margin-left: 4rpx;
+                  }
+                }
+                .lawyer-loc {
+                  @include font-style(24rpx);
+                  color: #999;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.menuConfig{
+  .menuTitle{
+    line-height: 50rpx;
+    font-size: 36rpx;
+    font-weight: 800;
+    color: #222222;
+    padding: 108rpx 32rpx 32rpx;
+    text{
+      font-size: 28rpx;
+      font-weight: 400;
+      margin-left: 20rpx;
+    }
+  }
+  .menuTitleClose{
+    position: absolute;
+    top: 32rpx;
+    right: 32rpx;
+  }
+}
+
+// 电话咨询指南 module
+.phoneOrder-guide-module {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, .6);
+  .phoneOrder-guide-wrap {
+    margin: 0 24rpx;
+    .header-main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 24rpx;
+      .main-item {
+        @include flex-y-layout;
+        position: relative;
+        background: #FFFFFF;
+        height: 230rpx;
+        border-radius: 30rpx;
+        overflow: hidden;
+        .main-title {
+          @include font-style(36rpx, 600);
+          margin-bottom: 8rpx;
+        }
+        .main-subtitle {
+          @include font-style(24rpx);
+          color: #999;
+        }
+        .free-tag {
+          @include element-size(90rpx, 36rpx, 0);
+          @include font-style(26rpx, 500);
+          @include flex-xy-layout;
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #fff;
+          background: #FE5F48;
+          border-radius: 0 0 30rpx 0;
+        }
+      }
+    }
+    .tip-main {
+      @include flex-y-layout(flex-end);
+      margin-top: 20rpx;
+      .tip-btn {
+        @include flex-xy-layout;
+        @include element-size(140rpx, 50rpx, 30rpx);
+        @include font-style(28rpx);
+        margin-top: 42rpx;
+        color: #fff;
+        align-self: center;
+        border: 2rpx solid #fff;
+      }
+    }
+  }
+}
+
+.pubNav-btn {
+  @include element-size(60rpx, 240rpx, 0);
+  position: fixed;
+  bottom: 150rpx;
+  right: 0;
+}
+
+.refresh-btn {
+  @include element-size(90rpx, 90rpx, 0);
+  position: fixed;
+  bottom: 150rpx;
+  right: 10rpx;
+}

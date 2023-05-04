@@ -1,0 +1,92 @@
+.main {
+  position: relative;
+  height: 100%;
+  padding-bottom: 50rpx;
+  .service-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+  }
+}
+
+.service-module {
+  width: 100vw;
+  height: 100%;
+  .service-wrap {
+    position: absolute;
+    top: 236rpx;
+    left: 40rpx;
+    right: 40rpx;
+    z-index: 1;
+    .service-title {
+      @include font-style(46rpx);
+      color: $qy-color-f;
+    }
+    .service-priceTitle {
+      @include font-style(60rpx, 600);
+      color: #FFDF7D;
+      margin-bottom: 24rpx;
+    }
+    .service-subtitle {
+      @include font-style(36rpx);
+      color: $qy-color-f;
+      margin-bottom: 40rpx;
+    }
+    .qrcode-box {
+      @include element-size(auto, auto, 30rpx);
+      padding: 55rpx;
+      background: $qy-color-f;
+      .qrcode-header {
+        @include flex-xy-layout(flex-start);
+        margin-bottom: 60rpx;
+        .kufu-avatar {
+          @include element-size(160rpx, 160rpx, 0);
+          margin-right: 34rpx;
+        }
+        .kufu-info {
+          @include font-style(52rpx, 500);
+        }
+      }
+      .qrcode-wrap {
+        @include element-size(540rpx, 540rpx, 0);
+        position: relative;
+        .qrcode {
+          width: 100%;
+          height: 100%;
+        }
+        .qrcode-logo {
+          @include element-size(140rpx, 140rpx, 0);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .call-phone-header {
+        @include font-style(32rpx, 500);
+        text-align: center;
+        margin-bottom: 30rpx;
+      }
+      .phone-wrap {
+        @include flex-xy-layout;
+        @include font-style(70rpx, 500);
+        color: #0085FF;
+        margin-bottom: 30rpx;
+      }
+      .call-btn {
+        @include flex-xy-layout;
+        @include font-style(30rpx, 500);
+        @include element-size(240rpx, 80rpx, 40rpx);
+        color: #fff;
+        background: #0085FF;
+        margin: 0 auto;
+        .call-img {
+          @include element-size(44rpx, 44rpx, 0);
+          margin-right: 10rpx;
+        }
+      }
+    }
+  }
+}

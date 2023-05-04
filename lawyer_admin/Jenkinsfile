@@ -1,0 +1,121 @@
+pipeline {
+  agent any
+  triggers {
+      GenericTrigger(
+           genericVariables: [
+            [key: 'ref', value: '$.ref']
+           ],
+
+           causeString: 'Triggered on $ref',
+           token: 'H8b7guYZmEzkQ86nXTGtHcEwR4dZyeVH',
+           tokenCredentialId: '',
+           printContributedVariables: true,
+           printPostContent: true,
+           silentResponse: false,
+           regexpFilterText: '$ref',
+           regexpFilterExpression: 'refs/heads/' + BRANCH_NAME
+          )
+  }
+  stages {
+    stage('开始企业微信通知') {
+        steps {
+            script {
+                def notifyContent = """开始构建 <font color=\\"warning\\">${BUILD_TITLE}</font> 测试人员注意。
+                >分支:<font color=\\"comment\\">${env.BRANCH_NAME}</font>
+                >开始时间:<font color=\\"comment\\">${env.BUILD_START_DATETIME}</font>"""
+                def markdown = """{"msgtype": "markdown","markdown": {"content": "${notifyContent}"}}"""
+                echo notifyContent
+                echo markdown
+                sh """curl '${WECHAT_NOTIFY_URL}'  -H 'Content-Type: application/json' -d '${markdown}'"""
+            }
+        }
+    }
+    stage('检出') {
+      steps {
+        checkout([$class: 'GitSCM',
+        branches: [[name: BRANCH_NAME]],
+        userRemoteConfigs: [[
+          url: 'git@e.coding.net:lawyerkd/lvkuaidaweb/lawyer_admin.git',
+          credentialsId: 'coding-git-private'
+        ]]])
+      }
+    }
+    stage('构建镜像并且push') {
+      steps {
+        script {
+            docker.withRegistry(
+                "https://registry.cn-hangzhou.aliyuncs.com",
+                "${ALI_DOCKER_TOKEN}"
+            ) {
+                def admin
+                if(env.BRANCH_NAME == 'master') {
+                  admin = docker.build(
+                    "registry.cn-hangzhou.aliyuncs.com/baixing_lawyer/admin:${DOCKER_IMAGE_TAG}",
+                    "--build-arg version=product --compress -f Dockerfile ."
+                  )
+                  admin.push()
+                  admin.push('product')
+                } else {
+                   admin = docker.build(
+                        "registry.cn-hangzhou.aliyuncs.com/baixing_lawyer/admin:${DOCKER_IMAGE_TAG}",
+                        "--build-arg version=dev --compress -f Dockerfile ."
+                    )
+
+                   admin.push()
+                   admin.push('dev')
+                }
+            }
+        }
+      }
+    }
+    stage('测试服部署') {
+        when {
+            branch 'develop'
+        }
+        steps {
+            sshagent(credentials: ['coding-git-private']) {
+                sh '''
+                ssh -p 33333 -o StrictHostKeyChecking=no root@47.114.81.184 "cd ~/docker/swarm \
+        && docker service update api_admin --image registry.cn-hangzhou.aliyuncs.com/baixing_lawyer/admin:${DOCKER_IMAGE_TAG} --with-registry-auth  --force  \
+        && docker system prune -f"
+            '''
+          }
+      }
+    }
+    stage('正式服部署') {
+            when {
+                branch 'master'
+            }
+            steps {
+                sshagent(credentials: ['coding-git-private']) {
+                    sh '''
+                    ssh -o StrictHostKeyChecking=no -J root@47.114.81.184:33333 root@172.16.204.79 -p 33333 "cd ~/docker/swarm \
+                && docker service update api_admin --image registry.cn-hangzhou.aliyuncs.com/baixing_lawyer/admin:${DOCKER_IMAGE_TAG} --with-registry-auth  --force  \
+                && docker system prune -f"
+                '''
+              }
+          }
+        }
+        stage('结束企业微信通知') {
+            steps {
+                script {
+                    def endDateTime = sh(script: "date '+%Y年%m月%d日 %H:%M:%S'", returnStdout: true).trim()
+                    def notifyContent = """构建完成 <font color=\\"warning\\">${BUILD_TITLE}</font> 测试人员开始测试。
+                        >分支:<font color=\\"comment\\">${env.BRANCH_NAME}</font>
+                        >结束时间:<font color=\\"comment\\">${endDateTime}</font>"""
+                    def markdown = """{"msgtype": "markdown","markdown": {"content": "${notifyContent}"}}"""
+                    sh """curl '${WECHAT_NOTIFY_URL}'  -H 'Content-Type: application/json' -d '${markdown}'"""
+                }
+            }
+        }
+  }
+  environment {
+    def BUILD_START_DATETIME = sh(script: "date '+%Y年%m月%d日 %H:%M:%S'", returnStdout: true).trim()
+    def BUILD_START_TIMESTAMP = sh(script: "date '+%s'", returnStdout: true).trim()
+    def BUILD_DATE = sh(script: "date '+%Y%m%d'", returnStdout: true).trim()
+    ALI_DOCKER_TOKEN = 'ali-docker-token'
+    def DOCKER_IMAGE_TAG = "${env.BRANCH_NAME}-${BUILD_ID}-${BUILD_DATE}"
+    def WECHAT_NOTIFY_URL = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=4eb633c9-2981-4ff8-bab0-20d50010caea"
+    def BUILD_TITLE = "后台"
+  }
+}

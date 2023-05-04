@@ -1,0 +1,55 @@
+.main {
+  padding-bottom: 180rpx;
+}
+
+.idcardImg-module {
+  background: $qy-color-f;
+  padding: 30rpx 24rpx;
+  margin-bottom: 16rpx;
+  .idcard-title {
+    @include font-style(32rpx, 500);
+    margin-bottom: 8rpx;
+  }
+  .idcard-subtitle {
+    @include font-style(24rpx);
+    color: $qy-color-9;
+    margin-bottom: 30rpx;
+  }
+  .idcard-imgWrap {
+    @include flex-y-layout;
+    @include font-style(28rpx);
+    .idcard-img {
+      @include element-size(500rpx, 324rpx, 0);
+      margin-bottom: 20rpx;
+    }
+  }
+}
+
+.idcardInfo-module {
+  padding: 10rpx 24rpx;
+  background: $qy-color-f;
+  .idcardInfo-item {
+    @include flex-xy-layout(flex-start);
+    @include font-style(32rpx, 500);
+    height: 80rpx;
+    .input-text {
+      flex: 1;
+      margin-left: 20rpx;
+      text-align: right;
+    }
+  }
+}
+
+
+.next-btn {
+  @include font-style(36rpx, 500);
+  @include flex-xy-layout;
+  position: fixed;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 50rpx;
+  height: 96rpx;
+  border-radius: 48rpx;
+  color: $qy-color-f;
+  background: linear-gradient(90deg, #48A8FF 0%, #0085FF 100%, #0085FF 100%);
+}

@@ -1,0 +1,89 @@
+.notice-module {
+  @include flex-xy-layout(flex-start);
+  @include font-style(26rpx, 500);
+  padding: 20rpx 0;
+  padding-left: 30rpx;
+  padding-right: 50rpx;
+  background: #F5F5F5;
+  .icon-tanhao {
+    @include element-size(32rpx, 32rpx, 0);
+    margin-right: 10rpx;
+  }
+}
+
+.info-module {
+  padding: 40rpx 32rpx;
+  .content-item {
+    margin-bottom: 50rpx;
+    .item-title {
+      @include font-style(30rpx);
+      color: $bx-color-6;
+      margin-bottom: 10rpx;
+    }
+    .input-wrap {
+      @include element-size(100%, 70rpx, 0);
+      @include flex-xy-layout(flex-start);
+      position: relative;
+      border-bottom: 2rpx solid #D8D8D8;
+      .input-text {
+        @include font-style(30rpx);
+        flex: 1;
+      }
+    }
+  }
+  
+  .info-item {
+    @include flex-xy-layout(flex-start);
+    @include font-style(30rpx);
+    margin-bottom: 30rpx;
+    .info-key {
+      color: $bx-color-6;
+      min-width: 120rpx;
+      margin-right: 60rpx;
+    }
+  }
+}
+
+// 底部按钮
+.bottom-btns {
+  @include flex-xy-layout(flex-start);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 24rpx;
+  padding-top: 20rpx;
+  z-index: 999;
+  background: $bx-color-f;
+  .verify-btn {
+    @include flex-xy-layout;
+    @include font-style(36rpx, 500);
+    flex: 1;
+    color: $bx-color-f;
+    background: #0085FF;
+    height: 88rpx;
+    border-radius: 8rpx;
+  }
+}
+
+.upopup-success-box {
+  padding: 30rpx;
+  .success-img-wrap {
+    margin-bottom: 40rpx;
+    text-align: center;
+    .icon-success {
+      @include element-size(140rpx, 140rpx, 0);
+    }
+  }
+  .info-item {
+    text-align: center;
+  }
+  .ok-btn {
+    @include flex-xy-layout;
+    @include element-size(auto, 80rpx, 12rpx);
+    @include font-style(32rpx, 500);
+    color: $bx-color-f;
+    margin-top: 40rpx;
+    background: #0085FF;
+  }
+}

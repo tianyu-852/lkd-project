@@ -1,0 +1,412 @@
+.main {
+  padding-bottom: 100rpx;
+}
+
+.advert-banner-module {
+  @include element-size(100%, 280rpx, 0);
+}
+
+.recommend-module {
+  .recommend-header {
+    @include flex-xy-layout(space-between);
+    @include font-style(30rpx, 500);
+    margin: 0 30rpx;
+    margin-bottom: 20rpx;
+  }
+  .open-loc {
+    @include element-size(auto, 200rpx, 0);
+    margin: 0 30rpx;
+    margin-bottom: 20rpx;
+  }
+  .scroll-x.recommend-scroll-x {
+    margin-bottom: 20rpx;
+    .scroll-x-item {
+      margin-right: 40rpx;
+      &:first-child { margin-left: 30rpx; }
+      .recommend-item-wrap {
+        @include flex-y-layout;
+        .lawyer-avatar {
+          @include element-size(72rpx, 72rpx, 12rpx);
+        }
+        .lawyer-nickname {
+          @include flex-xy-layout(flex-start);
+          @include font-style(28rpx, 500);
+          margin-top: 10rpx;
+          .youxuan-tag {
+            @include element-size(28rpx, 28rpx, 8rpx);
+            @include flex-xy-layout;
+            @include font-style(20rpx, 500);
+            color: #fff;
+            background: #FE5F48;
+            margin-left: 4rpx;
+          }
+        }
+        .lawyer-loc {
+          @include font-style(24rpx);
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+.division-line {
+  height: 16rpx;
+  background: #F5F5F5;
+}
+
+.factor-module {
+  @include flex-xy-layout(flex-start, stretch);
+  @include element-size(100%, 88rpx, 0);
+  position: sticky;
+  left: 0;
+  z-index: 999;
+  background: $bx-color-f;
+  box-shadow: 0 2rpx 0 0 #EDEDED;
+  .factor-item {
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    color: $bx-color-6;
+    flex: 1;
+    &.factor-item-active {
+      color: #0085FF;
+    }
+    .triangle-bottom {
+      @include element-size(11rpx, 8rpx, 0);
+      margin-left: 12rpx;
+      transition: all .3s;
+      &.triangle-bottom-active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  // 条件 popup
+  .factor-option-popup {
+    @include element-size(100%, auto, 0);
+    position: absolute;
+    top: 88rpx;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    // 地区 factor popup
+    .region-factor-wrap {
+      display: flex;
+      overflow: hidden;
+      background: $bx-color-f;
+      transition: all .3s;
+      .left-sidenav {
+        position: relative;
+        width: 200rpx;
+        background: #F3F5F8;
+        overflow-y: auto;
+        .sidenav-line-outer {
+          @include flex-y-center;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 6rpx;
+          height: 100rpx;
+          transition: all .3s;
+          .sidenav-line-inner {
+            width: 100%;
+            height: 40rpx;
+            border-radius: 6rpx;
+            background: #0085FF;
+          }
+        }
+        .sidenav-item {
+          @include font-style(32rpx, 500);
+          @include flex-xy-layout;
+          height: 100rpx;
+          padding: 0 10rpx;
+          text-align: center;
+          color: #888D98;
+          &.sidenav-item-active {
+            color: $bx-color-3;
+          }
+        }
+      }
+      .right-region-content {
+        flex: 1;
+        margin: 30rpx;
+        overflow-y: auto;
+        .loc-wrap {
+          margin-bottom: 64rpx;
+          .loc-header {
+            @include flex-xy-layout(flex-start);
+            margin-bottom: 28rpx;
+            .loc-left {
+              @include font-style(30rpx, 500);
+            }
+            .loc-right {
+              @include font-style(30rpx, 500);
+              @include flex-xy-layout;
+              color: #222;
+              margin-left: auto;
+              .arrow-up {
+                @include element-size(22rpx, 14rpx, 0);
+                margin-right: 8rpx;
+              }
+            }
+          }
+          .loc-item {
+            @include flex-xy-layout;
+            @include element-size(233rpx, 68rpx, 8rpx);
+            @include font-style(30rpx, 500);
+            border: 2rpx solid #ECEFF4;
+            color: #888D98;
+            &.loc-item-active {
+              border: 2rpx solid #0085FF;
+              color: #0085FF;
+              background: $bx-color-f;
+            }
+            .location-img {
+              @include element-size(22rpx, 26rpx, 0);
+              margin-right: 12rpx;
+            }
+          }
+        }
+        .hot-wrap {
+          .hot-header {
+            @include flex-xy-layout(flex-start);
+            margin-bottom: 28rpx;
+            .hot-left {
+              @include font-style(30rpx, 500);
+            }
+          }
+          .city-wrap {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20rpx;
+            .city-item {
+              @include flex-xy-layout;
+              @include element-size(auto, 68rpx, 8rpx);
+              @include font-style(30rpx, 500);
+              color: #888D98;
+              background: #EEF0F3;
+              &.city-item-active {
+                position: relative;
+                border: 2rpx solid #0085FF;
+                background: $bx-color-f;
+                color: #0085FF;
+                .active-gou-img {
+                  @include element-size(26rpx, 26rpx, 0);
+                  position: absolute;
+                  right: 0;
+                  bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // 案件类型 factor popup
+    .caseType-factor-wrap {
+      display: flex;
+      overflow: hidden;
+      background: $bx-color-f;
+      transition: all .3s;
+      .left-sidenav {
+        position: relative;
+        width: 200rpx;
+        background: #F3F5F8;
+        overflow-y: auto;
+        .sidenav-line-outer {
+          @include flex-y-center;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 6rpx;
+          height: 100rpx;
+          transition: all .3s;
+          .sidenav-line-inner {
+            width: 100%;
+            height: 40rpx;
+            border-radius: 6rpx;
+            background: #0085FF;
+          }
+        }
+        .sidenav-item {
+          @include font-style(32rpx, 500);
+          @include flex-xy-layout;
+          height: 100rpx;
+          padding: 0 10rpx;
+          text-align: center;
+          color: #888D98;
+          &.sidenav-item-active {
+            color: $bx-color-3;
+          }
+        }
+      }
+      .right-type-content {
+        flex: 1;
+        margin: 30rpx;
+        overflow-y: auto;
+        .case-header {
+          @include flex-xy-layout(flex-start);
+          margin-bottom: 28rpx;
+          .case-left {
+            @include font-style(30rpx, 500);
+          }
+          .case-right {
+            @include font-style(30rpx, 500);
+            @include flex-xy-layout;
+            color: #222;
+            margin-left: auto;
+            .arrow-up {
+              @include element-size(22rpx, 14rpx, 0);
+              margin-right: 8rpx;
+            }
+          }
+        }
+        .type-wrap {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20rpx;
+          .type-item {
+            @include flex-xy-layout;
+            @include element-size(auto, 68rpx, 8rpx);
+            @include font-style(30rpx, 500);
+            color: #888D98;
+            background: #EEF0F3;
+            &.type-item-active {
+              position: relative;
+              border: 2rpx solid #0085FF;
+              background: $bx-color-f;
+              color: #0085FF;
+              .active-gou-img {
+                @include element-size(26rpx, 26rpx, 0);
+                position: absolute;
+                right: 0;
+                bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 排序方式 factor popup
+    .orderby-factor-wrap {
+      overflow: hidden;
+      border-bottom-left-radius: 30rpx;
+      border-bottom-right-radius: 30rpx;
+      background: $bx-color-f;
+      .orderby-factor-item {
+        @include flex-xy-layout;
+        @include font-style(26rpx);
+        text-align: center;
+        height: 90rpx;
+        &.orderby-factor-item-active {
+          color: #0085FF;
+        }
+      }
+    }
+  }
+  // 蒙层
+  .factor-mask {
+    position: absolute;
+    top: 88rpx;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    background: rgba(0, 0, 0, .4);
+  }
+}
+
+.lawyer-module {
+  .lawyer-item {
+    @include flex-xy-layout(flex-start, stretch);
+    position: relative;
+    padding: 30rpx;
+    border-bottom: 16rpx solid #F5F5F5;
+    &:last-child { border: none; };
+    .lawyer-left {
+      width: 140rpx;
+      margin-right: 30rpx;
+      .lawyer-avatar {
+        @include element-size(140rpx, 140rpx, 20rpx);
+      }
+      .loc-distance {
+        @include font-style(22rpx);
+        text-align: center;
+        color: #0085FF;
+        margin-top: 20rpx;
+      }
+      .loc-distance-btn {
+        @include flex-xy-layout;
+        @include font-style(24rpx);
+        height: 44rpx;
+        padding: 0 22rpx;
+        border-radius: 22rpx;
+        color: #fff;
+        background: #0085FF;
+        margin-top: 16rpx;
+      }
+    }
+    .lawyer-right {
+      flex: 1;
+      .lawyer-right-header {
+        @include flex-xy-layout(flex-start);
+        .lawyer-name-wrap {
+          @include flex-xy-layout(flex-start);
+          @include font-style(36rpx, 500);
+          .youxuan-tag {
+            @include element-size(64rpx, 32rpx, 20rpx);
+            @include flex-xy-layout;
+            @include font-style(24rpx);
+            color: #fff;
+            background: #FE5F48;
+            margin-left: 10rpx;
+          }
+        }
+        .contact-btn {
+          @include flex-xy-layout;
+          @include element-size(140rpx, 44rpx, 12rpx);
+          @include font-style(24rpx);
+          color: #0085FF;
+          background: #F5F5F5;
+          margin-left: auto;
+        }
+      }
+      .serve-data {
+        @include font-style(26rpx);
+        margin-top: 8rpx;
+        color: $bx-color-6;
+      }
+      .company-name {
+        @include font-style(26rpx);
+        margin-top: 8rpx;
+        color: $bx-color-6;
+      }
+      .tag-wrap {
+        @include flex-xy-layout(flex-start);
+        margin-top: 16rpx;
+        .tag-item {
+          @include flex-xy-layout;
+          @include font-style(24rpx);
+          color: $bx-color-9;
+          height: 44rpx;
+          padding: 0 16rpx;
+          background: #F5F5F5;
+          margin-right: 16rpx;
+          border-radius: 8rpx;
+          &:last-child { margin-right: 0; }
+        }
+      }
+    }
+    .ad-tag {
+      @include font-style(20rpx);
+      @include flex-xy-layout;
+      color: #fff;
+      position: absolute;
+      right: 4rpx;
+      bottom: 4rpx;
+      height: 28rpx;
+      padding: 0 8rpx;
+      background: rgba(0, 0, 0, .1);
+      border-radius: 8rpx;
+    }
+  }
+}

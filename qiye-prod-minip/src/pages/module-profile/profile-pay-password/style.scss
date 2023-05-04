@@ -1,0 +1,52 @@
+.phone-module {
+  @include flex-y-center;
+  @include font-style(28rpx);
+  padding: 30rpx;
+  color: #888D98;
+  background: #F5F7FA;
+}
+
+.set-password-module {
+  padding: 0 30rpx;
+  background: $qy-color-f;
+  .set-password-item {
+    @include flex-xy-layout(flex-start);
+    height: 90rpx;
+    .set-password-left {
+      @include font-style(32rpx);
+      min-width: 220rpx;
+    }
+    .set-password-middle {
+      @include font-style(32rpx);
+      flex: 1;
+    }
+    .set-password-right {
+      margin-left: 30rpx;
+      .send-verifycode-btn {
+        @include flex-xy-layout;
+        @include font-style(20rpx);
+        height: 48rpx;
+        padding: 0 12rpx;
+        border-radius: 8rpx;
+        color: #0085FF;
+        border: 2rpx solid #0085FF;
+        &.send-verifycode-btn-disable {
+          color: #CBD5E5;
+          border-color: #CBD5E5;
+        }
+      }
+    }
+  }
+}
+
+.set-password-btn {
+  @include flex-xy-layout;
+  @include element-size(auto, 96rpx, 48rpx);
+  @include font-style(36rpx, 500);
+  margin: 0 30rpx;
+  margin-top: 60rpx;
+  color: $qy-color-f;
+  margin: 0 40rpx;
+  margin-top: 100rpx;
+  background: #0085FF;
+}

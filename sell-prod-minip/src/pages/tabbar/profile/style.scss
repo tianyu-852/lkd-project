@@ -1,0 +1,58 @@
+.main {
+  margin-top: 140rpx;
+}
+
+.minipcode-module {
+  @include flex-xy-layout(flex-start);
+  padding: 40rpx;
+  margin: 40rpx;
+  border-radius: 20rpx;
+  background: $xs-color-f;
+  .minipcode {
+    @include element-size(170rpx, 170rpx, 0);
+    margin-right: 40rpx;
+  }
+  .minipcode-info {
+    @include font-style(40rpx, 500);
+    .save-btn {
+      @include flex-xy-layout;
+      @include element-size(230rpx, 50rpx, 25rpx);
+      @include font-style(30rpx, 500);
+      padding: 0 25rpx;
+      color: $xs-color-f;
+      background: #0085FF;
+      margin-top: 10rpx;
+    }
+  }
+}
+
+.qrcode-module {
+  @include element-size(auto, auto, 20rpx);
+  padding: 30rpx 50rpx;
+  background: $xs-color-f;
+  margin: 40rpx;
+  .qrcode-header {
+    @include flex-xy-layout(flex-start);
+    margin-bottom: 50rpx;
+    .kufu-avatar {
+      @include element-size(160rpx, 160rpx, 0);
+      margin-right: 34rpx;
+    }
+    .kufu-info {
+      @include font-style(44rpx, 500);
+    }
+  }
+  .qrcode-wrap {
+    @include element-size(540rpx, auto, 0);
+    position: relative;
+    .qrcode {
+      width: 100%;
+      height: 540rpx;
+    }
+    .qrcode-text {
+      @include font-style(32rpx, 500);
+      text-align: center;
+      margin-top: 30rpx;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.nav-module {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 2;
+  background: $xs-color-f;
+  .nav-wrap {
+    @include flex-xy-layout(flex-start);
+    .nav-item {
+      @include flex-xy-layout;
+      @include font-style(30rpx);
+      flex: 1;
+      color: $xs-color-9;
+      height: 88rpx;
+      border-bottom: 2rpx solid transparent;
+      &.nav-item-active {
+        color: #0085FF;
+        border-color: #0085FF;
+      }
+    }
+  }
+  .data-wrap {
+    @include flex-xy-layout(flex-start);
+    @include font-style(26rpx);
+    height: 80rpx;
+    color: $xs-color-6;
+    padding-left: 24rpx;
+    background: #F5F5F5;
+  }
+}
+
+.activity-module {
+  background: $xs-color-f;
+  .activity-item {
+    padding: 24rpx;
+    border-bottom: 2rpx solid #F5F5F5;
+    &:last-child { border-bottom: none; }
+    .activity-info {
+      @include flex-xy-layout(flex-start);
+      @include font-style(30rpx);
+      margin-bottom: 20rpx;
+      .qiye-name {
+        @include multi-line-ellipsis;
+        flex: 1;
+      }
+      .activity-name {
+        color: $xs-color-6;
+      }
+    }
+    .activity-time {
+      @include flex-xy-layout(flex-start);
+      @include font-style(28rpx);
+      .seller-name {
+        flex: 1;
+        color: #0085FF;
+      }
+      .time-text {
+        color: $xs-color-9;
+      }
+    }
+  }
+}
+
+.empty-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,235 @@
+.divide-ver {
+  height: 16rpx;
+  background: #F5F5F5;
+}
+
+.base-module {
+  padding: 30rpx; 
+  .base-title {
+    @include font-style(28rpx, 500);
+    color: $bx-color-6;
+  } 
+  .verify-type-wrap {
+    @include flex-xy-layout(flex-start);
+    margin-top: 20rpx;
+    .verify-type-item {
+      @include flex-xy-layout;
+      @include font-style(28rpx);
+      @include element-size(160rpx, 60rpx, 4rpx);
+      color: $bx-color-9;
+      border: 2rpx solid #D8D8D8;
+      margin-right: 20rpx;
+      &.verify-type-item-active {
+        color: #0085FF;
+        border-color: #0085FF;
+      }
+    }
+  }
+  .verify-type-explain {
+    @include font-style(26rpx);
+    color: $bx-color-9;
+    line-height: 36rpx;
+    margin-top: 20rpx;
+  }
+  &.noEdit-module {
+    .content-item {
+      margin-bottom: 50rpx;
+      &:last-child { margin-bottom: 0; }
+      .item-title {
+        @include font-style(28rpx, 500);
+        color: $bx-color-6;
+      }
+      .input-wrap {
+        @include element-size(100%, 70rpx, 0);
+        @include flex-xy-layout(flex-start);
+        position: relative;
+        border-bottom: 2rpx solid #D8D8D8;
+        .input-text {
+          @include font-style(30rpx);
+          flex: 1;
+        }
+      }
+    }
+  }
+  &.faceApprove-module {
+    .content-item {
+      margin-bottom: 50rpx;
+      &:last-child { margin-bottom: 0; }
+      .item-title {
+        @include font-style(28rpx, 500);
+        color: $bx-color-6;
+      }
+      .input-wrap {
+        @include element-size(100%, 70rpx, 0);
+        @include flex-xy-layout(flex-start);
+        position: relative;
+        border-bottom: 2rpx solid #D8D8D8;
+        .input-text {
+          @include font-style(30rpx);
+          flex: 1;
+        }
+      }
+    }
+  }
+  &.bank-module {
+    .content-item {
+      margin-bottom: 50rpx;
+      &:last-child { margin-bottom: 0; }
+      .item-title {
+        @include flex-xy-layout(flex-start);
+        @include font-style(28rpx, 500);
+        color: $bx-color-6;
+        .icon-tanhao {
+          @include element-size(28rpx, 28rpx, 0);
+          margin-left: auto;
+          margin-right: 10rpx;
+        }
+      }
+      .bankCard-type-wrap {
+        @include flex-xy-layout(flex-start);
+        margin-top: 20rpx;
+        .bankCard-type-item {
+          @include flex-xy-layout;
+          @include font-style(28rpx);
+          @include element-size(160rpx, 60rpx, 4rpx);
+          color: $bx-color-9;
+          border: 2rpx solid #D8D8D8;
+          margin-right: 20rpx;
+          &.bankCard-type-item-active {
+            color: #0085FF;
+            border-color: #0085FF;
+          }
+        }
+      }
+      .input-wrap {
+        @include element-size(100%, 70rpx, 0);
+        @include flex-xy-layout(flex-start);
+        position: relative;
+        border-bottom: 2rpx solid #D8D8D8;
+        .input-text {
+          @include font-style(30rpx);
+          flex: 1;
+        }
+      }
+      .select-wrap {
+        @include element-size(100%, 70rpx, 0);
+        @include flex-xy-layout(flex-start);
+        position: relative;
+        border-bottom: 2rpx solid #D8D8D8;
+        .select-value {
+          @include font-style(30rpx);
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+// 底部按钮
+.bottom-btns {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 24rpx;
+  padding-top: 20rpx;
+  z-index: 999;
+  background: $bx-color-f;
+  .submit-btn {
+    @include flex-xy-layout;
+    @include font-style(36rpx, 500);
+    flex: 1;
+    color: $bx-color-f;
+    background: #0085FF;
+    height: 88rpx;
+    border-radius: 8rpx;
+  }
+  .edit-btn {
+    @include font-style(28rpx);
+    color: $bx-color-9;
+    text-align: center;
+    margin-top: 30rpx;
+  }
+}
+
+.upopup-bank-box {
+  .upopup-header {
+    @include flex-xy-layout(space-between);
+    @include font-style(28rpx);
+    padding: 0 36rpx;
+    height: 100rpx;
+    border-bottom: 2rpx solid #EDEDED;
+    .upopup-title {
+      @include font-style(32rpx, 500);
+    }
+  }
+  .input-wrap {
+    @include flex-xy-layout(flex-start);
+    height: 80rpx;
+    border-radius: 4rpx;
+    padding: 0 30rpx;
+    margin: 20rpx 24rpx;
+    background: #F5F5F5;
+    .icon-search {
+      @include element-size(32rpx, 32rpx, 0);
+      margin-right: 10rpx;
+    }
+    .input-text {
+      @include font-style(30rpx);
+      flex: 1;
+    }
+  }
+  .bank-wrap-scrollView {
+    height: 600rpx;
+    overflow-y: auto;
+    .bank-item {
+      @include flex-xy-layout(flex-start);
+      @include font-style(32rpx);
+      height: 100rpx;
+      padding: 0 24rpx;
+      border-bottom: 2rpx solid #EDEDED;
+      &:last-child { border: none; }
+      .icon-gou {
+        @include element-size(44rpx, 44rpx, 0);
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.umodal-submit-box {
+  padding: 32rpx;
+  .umodal-title {
+    @include font-style(34rpx, 500);
+    text-align: center;
+    margin-bottom: 38rpx;
+  }
+  .bank-info {
+    @include font-style(28rpx);
+    text-align: left;
+    color: $bx-color-6;
+    margin-bottom: 16rpx;
+  }
+}
+
+.upopup-success-box {
+  padding: 30rpx;
+  .success-img-wrap {
+    margin-bottom: 40rpx;
+    text-align: center;
+    .icon-success {
+      @include element-size(140rpx, 140rpx, 0);
+    }
+  }
+  .info-item {
+    text-align: center;
+  }
+  .ok-btn {
+    @include flex-xy-layout;
+    @include element-size(auto, 80rpx, 12rpx);
+    @include font-style(32rpx, 500);
+    color: $bx-color-f;
+    margin-top: 40rpx;
+    background: #0085FF;
+  }
+}

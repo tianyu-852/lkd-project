@@ -1,0 +1,24 @@
+.login-module {
+  @include flex-y-layout;
+  margin-top: 200rpx;
+  .product-name {
+    @include font-style(40rpx, 600);
+    margin-bottom: 16rpx;
+  }
+  .product-desc {
+    @include font-style(28rpx);
+    color: #5C5E66;
+  }
+  .auth-btn {
+    @include flex-xy-layout;
+    @include element-size(580rpx, 88rpx, 16rpx);
+    @include font-style(34rpx, 500);
+    margin-top: 240rpx;
+    color: $qy-color-f;
+    background: #59be6b;
+    .icon-wxlogo-img {
+      @include element-size(58rpx, 48rpx, 0);
+      margin-right: 20rpx;
+    }
+  }
+}

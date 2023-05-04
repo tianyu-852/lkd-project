@@ -1,0 +1,78 @@
+.main {
+  padding-bottom: 180rpx;
+}
+
+.file-module {
+  margin-top: 2rpx;
+  .file-item {
+    @include flex-xy-layout(flex-start);
+    background: $bx-color-f;
+    padding: 30rpx;
+    border-bottom: 2rpx solid #F5F5F5;
+    &:last-child { margin-bottom: 0; }
+    .file-middle {
+      flex: 1;
+      margin-right: 48rpx;
+      .file-nameWrap {
+        @include flex-xy-layout(flex-start);
+        margin-bottom: 16rpx;
+        .file-name {
+          @include font-style(32rpx, 500);
+          @include multi-line-ellipsis;
+          // max-width: 380rpx;
+        }
+      }
+      .file-time {
+        @include font-style(28rpx);
+        color: $bx-color-9;
+        .file-user {
+          margin-left: 24rpx;
+        }
+      }
+    }
+    .file-right {
+      .radio {
+        @include element-size(36rpx, 36rpx);
+        @include flex-xy-layout;
+        border: 2rpx solid #c9cacd;
+        &.radio-active {
+          background: #0085FF;
+          border-color: #0085FF
+        }
+      }
+    }
+  }
+}
+
+
+
+.bottom-btns {
+  @include flex-xy-layout;
+  position: fixed;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 60rpx;
+  .plus-btn {
+    @include element-size(auto, 90rpx, 25rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    flex: 1;
+    border: 1rpx solid #D8D8D8;
+    background: $bx-color-f;
+    .icon-plus {
+      @include element-size(22rpx, 22rpx, 0);
+      margin-right: 20rpx;
+    }
+  }
+
+  .confirm-btn {
+    @include element-size(auto, 90rpx, 25rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    flex: 1;
+    margin-left: 30rpx;
+    color: $bx-color-f;
+    background: #0085FF;
+  }
+}
+

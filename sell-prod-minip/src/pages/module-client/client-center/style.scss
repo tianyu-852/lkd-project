@@ -1,0 +1,205 @@
+
+.factor-module {
+  @include flex-xy-layout(flex-start);
+  @include font-style(28rpx, 500);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 24rpx;
+  height: 90rpx;
+  z-index: 99;
+  background: #F5F5F5;
+  .time-text {
+    margin: 0 6rpx;
+    &.time-text-active {
+      color: #0085FF;
+    }
+  }
+  .icon-calendar {
+    @include element-size(48rpx, 48rpx, 0);
+  }
+  .icon-arrow {
+    @include element-size(30rpx, 30rpx, 0);
+  }
+}
+
+.client-module {
+  padding-top: 100rpx;
+  .client-item {
+    margin: 0 24rpx;
+    background: $xs-color-f;
+    margin-bottom: 16rpx;
+    border-radius: 16rpx;
+    &:last-child { margin-bottom: 0; }
+    .client-info-wrap {
+      @include flex-xy-layout(flex-start);
+      // height: 128rpx;
+      padding: 24rpx;
+      .client-info-left {
+        @include element-size(80rpx, 80rpx);
+        margin-right: 16rpx;
+      }
+      .client-info-middle {
+        @include font-style(28rpx);
+        flex: 1;
+        .client-phone {
+          @include font-style(24rpx);
+          margin-top: 6rpx;
+          color: $xs-color-6;
+        }
+      }
+      .client-info-right {
+        @include flex-xy-layout(flex-start);
+        .contract-status {
+          @include flex-xy-layout;
+          @include font-style(24rpx);
+          padding: 0 16rpx;
+          height: 40rpx;
+          border-radius: 24rpx;
+          color: $xs-color-f;
+          background: #FE5F48;
+          margin-right: 20rpx;
+        }
+        .icon-arrow {
+          @include element-size(30rpx, 30rpx, 0);
+          transition: all .3s;
+          &.icon-arrow-actvie {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+    .client-other-info {
+      margin: 0 24rpx;
+      .client-time {
+        @include font-style(24rpx);
+        color: $xs-color-9;
+      }
+      .client-name {
+        @include font-style(24rpx);
+        color: $xs-color-6;
+      }
+    }
+    .divide-hor {
+      margin: 20rpx 24rpx;
+      margin-bottom: 0;
+      border-bottom: 2rpx solid #EDEDED;
+    }
+    // 步骤条
+    .client-step-wrap {
+      padding: 24rpx;
+      .client-step-item {
+        @include flex-xy-layout(flex-start, flex-start);
+        position: relative;
+        padding-left: 46rpx;
+        height: 100rpx;
+        color: $xs-color-9;
+        &:last-child { height: auto; }
+        &:last-child::before { display: none; }
+        &::before {
+          content: '';
+          position: absolute;
+          top: 40rpx;
+          left: 11rpx;
+          width: 2rpx;
+          height: 50%;
+          background: #D8D8D8;
+        }
+        .step-title {
+          @include font-style(32rpx);
+          @include multi-line-ellipsis;
+          flex: 1;
+          &.step-title-active {
+            @include font-style(32rpx, 500);
+            color: #0085FF;
+          }
+          &.step-qrcode {
+            @include flex-xy-layout(flex-start);
+            .icon-qrcode {
+              @include element-size(32rpx, 32rpx, 0);
+              margin-left: 30rpx;
+              margin-right: 20rpx;
+            }
+          }
+        }
+        .step-btns {
+          margin-left: 20rpx;
+          .step-btn {
+            @include flex-xy-layout;
+            @include font-style(24rpx);
+            padding: 0 16rpx;
+            height: 40rpx;
+            border-radius: 24rpx;
+            color: $xs-color-f;
+            background: #FFBC28;
+            margin-right: 20rpx;
+          }
+        }
+        .icon-gou {
+          @include element-size(24rpx, 24rpx);
+          position: absolute;
+          top: 10rpx;
+          left: 0;
+        }
+        .step-dot-outer {
+          position: absolute;
+          top: 10rpx;
+          left: 0;
+          @include flex-xy-layout;
+          @include element-size(24rpx, 24rpx);
+          .step-dot-inner {
+            @include element-size(16rpx, 16rpx);
+            background: #D8D8D8;
+          }
+          &.step-dot-outer-ing {
+            background: #DBEEFF;
+            .step-dot-inner {
+              background: #0085FF;
+            }
+          }
+        }
+      }
+    }
+    // 展开区域
+    .client-spread-wrap {
+      @include flex-xy-layout;
+      @include font-style(24rpx);
+      color: $xs-color-9;
+      height: 73rpx;
+      .icon-arrowBottom {
+        @include element-size(20rpx, 20rpx, 0);
+        margin-left: 8rpx;
+        transition: all .3s;
+        &.icon-arrowBottom-actvie {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+.empty-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.upopup-qrcode-box {
+  padding: 20rpx;
+  .title {
+    @include font-style(42rpx, 500);
+    text-align: center;
+    color: #0085FF;
+  }
+  .sub-title {
+    @include font-style(28rpx);
+    text-align: center;
+    color: $xs-color-9;
+  }
+  .qrcode-img {
+    @include element-size(100%, auto, 0);
+    margin-top: 20rpx;
+  }
+}

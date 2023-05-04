@@ -1,0 +1,423 @@
+.share-slot {
+  .share-label {
+    @include element-size(48rpx, 48rpx, 0);
+    margin-left: auto;
+    margin-right: 24rpx;
+    .share-img {
+      @include element-size(48rpx, 48rpx, 0);
+    }
+  }
+}
+
+.banner-momdule {
+  @include element-size(100%, 330rpx, 0);
+}
+
+.content-module {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 330rpx + 24rpx);
+  margin-top: -24rpx;
+  border-radius: 24rpx 24rpx 0 0;
+  background: $qy-color-f;
+  overflow: hidden;
+  .tabnav-wrap {
+    @include flex-xy-layout(flex-start, stretch);
+    @include element-size(100%, 88rpx, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: $qy-color-f;
+    border-radius: 24rpx 24rpx 0 0;
+    overflow: hidden;
+    box-shadow: 0 2rpx 0 0 #EDEDED;
+    .tabnav-item {
+      @include flex-xy-layout;
+      @include font-style(28rpx);
+      color: $qy-color-6;
+      flex: 1;
+      &.tabnav-item-active {
+        color: #0085FF;
+      }
+    }
+    .tabnav-line-outer {
+      @include flex-xy-layout;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: calc(100% / 3);
+      height: 2rpx;
+      border-radius: 2rpx;
+      transition: all .3s;
+      .tabnav-line-inner {
+        width: 40rpx;
+        height: 100%;
+        border-radius: 2rpx;
+        background: #0085FF;
+      }
+    }
+  }
+  // 分享按钮
+  .share-btn-img {
+    @include element-size(50rpx, 120rpx, 0);
+    position: absolute;
+    // top: 140rpx;
+    top: 20rpx;
+    right: 0;
+    z-index: 10;
+  }
+  .scroll-y.content-scroll-y {
+    width: 100%;
+    height: 100%;
+    .divider-hor {
+      @include element-size(auto, 16rpx, 0);
+      background: #F5F5F5;
+    }
+    // 服务描述图片
+    // .server-desc-module {
+    //   @include element-size(100%, 370rpx, 24rpx);
+    // }
+    .vip-level-module {
+      padding: 32rpx 0;
+      .vip-level-title {
+        @include font-style(36rpx, 500);
+        padding: 0 24rpx;
+      }
+      .vip-level-subtitle {
+        @include font-style(28rpx);
+        padding: 0 24rpx;
+        color: $qy-color-6;
+      }
+      .vipLevel-scroll-x {
+        margin: 32rpx 0;
+        .scroll-x-item {
+          margin-right: 24rpx;
+          &:first-child { margin-left: 24rpx; }
+          .vipLevel-wrap {
+            @include flex-y-layout;
+            @include element-size(180rpx, 120rpx, 16rpx);
+            @include font-style(28rpx);
+            border: 2rpx solid #EDEDED;
+            color: $qy-color-6;
+            background: $qy-color-f;
+            &.vipLevel-wrap-active {
+              position: relative;
+              border: 2rpx solid #FE5F48;
+              color: #FE5F48;
+              background: #FFFAF9;
+              .active-gou-img {
+                @include element-size(40rpx, 40rpx, 0);
+                position: absolute;
+                right: 0;
+                bottom: 0;
+              }
+            }
+          }
+        }
+      }
+      .buy-btn {
+        @include flex-xy-layout;
+        @include font-style(36rpx, 500);
+        height: 96rpx;
+        border-radius: 48rpx;
+        margin: 0 24rpx;
+        color: $qy-color-f;
+        background: linear-gradient(90deg, #FE6D53 0%, #F7402C 100%, #F7402C 100%);
+        box-shadow: 0 7rpx 12rpx 0 rgba(255, 145, 130, 0.5);
+        .icon-arrowRight {
+          @include element-size(20rpx, 20rpx, 0);
+          margin-left: 12rpx;
+        }
+      }
+    }
+    .base-module {
+      padding: 32rpx 24rpx;
+      padding-bottom: 30rpx;
+      .title-wrap {
+        @include flex-xy-layout(space-between);
+        @include font-style(36rpx, 500);
+        margin-bottom: 24rpx;
+        .title-right {
+          @include flex-xy-layout;
+          @include font-style(24rpx);
+          color: $qy-color-9;
+          padding-left: 20rpx;
+          .arrow-left-img {
+            @include element-size(20rpx, 20rpx, 0);
+          }
+        }
+      }
+      .subtitle-wrap {
+        @include font-style(28rpx);
+        color: $qy-color-6;
+        margin-top: 8rpx;
+        margin-bottom: 32rpx;
+      }
+      // 服务规格 待删
+      &.spec-module {
+        .spec-wrap {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 24rpx;
+          margin-bottom: 30rpx;
+          .spec-item {
+            @include flex-y-layout;
+            @include element-size(auto, 140rpx, 16rpx);
+            @include font-style(28rpx);
+            border: 2rpx solid #EDEDED;
+            color: $qy-color-6;
+            background: $qy-color-f;
+            &.spec-item-active {
+              position: relative;
+              border: 2rpx solid #FE5F48;
+              color: #FE5F48;
+              background: #FFFAF9;
+              .active-gou-img {
+                @include element-size(40rpx, 40rpx, 0);
+                position: absolute;
+                right: 0;
+                bottom: 0;
+              }
+            }
+          }
+        }
+        .contact-btn {
+          @include flex-xy-layout;
+          @include font-style(36rpx, 500);
+          height: 96rpx;
+          border-radius: 48rpx;
+          color: $qy-color-f;
+          background: linear-gradient(90deg, #FE6D53 0%, #F7402C 100%, #F7402C 100%);
+          box-shadow: 0 7rpx 12rpx 0 rgba(255, 145, 130, 0.5);
+          .arrow-img {
+            @include element-size(20rpx, 20rpx, 0);
+            margin-left: 15rpx;
+          }
+        }
+        .buy-protocol-wrap {
+          @include flex-xy-layout;
+          @include font-style(24rpx, 500);
+          margin-top: 24rpx;
+          .buy-protocol {
+            @include font-style(20rpx, 500);
+            margin-left: -20rpx;
+            color: $qy-color-6;
+          }
+        }
+        .sell-share-btns {
+          @include flex-xy-layout(flex-start);
+          .share-label {
+            flex: 1;
+            .sell-share-btn {
+              @include flex-xy-layout;
+              @include font-style(36rpx, 500);
+              height: 96rpx;
+              border-radius: 48rpx;
+              // flex: 1;
+              color: $qy-color-f;
+              background: linear-gradient(90deg, #FE6D53 0%, #F7402C 100%, #F7402C 100%);
+              box-shadow: 0 7rpx 12rpx 0 rgba(255, 145, 130, 0.5);
+            }
+          }
+        }
+      }
+      // 会员权益详情
+      &.vip-module {
+        // padding-top: 0;
+        .vip-wrap {
+          .vip-rights-img {
+            width: 100%;
+            &:nth-child(1) { height: 226rpx; }
+            &:nth-child(2) { height: 69rpx; }
+            &:nth-child(3) { height: 1175rpx; }
+          }
+        }
+      }
+      // 服务流程
+      &.flow-module {
+        padding: 0;
+        width: 100%;
+        .flow-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      // 用户评价
+      &.comment-module {
+        .comment-item-wrap {
+          .comment-item {
+            @include flex-xy-layout(flex-start, flex-start);
+            padding-bottom: 30rpx;
+            margin-bottom: 30rpx;
+            border-bottom: 2rpx solid #EDEDED;
+            &:last-child { margin-bottom: 0; padding-bottom: 0; border: none; }
+            .comment-left {
+              margin-right: 16rpx;
+              .user-avatar {
+                @include element-size(60rpx, 60rpx);
+              }
+            }
+            .comment-right {
+              flex: 1;
+              .comment-header {
+                @include flex-xy-layout(space-between, flex-start);
+                margin-bottom: 10rpx;
+                .header-left {
+                  @include font-style(24rpx);
+                  color: $qy-color-6;
+                  .user-name-wrap {
+                    @include flex-xy-layout(flex-start);
+                    .user-name {
+                      @include multi-line-ellipsis;
+                      max-width: 288rpx;
+                    }
+                  }
+                }
+                .header-right {
+                  @include font-style(24rpx);
+                  color: $qy-color-9;
+                }
+              }
+              .comment-content {
+                @include font-style(28rpx);
+                line-height: 44rpx;
+              }
+            }
+          }
+        }
+      }
+      // 诚信保障
+      &.safe-module {
+        padding: 0;
+        .title-wrap {
+          padding: 32rpx 24rpx;
+          padding-bottom: 0;
+        }
+        .safe-scroll-x {
+          margin-bottom: 24rpx;
+          height: 224rpx;
+          .scroll-x-item {
+            margin-right: 24rpx;
+            &:first-child { margin-left: 24rpx; }
+            .safe-imgWrap {
+              height: 224rpx;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.upopup-buyServer-box {
+  position: relative;
+  padding: 40rpx 24rpx;
+  .icon-del {
+    @include element-size(30rpx, 30rpx, 0);
+    position: absolute;
+    top: 20rpx;
+    right: 4rpx;
+    padding: 20rpx;
+  }
+  .buyServer-title {
+    @include font-style(36rpx, 500);
+    margin-bottom: 40rpx;
+  }
+  .spec-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24rpx;
+    margin-bottom: 30rpx;
+    .spec-item {
+      @include flex-y-layout;
+      @include element-size(auto, 140rpx, 16rpx);
+      @include font-style(28rpx);
+      border: 2rpx solid #EDEDED;
+      color: $qy-color-6;
+      background: $qy-color-f;
+      &.spec-item-active {
+        position: relative;
+        border: 2rpx solid #FE5F48;
+        color: #FE5F48;
+        background: #FFFAF9;
+        .active-gou-img {
+          @include element-size(40rpx, 40rpx, 0);
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  .buy-btn {
+    @include flex-xy-layout;
+    @include font-style(36rpx, 500);
+    height: 96rpx;
+    border-radius: 48rpx;
+    color: $qy-color-f;
+    background: linear-gradient(90deg, #FE6D53 0%, #F7402C 100%, #F7402C 100%);
+    box-shadow: 0 7rpx 12rpx 0 rgba(255, 145, 130, 0.5);
+    .arrow-img {
+      @include element-size(20rpx, 20rpx, 0);
+      margin-left: 15rpx;
+    }
+  }
+  .buy-protocol-wrap {
+    @include flex-xy-layout;
+    margin-top: 24rpx;
+    .buy-protocol {
+      @include font-style(22rpx, 500);
+      color: $qy-color-6;
+    }
+  }
+  .sell-share-btns {
+    @include flex-xy-layout(flex-start);
+    .share-label {
+      flex: 1;
+      .sell-share-btn {
+        @include flex-xy-layout;
+        @include font-style(36rpx, 500);
+        height: 96rpx;
+        border-radius: 48rpx;
+        // flex: 1;
+        color: $qy-color-f;
+        background: linear-gradient(90deg, #FE6D53 0%, #F7402C 100%, #F7402C 100%);
+        box-shadow: 0 7rpx 12rpx 0 rgba(255, 145, 130, 0.5);
+      }
+    }
+  }
+}
+
+// 购买成功 popup
+.upopup-buySuc-box {
+  width: 100%;
+  background: transparent;
+  .buySuc-wrap {
+    position: relative;
+    width: 100%;
+    height: 611rpx;
+    .buySuc-img {
+      width: 100%;
+      height: 100%;
+    }
+    .buySuc-btnWrap {
+      @include element-size(auto, 76rpx, 44rpx);
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      position: absolute;
+      left: 70rpx;
+      bottom: 70rpx;
+      right: 70rpx;
+      color: #FFF1CB;
+      background: linear-gradient(90deg, #5C5951 0%, #49453D 100%);
+      .arrow-img {
+        @include element-size(24rpx, 24rpx, 0);
+        margin-left: 6rpx;
+      }
+    }
+  }
+  // .icon-del {
+  //   @include element-size(60rpx, 60rpx, 0);
+  // }
+}

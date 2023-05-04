@@ -1,0 +1,31 @@
+<svg id="ygz_icon" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #0061ff;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #0061ff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="椭圆_173" data-name="椭圆 173" class="cls-1">
+    <circle class="cls-3" cx="22" cy="22" r="22"/>
+    <circle class="cls-4" cx="22" cy="22" r="21"/>
+  </g>
+  <g id="组_3676" data-name="组 3676" transform="matrix(0.755, -0.656, 0.656, 0.755, 9.2, 21.743)">
+    <rect id="矩形_2468" data-name="矩形 2468" class="cls-2" width="20.759" height="4.885" rx="2.442" transform="translate(2.217 10.038)"/>
+    <rect id="矩形_2469" data-name="矩形 2469" class="cls-2" width="14.654" height="4.885" rx="2.442" transform="translate(4.837) rotate(82)"/>
+  </g>
+</svg>

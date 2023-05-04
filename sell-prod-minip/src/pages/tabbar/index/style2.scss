@@ -1,0 +1,54 @@
+.profile-module {
+  position: relative;
+  height: 320rpx;
+  .profile-wrap {
+    @include flex-xy-layout(flex-start);
+    position: absolute;
+    left: 32rpx;
+    right: 32rpx;
+    bottom: 24rpx;
+    .profile-left {
+      flex: 1;
+      .profile-name {
+        @include font-style(40rpx, 500);
+        .profile-phone {
+          margin-left: 20rpx;
+        }
+      }
+      .profile-job {
+        @include font-style(28rpx);
+        @include multi-line-ellipsis;
+        margin-top: 6rpx;
+        color: $xs-color-9;
+      }
+    }
+    .profile-right {
+      margin-left: auto;
+      .profile-avatar {
+        @include element-size(112rpx, 112rpx);
+      }
+    }
+  }
+}
+
+.menu-module {
+  height: calc(100vh - 320rpx);
+  overflow-y: auto;
+  background: $xs-color-f;
+  padding: 50rpx 32rpx;
+  border-radius: 24rpx 24rpx 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  grid-gap: 30rpx;
+  .menu-item {
+    @include flex-y-layout;
+    height: 278rpx;
+    border-radius: 24rpx;
+    background: #F9FCFF;
+    .icon-menu {
+      @include font-style(28rpx);
+      @include element-size(120rpx, 120rpx, 0);
+    }
+  }
+}

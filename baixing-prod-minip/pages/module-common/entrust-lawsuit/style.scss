@@ -1,0 +1,241 @@
+.lawsuit-header {
+  @include flex-xy-layout(flex-start);
+  margin: 0 24rpx;
+  margin-bottom: 20rpx;
+  .header-left {
+    @include font-style(32rpx, 500);
+  }
+  .header-right {
+    @include flex-xy-layout(flex-start);
+    @include font-style(30rpx, 500);
+    margin-left: auto;
+    .user-avatar {
+      @include element-size(50rpx, 50rpx, 10rpx);
+      margin-right: 16rpx;
+    }
+  }
+}
+
+.base-module {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 0 24rpx;
+  margin: 0 24rpx;
+  &.lawsuit-module {
+    .cell-item {
+      @include flex-xy-layout(flex-start);
+      height: 100rpx;
+      .cell-left {
+        @include font-style(30rpx, 500);
+      }
+      .cell-right {
+        @include flex-xy-layout(flex-start);
+        margin-left: auto;
+      }
+    }
+    // 案件描述
+    .desc-module {
+      padding-bottom: 20rpx;
+      .desc-wrap {
+        background: #F5F5F5;
+        padding: 24rpx;
+        border-radius: 16rpx;
+        .textarea {
+          @include font-style(32rpx);
+          width: 100%;
+          height: 300rpx;
+          word-wrap: break-word;
+          white-space: pre-line;
+        }
+        .image-wrap {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 24rpx;
+          margin-top: 30rpx;
+          .image-item {
+            @include element-size(130rpx, 130rpx, 8rpx);
+            position: relative;
+            .icon-del {
+              @include element-size(34rpx, 34rpx, 0);
+              position: absolute;
+              padding: 10rpx;
+              top: -20rpx;
+              right: -20rpx;
+            }
+          }
+          &.file-wrap {
+            margin-top: 30rpx;
+            .file-item {
+              @include flex-xy-layout;
+              .file-bg {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+              }
+              .file-name {
+                @include multi-line-ellipsis(2);
+                @include font-style(22rpx);
+                position: absolute;
+                top: 50%;
+                left: 6rpx;
+                right: 6rpx;
+                z-index: 1;
+                transform: translateY(-50%);
+                color: $bx-color-f;
+                text-align: center;
+              }
+            }
+          }
+        }
+        .upload-wrap {
+          @include flex-xy-layout(flex-start);
+          margin-top: 24rpx;
+          .upload-item {
+            @include flex-y-layout;
+            @include element-size(130rpx, 130rpx, 8rpx);
+            @include font-style(24rpx);
+            border: 2rpx dashed #bbb;
+            color: $bx-color-9;
+            margin-right: 24rpx;
+            .icon-upload {
+              @include element-size(48rpx, 48rpx, 0);
+            }
+          }
+        }
+      }
+      .desc-tips {
+        @include font-style(28rpx);
+        text-align: center;
+        color: #0085FF;
+        margin-top: 20rpx;
+      }
+    }
+  }
+  &.sync-module {
+    @include flex-xy-layout(flex-start);
+    @include font-style(30rpx, 500);
+    height: 100rpx;
+    margin-top: 24rpx;
+    .sync-riht {
+      margin-left: auto;
+    }
+  }
+}
+
+// 底部按钮
+.btn-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 980;
+  background: $bx-color-f;
+  padding-top: 20rpx;
+  .btn-wrap {
+    @include flex-xy-layout(flex-start);
+    width: 100%;
+    margin-bottom: 10rpx;
+    padding: 0 24rpx;
+    .btn-item {
+      @include flex-xy-layout;
+      @include element-size(100%, 90rpx, 48rpx);
+      @include font-style(36rpx, 500);
+      color: $bx-color-f;
+      background: #0085FF;
+    }
+  }
+  .pay-protocol {
+    @include font-style(24rpx);
+    color: $bx-color-6;
+    text-align: center;
+  }
+}
+
+// 分类 popup
+.upopup-category-box {
+  .upopup-category-header {
+    @include flex-xy-layout;
+    @include font-style(30rpx, 500);
+    height: 88rpx;
+    border-bottom: 2rpx solid #F5F5F5
+  }
+  .upopup-category-content {
+    padding: 0 30rpx;
+    .category-content-scrollYView {
+      max-height: 660rpx;
+    }
+    .category-group {
+      padding-bottom: 30rpx;
+      &:first-child { padding-top: 30rpx; }
+      .category-group-name {
+        @include font-style(30rpx, 500);
+        margin-bottom: 30rpx;
+      }
+      .category-item-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24rpx;
+        .category-item {
+          @include flex-xy-layout;
+          @include font-style(28rpx);
+          height: 80rpx;
+          background: #F5F5F5;
+          border-radius: 40rpx;
+          &.category-item-active {
+            color: $bx-color-f;
+            background:#0085FF;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 更换联系人 popup
+.upopup-contact-box {
+  padding: 30rpx 24rpx;
+  .upopup-title {
+    @include flex-xy-layout;
+    @include font-style(32rpx, 500);
+    margin-bottom: 30rpx;
+  }
+  .contact-info-item {
+    @include flex-xy-layout(flex-start);
+    @include font-style(30rpx);
+    height: 100rpx;
+    border-radius: 16rpx;
+    padding: 0 24rpx;
+    border: 2rpx solid #F5F5F5;
+    margin-bottom: 30rpx;
+    .divide-ver {
+      color: $bx-color-9;
+      margin: 0 20rpx;
+    }
+    .code-btn {
+      @include font-style(30rpx);
+      color: #0085FF;
+      &.code-btn-disable {
+        color: $bx-color-9;
+      }
+    }
+  }
+  .upopup-btns {
+    @include flex-xy-layout;
+    .upopup-btn {
+      @include font-style(32rpx);
+      @include flex-xy-layout;
+      flex: 1;
+      height: 90rpx;
+      border-radius: 16rpx;
+      color: $bx-color-6;
+      background: #F5F5F5;
+      &:last-child {
+        margin-left: 24rpx;
+        color: $bx-color-f;
+        background: #0085FF;
+      }
+    }
+  }
+}

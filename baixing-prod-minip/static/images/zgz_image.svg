@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="340" height="235" viewBox="0 0 340 235">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #eff5ff;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        filter: url(#椭圆_37);
+      }
+
+      .cls-5 {
+        filter: url(#矩形_302);
+      }
+    </style>
+    <filter id="矩形_302" x="0" y="0" width="340" height="235" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#0d2b8f" flood-opacity="0.157"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#317cfe"/>
+      <stop offset="1" stop-color="#3e69ff"/>
+    </linearGradient>
+    <filter id="椭圆_37" x="109" y="51" width="121" height="122" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-color="#194eff" flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="zgz_image" transform="translate(18 12)">
+    <g id="zgz_image-2" data-name="zgz_image" transform="translate(0 0)">
+      <g class="cls-5" transform="matrix(1, 0, 0, 1, -18, -12)">
+        <rect id="矩形_302-2" data-name="矩形 302" class="cls-1" width="304" height="199" rx="16" transform="translate(18 12)"/>
+      </g>
+      <rect id="矩形_304" data-name="矩形 304" class="cls-2" width="60" height="10" rx="4" transform="translate(208 42)"/>
+      <rect id="矩形_605" data-name="矩形 605" class="cls-2" width="54" height="10" rx="4" transform="translate(138 42)"/>
+      <rect id="矩形_306" data-name="矩形 306" class="cls-2" width="60" height="11" rx="4" transform="translate(208 69)"/>
+      <rect id="矩形_604" data-name="矩形 604" class="cls-2" width="54" height="11" rx="4" transform="translate(138 69)"/>
+      <rect id="矩形_308" data-name="矩形 308" class="cls-2" width="60" height="10" rx="4" transform="translate(208 95)"/>
+      <rect id="矩形_603" data-name="矩形 603" class="cls-2" width="54" height="10" rx="4" transform="translate(138 95)"/>
+      <rect id="矩形_310" data-name="矩形 310" class="cls-2" width="101" height="10" rx="4" transform="translate(35 153)"/>
+      <rect id="矩形_311" data-name="矩形 311" class="cls-2" width="117" height="10" rx="4" transform="translate(151 153)"/>
+      <image id="头像" width="70" height="70" transform="translate(35 34)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0wMTowNjo1NyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlENEQyRDI4RjBFMjExRUE5NzRDQTdCMTk5ODM0RDM0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlENEQyRDI5RjBFMjExRUE5NzRDQTdCMTk5ODM0RDM0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUQ0RDJEMjZGMEUyMTFFQTk3NENBN0IxOTk4MzREMzQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUQ0RDJEMjdGMEUyMTFFQTk3NENBN0IxOTk4MzREMzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5I2zfGAAAAVFBMVEXv9f/////9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"/>
+      <g id="组_480" data-name="组 480" transform="translate(120.592 62.562)">
+        <g class="cls-4" transform="matrix(1, 0, 0, 1, -138.59, -74.56)">
+          <ellipse id="椭圆_37-2" data-name="椭圆 37" class="cls-3" cx="30.5" cy="31" rx="30.5" ry="31" transform="translate(139 75)"/>
+        </g>
+        <g id="组_479" data-name="组 479" transform="translate(18.213 20.509)">
+          <ellipse id="椭圆_38" data-name="椭圆 38" class="cls-1" cx="3.879" cy="3.879" rx="3.879" ry="3.879" transform="translate(9.444 8.142)"/>
+          <path id="路径_335" data-name="路径 335" class="cls-1" d="M902.483,1370.409h-4.142a1.225,1.225,0,0,1-.967-.473l-1.531-1.971a.545.545,0,0,0-.425-.213h-7.744a.544.544,0,0,0-.412.226l-1.4,1.926a1.225,1.225,0,0,1-.991.5h-4.49a2.006,2.006,0,0,0-2.006,1.992v14.611a2.006,2.006,0,0,0,2.006,1.992h22.1a2.006,2.006,0,0,0,2.006-1.992V1372.4A2.006,2.006,0,0,0,902.483,1370.409Zm-10.825,15.5a6.15,6.15,0,1,1,6.189-6.11A6.163,6.163,0,0,1,891.658,1385.91Zm8.5-10.932a.8.8,0,1,1,.8-.8A.8.8,0,0,1,900.159,1374.979Z" transform="translate(-878.375 -1367.753)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

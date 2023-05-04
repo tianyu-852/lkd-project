@@ -1,0 +1,69 @@
+.withdraw-module {
+  padding: 30rpx 40rpx;
+  background: $qy-color-f;
+  .withdraw-header {
+    @include flex-xy-layout(space-between);
+    @include font-style(32rpx);
+    margin-bottom: 20rpx;
+    .total-btn {
+      color: #66D132;
+    }
+  }
+  .withdraw-wrap {
+    @include flex-xy-layout(flex-start);
+    .icon-money {
+      @include font-style(40rpx, 600);
+      margin-right: 20rpx;
+    }
+    .input-text {
+      @include font-style(82rpx, 600);
+      flex: 1;
+      height: 100rpx;
+      color: $qy-color-3;
+    }
+  }
+  .divider-hor {
+    height: 2rpx;
+    background: #EDEDED;
+    margin: 20rpx 0;
+  }
+  .usable-money {
+    @include font-style(28rpx);
+    color: $qy-color-6;
+  }
+}
+
+.withdraw-btn {
+  @include flex-xy-layout;
+  @include element-size(auto, 96rpx, 48rpx);
+  @include font-style(36rpx, 500);
+  color: $qy-color-f;
+  margin: 0 40rpx;
+  margin-top: 40rpx;
+  background: linear-gradient(135deg, #66DD3B 0%, #49CA0A 100%);
+}
+
+.withdraw-tips-wrap {
+  margin: 0 40rpx;
+  margin-top: 40rpx;
+  .withdraw-tips-item {
+    @include font-style(24rpx);
+    margin-bottom: 20rpx;
+    color: $qy-color-6;
+    line-height: 36rpx;
+  }
+}
+
+.upopup-passwrod-box {
+  padding: 30rpx;
+  .header-passwrod {
+    @include flex-xy-layout;
+    @include font-style(34rpx, 500);
+    margin-bottom: 60rpx;
+  }
+  .withdraw-money {
+    @include flex-xy-layout;
+    @include font-style(70rpx, 500);
+    margin-bottom: 40rpx;
+  }
+}

@@ -1,0 +1,44 @@
+
+.detail-module {
+  padding: 44rpx 32rpx;
+  .detail-item {
+    @include flex-xy-layout(flex-start, flex-start);
+    margin-bottom: 48rpx;
+    .detail-left {
+      @include font-style(30rpx);
+      color: $bx-color-6;
+      min-width: 120rpx;
+      margin-right: 32rpx;
+    }
+    .detail-right {
+      @include font-style(30rpx, 500);
+      flex: 1;
+      &.detail-num {
+        @include flex-xy-layout(flex-start);
+        flex-wrap: wrap;
+        .num-item {
+          margin-right: 24rpx;
+          margin-bottom: 10rpx;
+        }
+      }
+    }
+  }
+}
+
+.bottom-btns {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background: $bx-color-f;
+  padding-top: 20rpx;
+  .pay-btn {
+    @include element-size(auto, 80rpx, 16rpx);
+    @include flex-xy-layout;
+    @include font-style(30rpx);
+    color: $bx-color-f;
+    background: #0085FF;
+    margin: 0 32rpx;
+  }
+}

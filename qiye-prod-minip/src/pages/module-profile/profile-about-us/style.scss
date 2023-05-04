@@ -1,0 +1,58 @@
+.about-header-module {
+  @include element-size(auto, 200rpx, 24rpx);
+  @include flex-xy-layout(flex-start);
+  padding: 24rpx;
+  background: $qy-color-f;
+  box-shadow: 0 2rpx 18rpx 0 rgba(0, 0, 0, .09);
+  margin: 24rpx;
+  .about-header-left {
+    margin-right: 20rpx;
+    .logo-img {
+      @include element-size(100rpx, 100rpx, 0);
+    }
+  }
+  .about-header-right {
+    flex: 1;
+    .header-title {
+      @include font-style(32rpx, 500);
+      margin-bottom: 12rpx;
+    }
+    .header-phone {
+      @include flex-xy-layout(flex-start);
+      @include font-style(32rpx, 500);
+      color: #0085FF;
+      .call-img {
+        @include element-size(44rpx, 44rpx, 0);
+        margin-right: 10rpx;
+      }
+    }
+  }
+}
+
+.about-body-module {
+  background: $qy-color-f;
+  padding: 44rpx 40rpx;
+  // height: 80vh;
+  .about-body-title {
+    @include font-style(32rpx, 500);
+    margin-bottom: 30rpx;
+  }
+  .about-body-intro {
+    @include font-style(28rpx, 500);
+    line-height: 56rpx;
+    text-indent: 60rpx;
+    margin-bottom: 48rpx;
+  }
+  .about-body-explainWrap {
+    margin-right: 55rpx;
+    .about-body-explain {
+      @include flex-xy-layout(flex-start, flex-start);
+      @include font-style(28rpx, 500);
+      line-height: 56rpx;
+      margin-bottom: 16rpx;
+      .explain-key {
+        min-width: 136rpx;
+      }
+    }
+  }
+}

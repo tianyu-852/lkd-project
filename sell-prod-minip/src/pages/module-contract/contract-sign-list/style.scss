@@ -1,0 +1,58 @@
+.contract-module {
+  margin-top: 2rpx;
+  .contract-item {
+    @include flex-xy-layout(flex-start);
+    background: $xs-color-f;
+    padding: 30rpx;
+    border-bottom: 2rpx solid #F5F5F5;
+    &:last-child { margin-bottom: 0; }
+    .contract-left {
+      margin-right: 20rpx;
+      .icon-file {
+        @include element-size(74rpx, 63rpx, 0);
+      }
+    }
+    .contract-middle {
+      flex: 1;
+      margin-right: 48rpx;
+      .contract-nameWrap {
+        @include flex-xy-layout(flex-start);
+        margin-bottom: 16rpx;
+        .contract-name {
+          @include font-style(32rpx, 500);
+          @include multi-line-ellipsis;
+          max-width: 380rpx;
+        }
+        .contract-tag {
+          @include flex-xy-layout;
+          @include font-style(24rpx);
+          padding: 0 16rpx;
+          height: 36rpx;
+          margin-left: 16rpx;
+          border-radius: 24rpx;
+          color: #0085FF;
+          border: 2rpx solid #0085FF;
+        }
+      }
+      .contract-time {
+        @include font-style(28rpx);
+        color: $xs-color-9;
+        .contract-user {
+          margin-left: 24rpx;
+        }
+      }
+    }
+    .contract-right {
+      .icon-arrow {
+        @include element-size(30rpx, 30rpx, 0);
+      }
+    }
+  }
+}
+
+.empty-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

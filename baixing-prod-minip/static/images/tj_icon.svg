@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0061ff;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="tj_icon" transform="translate(-268.214 -1397.904)">
+    <circle id="椭圆_466" data-name="椭圆 466" class="cls-1" cx="14" cy="14" r="14" transform="translate(268.214 1397.904)"/>
+    <path id="路径_3585" data-name="路径 3585" class="cls-2" d="M295.988,1417.434H290.53v-5.458a1.393,1.393,0,0,0-2.787,0v5.458h-5.458a1.393,1.393,0,1,0,0,2.787h5.458v5.458a1.393,1.393,0,1,0,2.787,0v-5.458h5.458a1.393,1.393,0,1,0,0-2.787Z" transform="translate(-6.923 -6.923)"/>
+  </g>
+</svg>

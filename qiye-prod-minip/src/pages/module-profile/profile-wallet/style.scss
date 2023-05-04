@@ -1,0 +1,49 @@
+.wallet-money-module {
+  height: 246rpx;
+  padding: 0 40rpx;
+  padding-top: 40rpx;
+  background: $qy-color-f;
+  .wallet-money-title {
+    @include font-style(32rpx);
+  }
+  .wallet-money-wrap {
+    @include flex-xy-layout(space-between);
+    .wallet-money {
+      @include font-style(82rpx, 500);
+    }
+    .wallet-money-eye {
+      @include element-size(48rpx, 48rpx, 0);
+      .money-eye-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.wallet-cell-module {
+  background: $qy-color-f;
+  margin-top: 16rpx;
+  padding: 0 36rpx;
+  .cell-item {
+    @include flex-xy-layout(flex-start);
+    @include font-style(32rpx);
+    height: 90rpx;
+    .cell-left {
+      @include element-size(48rpx, 48rpx, 0);
+      margin-right: 36rpx;
+    }
+    .cell-middle {
+      flex: 1;
+    }
+    .cell-right {
+      @include flex-y-center;
+      .arrow-img {
+        @include element-size(30rpx, 30rpx, 0);
+      }
+      .wallet-subsidy-tag {
+        @include element-size(172rpx, 80rpx, 0);
+      }
+    }
+  }
+}

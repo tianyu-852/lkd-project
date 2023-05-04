@@ -1,0 +1,117 @@
+// .upopup-kefu-box {
+//   position: relative;
+//   .kefu-headerBg {
+//     @include element-size(100%, 205rpx, 0);
+//   }
+//   .kefu-del {
+//     @include element-size(30rpx, 30rpx, 0);
+//     position: absolute;
+//     top: 10rpx;
+//     right: 10rpx;
+//     padding: 20rpx;
+//   }
+//   .kufu-popup-avatar {
+//     @include element-size(160rpx, 160rpx, 0);
+//     position: absolute;
+//     top: 97rpx;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+//   .kefu-content {
+//     padding: 32rpx 24rpx;
+//     padding-top: 60rpx;
+//     padding-bottom: 50rpx;
+//     .tip-desc {
+//       @include font-style(36rpx, 500);
+//       text-align: center;
+//       margin-bottom: 24rpx;
+//     }
+//     .open-btn {
+//       @include element-size(auto, 68rpx, 34rpx);
+//       @include flex-xy-layout;
+//       @include font-style(32rpx, 500);
+//       color: $qy-color-f;
+//       background: #FE5F48;
+//       margin-bottom: 50rpx;
+//     }
+//     .btn-box {
+//       @include flex-xy-layout;
+//       .btn-key {
+//         @include font-style(28rpx);
+//         margin-right: 20rpx;
+//       }
+//       .btn-wrap {
+//         @include flex-xy-layout(flex-start);
+//         .btn-item {
+//           @include flex-xy-layout;
+//           @include element-size(60rpx, 60rpx);
+//           color: $qy-color-f;
+//           background: #00D157;
+//           &:last-child {
+//             margin-left: 20rpx;
+//             background: #0085FF;
+//           }
+//           .btn-icon {
+//             @include element-size(36rpx, 36rpx, 0);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, .4);
+}
+
+.popup-module {
+  @include element-size(512rpx, auto, 20rpx);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: $qy-color-f;
+  .header-img {
+    @include element-size(100%, 330rpx, 0);
+  }
+  .upopup-content-wrap {
+    padding: 0 42rpx;
+    margin-bottom: 70rpx;
+    .open-btn {
+      @include element-size(100%, 80rpx, 12rpx);
+      @include font-style(38rpx, 500);
+      @include flex-xy-layout;
+      color: $qy-color-f;
+      background: #FE5F48;
+      margin-bottom: 40rpx;
+    }
+    .phone-title {
+      @include font-style(28rpx);
+      text-align: center;
+      margin-bottom: 12rpx;
+    }
+    .phone-call {
+      @include flex-xy-layout;
+      @include font-style(28rpx, 500);
+      color: #0085FF;
+      .icon-call {
+        @include element-size(40rpx, 40rpx, 0);
+        margin-right: 12rpx;
+      }
+    }
+  }
+  .icon-del {
+    @include element-size(60rpx, 60rpx, 0);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120rpx;
+  }
+}

@@ -1,0 +1,41 @@
+.invoice-module {
+  padding: 0 24rpx;
+  background: $xs-color-f;
+  padding-top: 30rpx;
+  .invoice-item {
+    padding-bottom: 20rpx;
+    border-bottom: 2rpx solid #F5F5F5;
+    margin-bottom: 20rpx;
+    &:last-child { margin-bottom: 0;}
+    .invoice-top {
+      @include flex-xy-layout(flex-start);
+      margin-bottom: 16rpx;
+      .contract-name {
+        @include multi-line-ellipsis;
+        @include font-style(32rpx, 500);
+        flex: 1;
+      }
+      .status-btn {
+        @include element-size(172rpx, 48rpx, 24rpx);
+        @include flex-xy-layout;
+        @include font-style(28rpx);
+        color: $xs-color-f;
+        background: #0085FF;
+      }
+    }
+    .invoice-middle {
+      @include flex-xy-layout(flex-start);
+      @include font-style(28rpx);
+      color: $xs-color-9;
+      margin-bottom: 16rpx;
+    }
+    .invoice-bottom {
+      @include flex-xy-layout(flex-start);
+      @include font-style(28rpx);
+      color: $xs-color-9;
+      .sell-name {
+        flex: 1;
+      }
+    }
+  }
+}

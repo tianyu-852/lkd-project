@@ -1,0 +1,88 @@
+.drag-btn {
+  @include flex-xy-layout(flex-start);
+  position: fixed;
+  z-index: 999;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background: rgba(0, 133, 255, 0.8);
+  &.drag-transition {
+    transition: left .3s ease, top .3s ease;
+  }
+  .kefu-avatar {
+    @include element-size(100rpx, 100rpx, 0);
+  }
+}
+
+
+.black-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, .4);
+}
+
+.kefu-guide-module {
+  // @include element-size(562rpx, 363rpx, 24rpx);
+  @include element-size(562rpx, auto, 24rpx);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  padding: 32rpx;
+  background: $qy-color-f;
+  .icon-del {
+    @include element-size(44rpx, 44rpx, 0);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -88rpx;
+  }
+  .kefu-wrap {
+    @include flex-xy-layout(flex-start, flex-start);
+    margin-bottom: 23rpx;
+    .kufu-left {
+      @include element-size(70rpx, 70rpx);
+      margin-right: 20rpx;
+    }
+    .kefu-right {
+      flex: 1;
+      .kefu-right-key {
+        @include font-style(28rpx);
+        color: $qy-color-6;
+        margin-bottom: 20rpx;
+      }
+      .kefu-right-value {
+        @include font-style(28rpx);
+        padding: 20rpx;
+        height: 128rpx;
+        line-height: 44rpx;
+        background: #F5F5F5;
+        border-radius: 6rpx 12rpx 12rpx 12rpx;
+      }
+    }
+  }
+  .btn-wrap {
+    @include flex-xy-layout(flex-start);
+    margin-top: 36rpx;
+    .btn-item {
+      @include flex-xy-layout;
+      @include element-size(auto, 68rpx, 34rpx);
+      @include font-style(28rpx, 500);
+      flex: 1;
+      color: $qy-color-f;
+      background: #00D157;
+      &:last-child {
+        margin-left: 29rpx;
+        background: #0085FF;
+      }
+      .btn-icon {
+        @include element-size(36rpx, 36rpx, 0);
+        margin-right: 10rpx;
+      }
+    }
+  }
+}

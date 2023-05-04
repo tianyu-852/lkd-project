@@ -1,0 +1,175 @@
+
+.tool-module {
+  @include flex-xy-layout(space-around);
+  padding: 24rpx 0;
+  background: $xs-color-f;
+  margin-bottom: 16rpx;
+  .menu-item {
+    @include flex-y-layout;
+    .icon-tool {
+      @include element-size(120rpx, 120rpx, 0);
+      @include font-style(28rpx);
+    }
+  }
+}
+
+.factor-module {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 2;
+  background: $xs-color-f;
+  .factor-nav-box {
+    @include flex-xy-layout(space-around);
+    height: 88rpx;
+    .factor-item {
+      @include font-style(28rpx);
+      @include flex-xy-layout;
+      height: 100%;
+      color: $xs-color-6;
+      .icon-triangle {
+        @include element-size(11rpx, 8rpx, 0);
+        margin-left: 16rpx;
+        transition: all .3s;
+        &.icon-triangle-active {
+          transform: rotate(180deg);
+        }
+      }
+      .icon-sort {
+        @include element-size(28rpx, 28rpx, 0);
+        margin-left: 8rpx;
+      }
+      .factor-time-wrap {
+        .time-value-wrap {
+          @include flex-y-layout;
+          @include font-style(22rpx);
+          color: #0085FF;
+          .time-value-divide {
+            margin: -12rpx 0;
+          }
+        }
+      }
+    }
+  }
+  .factor-options-box {
+    @include element-size(100%, 0, 0);
+    position: absolute;
+    top: 88rpx;
+    left: 0;
+    height: 400rpx;
+    border-radius: 0 0 24rpx 24rpx;
+    background: $xs-color-f;
+    overflow: hidden;
+    transition: all .3s;
+    // 状态条件
+    .factor-status-wrap {
+      height: 100%;
+      .factor-status-item {
+        @include flex-xy-layout;
+        @include font-style(28rpx);
+        height: 100rpx;
+        &.factor-status-item-active {
+          color: #0085FF
+        }
+      }
+    }
+    .time-factor-wrap {
+      padding: 0 24rpx;
+      .time-wrap {
+        @include flex-xy-layout(flex-start);
+        .time-item {
+          @include flex-xy-layout;
+          @include font-style(32rpx);
+          height: 100rpx;
+          flex: 1;
+          color: $xs-color-9;
+          border-bottom: 2rpx solid $xs-color-9;
+          &.time-item-active {
+            color: #0085FF;
+            border-color: #0085FF;
+          }
+        }
+        .time-divide {
+          @include font-style(32rpx);
+          margin: 0 20rpx;
+        }
+      }
+      .finish-btn {
+        @include element-size(auto, 80rpx, 40rpx);
+        @include flex-xy-layout;
+        @include font-style(32rpx);
+        color: $xs-color-f;
+        background: #0085FF;
+        margin-top: 20rpx;
+      }
+    }
+  }
+}
+
+.contract-module {
+  position: relative;
+  margin-top: 2rpx;
+  .contract-item {
+    // @include flex-xy-layout(flex-start);
+    background: $xs-color-f;
+    padding: 24rpx;
+    margin-bottom: 2rpx;
+    &:last-child { margin-bottom: 0; }
+    .contract-wrap {
+      @include flex-xy-layout(flex-start);
+      margin-bottom: 16rpx;
+      .contract-left {
+        flex: 1;
+        margin-right: 48rpx;
+        .contract-name {
+          @include font-style(32rpx, 500);
+          @include multi-line-ellipsis;
+        }
+        .contract-time {
+          @include font-style(28rpx);
+          color: $xs-color-9;
+          .contract-user {
+            margin-left: 24rpx;
+          }
+        }
+      }
+      .contract-right {
+        .contract-status {
+          @include flex-xy-layout;
+          @include font-style(28rpx);
+          padding: 0 16rpx;
+          height: 48rpx;
+          border-radius: 24rpx;
+          color: $xs-color-f;
+          background: #0085FF;
+        }
+      }
+    }
+    .client-info-wrap {
+      @include font-style(28rpx);
+      color: $xs-color-9;
+      .xiaoshou {
+        margin-bottom: 6rpx;
+      }
+      .client-name {
+        margin-bottom: 6rpx;
+      }
+    }
+  }
+  // 蒙层
+  .factor-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, .1);
+  }
+  .empty-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,42 @@
+.invoice-module {
+  background: $xs-color-f;
+  padding: 0 24rpx;
+  .invoice-item {
+    @include flex-xy-layout(flex-start);
+    height: 100rpx;
+    .invoice-key {
+      @include font-style(30rpx);
+      min-width: 120rpx;
+      margin-right: 32rpx;
+    }
+    .input {
+      @include font-style(30rpx);
+      flex: 1;
+    }
+    .type-wrap {
+      @include flex-xy-layout(flex-start);
+      .type-item {
+        @include flex-xy-layout;
+        @include font-style(32rpx);
+        @include element-size(120rpx, 60rpx, 16rpx);
+        color: $xs-color-9;
+        background: #F5F5F5;
+        margin-right: 24rpx;
+        &.type-item-active {
+          color: $xs-color-f;
+          background: #0085FF;
+        }
+      }
+    }
+  }
+}
+
+.apply-btn {
+  @include flex-xy-layout;
+  @include font-style(32rpx, 500);
+  @include element-size(auto, 90rpx, 45rpx);
+  margin: 0 30rpx;
+  color: $xs-color-f;
+  background: #0085FF;
+  margin: 50rpx;
+}

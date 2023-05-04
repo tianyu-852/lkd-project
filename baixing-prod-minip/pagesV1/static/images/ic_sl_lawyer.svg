@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0061ff;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="sl_icon" transform="translate(-196 -1662)">
+    <g id="组_5734" data-name="组 5734" transform="translate(200.98 1667)">
+      <path id="路径_3799" data-name="路径 3799" class="cls-1" d="M875.814,1474.106h-34.3a1.8,1.8,0,0,0-1.8,1.8v34.308a1.8,1.8,0,0,0,2.347,1.714l11.789-3.764h21.963a1.8,1.8,0,0,0,1.8-1.8v-30.459A1.8,1.8,0,0,0,875.814,1474.106Zm-1.8,30.459H853.57a1.8,1.8,0,0,0-.548.085l-9.708,3.1v-30.045h30.7Z" transform="translate(-839.715 -1474.106)"/>
+      <path id="路径_3800" data-name="路径 3800" class="cls-1" d="M852.338,1494.581h21.287a1.8,1.8,0,0,0,0-3.6H852.338a1.8,1.8,0,0,0,0,3.6Z" transform="translate(-844.045 -1480.858)"/>
+      <path id="路径_3801" data-name="路径 3801" class="cls-1" d="M852.338,1508.693h9.579a1.8,1.8,0,0,0,0-3.6h-9.579a1.8,1.8,0,1,0,0,3.6Z" transform="translate(-844.045 -1486.504)"/>
+    </g>
+    <rect id="矩形_5445" data-name="矩形 5445" class="cls-2" width="48" height="48" transform="translate(196 1662)"/>
+  </g>
+</svg>

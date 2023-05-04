@@ -1,0 +1,82 @@
+.divide-ver {
+  height: 16rpx;
+  background: #F5F5F5;
+}
+
+.info-module {
+  padding: 0 24rpx;
+  .order-item {
+    @include flex-xy-layout(flex-start);
+    position: relative;
+    height: 90rpx;
+    .order-title {
+      @include font-style(30rpx);
+      color: $xs-color-6;
+      margin-right: 20rpx;
+    }
+    .order-value {
+      @include font-style(30rpx);
+      margin-left: auto;
+    }
+  }
+}
+
+.flow-module {
+  padding: 24rpx;
+  .flow-title {
+    @include font-style(30rpx, 500);
+    margin-bottom: 30rpx;
+  }
+  .flow-timeline {
+    .unode-left {
+      .icon-dot {
+        height: 16rpx;
+        width: 16rpx;
+        border-radius: 50%;
+        background: #D8D8D8;;
+        &.icon-dot-cur {
+          background: #0085FF;
+        }
+        &.icon-dot-fail {
+          background: #FE5F48;
+        }
+      }
+    }
+    .unode-right {
+      margin-bottom: 40rpx;
+      .timeline-title {
+        @include flex-xy-layout(flex-start);
+        .title {
+          @include font-style(30rpx);
+        }
+        .time {
+          @include font-style(26rpx);
+          margin-left: auto;
+          color: $xs-color-9;
+        }
+      }
+    }
+  }
+}
+
+// 底部按钮
+.bottom-btns {
+  @include flex-xy-layout(flex-end);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  background: $xs-color-f;
+  padding: 0 24rpx;
+  padding-top: 20rpx;
+  .btn-item {
+    @include element-size(168rpx, 72rpx, 40rpx);
+    @include flex-xy-layout;
+    @include font-style(28rpx);
+    color: $xs-color-6;
+    border: 2rpx solid #D8D8D8;
+    margin-right: 24rpx;
+    &:last-child { margin-right: 0; }
+  }
+}

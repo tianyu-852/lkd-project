@@ -1,0 +1,291 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "律快答-销售端",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#fff",
+		"navigationStyle": "custom"
+	},
+  "tabBar": {
+    "custom": true,
+    "color": "#999",
+    "selectedColor": "#333",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/index/index",
+        "iconPath": "static/tabbar/index.png",
+        "selectedIconPath": "static/tabbar/index-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabbar/center/center",
+        "text": "法律中心"
+      },
+      {
+        "pagePath": "pages/tabbar/profile/profile",
+        "iconPath": "static/tabbar/profile.png",
+        "selectedIconPath": "static/tabbar/profile-active.png",
+        "text": "商务经理"
+      }
+    ]
+  },
+  "usingComponents": {},
+	"pages": [
+		{
+			"path": "pages/tabbar/index/index",
+			"name": "tabIndex",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true,
+        "navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/tabbar/center/center",
+			"name": "tabCenter",
+			"style": {
+				"navigationBarTitleText": "法律中心"
+			}
+		},
+		{
+			"path": "pages/tabbar/profile/profile",
+			"name": "tabProfile",
+			"style": {
+				"navigationBarTitleText": "更多",
+        "navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"name": "login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "pages/module-contract",
+			"pages": [
+				{
+					"path": "contract-center/contract-center",
+					"name": "contractCenter",
+					"style": {
+						"navigationBarTitleText": "合同管理",
+            "enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "contract-sign-list/contract-sign-list",
+					"name": "contractSignList",
+					"style": {
+						"navigationBarTitleText": "选择合同"
+					}
+				},
+				{
+					"path": "contract-sign-edit/contract-sign-edit",
+					"name": "contractSignEdit",
+					"style": {
+						"navigationBarTitleText": "合同编辑"
+					}
+				},
+				{
+					"path": "contract-sign-submit/contract-sign-submit",
+					"name": "contractSignSubmit",
+					"style": {
+						"navigationBarTitleText": "提交合同",
+						"navigationBarTextStyle": "white"
+					}
+				},
+				{
+					"path": "contract-pay-image/contract-pay-image",
+					"name": "contractPayImage",
+					"style": {
+						"navigationBarTitleText": "上传截图"
+					}
+				},
+				{
+					"path": "contract-finance-check/contract-finance-check",
+					"name": "contractFinanceCheck",
+					"style": {
+						"navigationBarTitleText": "财务审核"
+					}
+				},
+				{
+					"path": "contract-finance-refuse/contract-finance-refuse",
+					"name": "contractFinanceRefuse",
+					"style": {
+						"navigationBarTitleText": "财务审核"
+					}
+				},
+        {
+					"path": "contract-template/contract-template",
+					"name": "contractTemplate",
+					"style": {
+						"navigationBarTitleText": "合同模板"
+					}
+				},
+        {
+					"path": "contract-express-submit/contract-express-submit",
+					"name": "contractExpressSubmit",
+					"style": {
+						"navigationBarTitleText": "快递",
+            "navigationBarTextStyle": "white"
+					}
+				},
+        {
+					"path": "contract-express-detail/contract-express-detail",
+					"name": "contractExpressDetail",
+					"style": {
+						"navigationBarTitleText": "快递详情"
+					}
+				},
+        {
+					"path": "contract-create/contract-create",
+					"name": "contractCreate",
+					"style": {
+						"navigationBarTitleText": "创建合同"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/module-client",
+			"pages": [
+				{
+					"path": "client-center/client-center",
+					"name": "clientCenter",
+					"style": {
+						"navigationBarTitleText": "客户管理",
+            "enablePullDownRefresh": true
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/module-team",
+			"pages": [
+				{
+					"path": "team-center/team-center",
+					"name": "teamCenter",
+					"style": {
+						"navigationBarTitleText": "我的团队"
+					}
+				}
+			]
+		},
+    {
+			"root": "pages/module-cause",
+			"pages": [
+				{
+					"path": "cause-create/cause-create",
+					"name": "causeCreate",
+					"style": {
+						"navigationBarTitleText": "发布订单",
+            "enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "cause-file-list/cause-file-list",
+					"name": "causeFileList",
+					"style": {
+						"navigationBarTitleText": "文件列表",
+            "enablePullDownRefresh": true
+					}
+				}
+			]
+		},
+    // 注：该价格分享转移至企业律云
+    // {
+		// 	"root": "pages/module-price",
+		// 	"pages": [
+		// 		{
+		// 			"path": "price-center/price-center",
+		// 			"name": "priceCenter",
+		// 			"style": {
+		// 				"navigationBarTitleText": "价格分享",
+    //         "usingComponents": {
+    //           "painter" : "/wxcomponents/painter/painter"
+    //         }
+		// 			}
+		// 		},
+		// 		{
+		// 			"path": "price-diff/price-diff",
+		// 			"name": "priceDiff",
+		// 			"style": {
+		// 				"navigationBarTitleText": "对比图片"
+		// 			}
+		// 		}
+		// 	]
+		// },
+    {
+			"root": "pages/module-order",
+			"pages": [
+				{
+					"path": "order-center/order-center",
+					"name": "orderCenter",
+					"style": {
+						"navigationBarTitleText": "服务中心",
+            "usingComponents": {
+              "painter" : "/wxcomponents/painter/painter"
+            }
+					}
+				},
+				{
+					"path": "order-detail/order-detail",
+					"name": "orderDetail",
+					"style": {
+						"navigationBarTitleText": "订单详情",
+            "navigationBarTextStyle": "white"
+					}
+				}
+			]
+		},
+    {
+			"root": "pages/module-invoice",
+			"pages": [
+				{
+					"path": "invoice-center/invoice-center",
+					"name": "invoiceCenter",
+					"style": {
+						"navigationBarTitleText": "发票中心"
+					}
+				},
+				{
+					"path": "invoice-create/invoice-create",
+					"name": "invoiceCreate",
+					"style": {
+						"navigationBarTitleText": "申请发票"
+					}
+				}
+			]
+		},
+    {
+      "root": "pages/module-common",
+      "pages": [
+        {
+          "path": "webview-word/webview-word",
+          "name": "webviewWord",
+          "style": {
+            "navigationStyle": "default",
+            "navigationBarTitleText": ""
+          }
+        },
+        {
+          "path": "activity-list/activity-list",
+          "name": "activityList",
+          "style": {
+            "navigationBarTitleText": "官方活动"
+          }
+        }
+      ]
+    }
+	]
+}

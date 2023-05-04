@@ -1,0 +1,166 @@
+
+.header-module {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('https://lvkuaidaimages.oss-cn-hangzhou.aliyuncs.com/lkd-file/202333-1677834307280-kfNY8Y.png');
+  height: 363rpx;
+  margin-bottom: -24rpx;
+  .content-wrap {
+    @include flex-xy-layout(flex-start);
+    @include font-style(38rpx, 500);
+    position: absolute;
+    left: 32rpx;
+    bottom: 60rpx;
+    color: #fff;
+    .usre-avatar {
+      @include element-size(100rpx, 100rpx, 14rpx);
+      margin-right: 20rpx;
+    }
+  }
+}
+
+.content-module {
+  position: relative;
+  border-radius: 24rpx 24rpx 0 0;
+  background: #fff;
+  min-height: 60rpx;
+  padding: 44rpx 32rpx;
+  padding-bottom: 0;
+  .detail-item {
+    @include flex-xy-layout(flex-start, flex-start);
+    margin-bottom: 48rpx;
+    &:last-child { margin-bottom: 40rpx; }
+    .detail-left {
+      @include font-style(30rpx);
+      color: $bx-color-6;
+      min-width: 120rpx;
+      margin-right: 32rpx;
+    }
+    .detail-right {
+      @include font-style(30rpx, 500);
+      flex: 1;
+      .detail-img-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24rpx;
+        margin-right: 66rpx;
+        .detail-img {
+          @include element-size(auto, 140rpx, 14rpx);
+        }
+      }
+      .detail-file-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24rpx;
+        margin-right: 66rpx;
+        .file-item {
+          @include element-size(100%, 140rpx, 0);
+          position: relative;
+          .file-img {
+            @include element-size(100%, 100%, 0);
+          }
+          .file-name {
+            @include multi-line-ellipsis(2);
+            @include font-style(22rpx);
+            position: absolute;
+            top: 50%;
+            left: 6rpx;
+            right: 6rpx;
+            z-index: 1;
+            transform: translateY(-50%);
+            color: $bx-color-f;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.divide-line {
+  @include element-size(100%, 16rpx, 0);
+  background: #F5F5F5;
+}
+
+.lawyer-module {
+  padding: 32rpx;
+  padding-bottom: 140rpx;
+  .lawyer-title {
+    @include font-style(32rpx, 500);
+    margin-bottom: 32rpx;
+  }
+  .lawyer-item {
+    margin-bottom: 40rpx;
+    .lawyer-info {
+      @include flex-xy-layout(flex-start);
+      .lawyer-avatar {
+        @include element-size(100rpx, 100rpx);
+        margin-right: 20rpx;
+      }
+      .lawyer-baseinfo {
+        .lawyer-nickname-wrap {
+          @include flex-xy-layout(flex-start);
+          .lawyer-nickname {
+            @include font-style(30rpx, 500);
+          }
+          .lawyer-year {
+            @include flex-xy-layout;
+            @include font-style(20rpx, 500);
+            padding: 0 12rpx;
+            height: 28rpx;
+            border-radius: 14rpx;
+            color: #0085FF;
+            background: rgba(0,133,255,.1);
+            border: 2rpx solid #0085FF;
+            margin-left: 20rpx;
+          }
+        }
+        .lawyer-skill-wrap {
+          @include font-style(24rpx);
+          color: #999;
+          line-height: 32rpx;
+          .lawyer-skill-item {
+            margin-right: 6rpx;
+          }
+        }
+      }
+      .lawyer-price {
+        @include font-style(36rpx, 500);
+        color: #FF4E3A;
+        margin-left: auto;
+      }
+    }
+    .lawyer-content {
+      @include font-style(28rpx, 500);
+      padding: 20rpx 32rpx;
+      margin-top: 20rpx;
+      color: #333;
+      background: #F5F5F5;
+      border-radius: 16rpx;
+    }
+  }
+}
+
+.bottom-btns {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background: $bx-color-f;
+  padding-top: 20rpx;
+  .pay-btn {
+    @include element-size(auto, 80rpx, 16rpx);
+    @include flex-xy-layout;
+    @include font-style(30rpx);
+    color: $bx-color-f;
+    background: #0085FF;
+    margin: 0 32rpx;
+    .icon-weituo {
+      @include element-size(48rpx, 48rpx, 0);
+      margin-right: 8rpx;
+    }
+  }
+}

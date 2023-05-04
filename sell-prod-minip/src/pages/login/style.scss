@@ -1,0 +1,38 @@
+.login-module {
+  margin: 0 58rpx;
+  margin-top: 255rpx;
+  .title {
+    @include font-style(50rpx, 500);
+    line-height: 70rpx;
+  }
+  .input-wrap {
+    margin-top: 100rpx;
+    .input-item {
+      @include flex-xy-layout(flex-start);
+      @include element-size(100%, 100rpx, 50rpx);
+      padding: 0 40rpx;
+      background: #F5F5F5;
+      margin-bottom: 40rpx;
+      &:last-child { margin-bottom: 0; }
+      .input {
+        @include font-style(32rpx);
+        flex: 1;
+      }
+      .code-btn {
+        @include font-style(32rpx);
+        color: #0085FF;
+        &.code-btn-disable {
+          color: $xs-color-9;
+        }
+      }
+    }
+  }
+  .login-btn {
+    @include element-size(100%, 100rpx, 50rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    color: $xs-color-f;
+    background: #0085FF;
+    margin-top: 60rpx;
+  }
+}

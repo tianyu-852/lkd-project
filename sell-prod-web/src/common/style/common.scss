@@ -1,0 +1,57 @@
+$xs-color-3: #333;
+$xs-color-6: #666;
+$xs-color-9: #999;
+$xs-color-f: #fff;
+
+ // flex xy 轴布局
+ @mixin flex-xy-layout($xLayout: center, $yLayout: center) {
+   display: flex;
+   justify-content: $xLayout;
+   align-items: $yLayout;
+ }
+
+ // flex y 轴布局
+ @mixin flex-y-layout($yLayout: center, $xLayout: center) {
+   display: flex;
+   flex-direction: column;
+   align-items: $yLayout;
+   justify-content: $xLayout;
+ }
+
+ // flex y 轴居中
+ @mixin flex-y-center {
+   display: flex;
+   align-items: center;
+ }
+
+ // 元素宽高 + 圆角
+ @mixin element-size($width: 100%, $height: 100%, $borderRadius: 50%) {
+   width: $width;
+   height: $height;
+   border-radius: $borderRadius;
+ }
+
+ // 字体大小 + 粗细
+ @mixin font-style($size: 20px, $weight: normal) {
+   font-size: $size;
+   font-weight: $weight;
+ }
+
+ // 多行文本溢出显示省略号 默认 1 行
+ @mixin multi-line-ellipsis($line: 1) {
+   white-space: normal;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: $line;
+   /* ! autoprefixer: off */
+   -webkit-box-orient: vertical;
+ }
+
+ // fixed 底部左右居中
+ @mixin fixed-bottom($bottom: 50px) {
+   position: fixed;
+   left: 50%;
+   bottom: $bottom;
+   transform: translateX(-50%);
+ }

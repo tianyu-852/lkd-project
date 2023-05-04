@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="300" viewBox="0 0 160 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        opacity: 0.25;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="矩形_5705" data-name="矩形 5705" class="cls-1" width="160" height="300" transform="translate(590 691)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1.309" x2="0.571" y2="0.04" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#3e85ff" stop-opacity="0.522"/>
+    </linearGradient>
+  </defs>
+  <g id="bg1_icon" class="cls-2" transform="translate(-590 -691)">
+    <path id="bg1_icon-2" data-name="bg1_icon" class="cls-3" d="M5105,5301a151.083,151.083,0,0,1-30.229-3.048,149.125,149.125,0,0,1-53.636-22.57,150.447,150.447,0,0,1-54.347-66,149.212,149.212,0,0,1-8.74-28.157,151.439,151.439,0,0,1,0-60.459,149.147,149.147,0,0,1,22.571-53.637,150.438,150.438,0,0,1,66-54.346,149.236,149.236,0,0,1,28.157-8.74,151.465,151.465,0,0,1,60.46,0,149.2,149.2,0,0,1,53.636,22.57,150.44,150.44,0,0,1,54.345,66,149.161,149.161,0,0,1,8.74,28.158,151.463,151.463,0,0,1,0,60.459,149.188,149.188,0,0,1-22.57,53.637,150.44,150.44,0,0,1-66,54.347,149.2,149.2,0,0,1-28.156,8.739A151.1,151.1,0,0,1,5105,5301Zm0-259.356A109.355,109.355,0,1,0,5214.356,5151,109.479,109.479,0,0,0,5105,5041.645Z" transform="translate(-4364 -4310)"/>
+  </g>
+</svg>

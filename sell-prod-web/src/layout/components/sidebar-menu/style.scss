@@ -1,0 +1,55 @@
+$menuBg:#304156;
+$subMenuBg:#1f2d3d;
+$menuHover:#001528;
+$menuActive:#409eff;
+
+.sidebar-menu {
+  height: 100%;
+  background: $menuBg;
+  overflow: hidden !important;
+  .logo-section {
+    position: relative;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    .img {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+    }
+    .name {
+      color: #fff;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+  }
+  .el-menu-vertical:not(.el-menu--collapse) {
+    width: 210px;
+  }
+  .el-menu-vertical {
+    height: 100%;
+    border: none;
+    .el-submenu {
+      .el-submenu>::v-deep.el-submenu__title {
+        background-color: $subMenuBg !important;
+        &:hover {
+          background-color: $menuHover !important;
+        }
+      }
+      .el-menu-item {
+        background: $subMenuBg !important;
+        &:hover {
+          background-color: $menuHover !important;
+        }
+        &.is-active {
+          background-color: $menuActive !important;
+        }
+      }
+    }
+    .el-menu-item.is-active {
+      background-color: $menuActive !important;
+    }
+  }
+}
+

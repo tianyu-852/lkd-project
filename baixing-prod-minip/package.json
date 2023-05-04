@@ -1,0 +1,21 @@
+{
+  "name": "baixing-prod-minip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@e.coding.net:lawyerkd/lkd-minip/baixing-prod-minip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.5",
+    "js-base64": "^3.7.2",
+    "json-bigint": "^1.0.0",
+    "jweixin-module": "^1.6.0"
+  }
+}

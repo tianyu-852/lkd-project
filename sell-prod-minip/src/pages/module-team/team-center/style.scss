@@ -1,0 +1,375 @@
+.hor-divide {
+  height: 16rpx;
+  background: #F5F5F5;
+}
+
+.data-module {
+  padding: 0 24rpx;
+  margin-top: 30rpx;
+  .title-wrap {
+    @include flex-xy-layout(space-between);
+    @include font-style(32rpx, 500);
+    margin-bottom: 20rpx;
+    .data-filter-nav {
+      @include flex-xy-layout;
+      @include font-style(28rpx);
+      position: relative;
+      height: 44rpx;
+      padding: 0 24rpx;
+      background: #F6FBFF;
+      color: #0085FF;
+      border-radius: 12rpx;
+      .icon-arrow-bottom {
+        @include element-size(14rpx, 8rpx, 0);
+        margin-left: 8rpx;
+      }
+      .time-filter-wrap {
+        position: absolute;
+        width: 200rpx;
+        top: calc(100% + 30rpx);
+        right: 0;
+        background: $xs-color-f;
+        box-shadow: 0 0 14rpx 0 rgba(0, 0, 0, .1);
+        border-radius: 10rpx;
+        .time-filter-item {
+          @include flex-xy-layout;
+          @include font-style(28rpx);
+          height: 80rpx;
+          color: $xs-color-3;
+          border-bottom: 2rpx solid #EDEDED;
+          &.time-filter-item-active {
+            color: #0085FF;
+          }
+        }
+      }
+    }
+  }
+  .data-wrap {
+    margin-bottom: 20rpx;
+    .data-item-line {
+      @include flex-xy-layout(flex-start);
+      height: 108rpx;
+      .data-item {
+        @include flex-y-layout;
+        flex: 1;
+        .data-num {
+          @include font-style(32rpx, 500);
+        }
+        .data-title {
+          @include font-style(26rpx);
+          color: $xs-color-6;
+        }
+      }
+      .ver-line {
+        @include element-size(2rpx, 40rpx, 0);
+        background: #D8D8D8;
+      }
+    }
+  }
+}
+
+.team-module {
+  padding: 24rpx;
+  .title-wrap {
+    @include flex-xy-layout(space-between);
+    @include font-style(32rpx, 500);
+    margin-bottom: 10rpx;
+    .dot-wrap {
+      @include flex-xy-layout;
+      position: relative;
+      z-index: 1000;
+      .icon-dot {
+        @include element-size(48rpx, 48rpx, 0);
+      }
+      .action-wrap {
+        position: absolute;
+        width: 200rpx;
+        top: 100%;
+        right: 0;
+        background: $xs-color-f;
+        box-shadow: 0 0 14rpx 0 rgba(0, 0, 0, .1);
+        border-radius: 10rpx;
+        .action-item {
+          @include flex-xy-layout;
+          @include font-style(28rpx);
+          height: 80rpx;
+          border-bottom: 2rpx solid #EDEDED;
+        }
+      }
+    }
+  }
+  .inheritor-wrap {
+    @include flex-xy-layout(flex-start);
+    @include element-size(auto, 90rpx, 16rpx);
+    @include font-style(30rpx);
+    background: #F5F5F5;
+    padding: 0 24rpx;
+    margin-bottom: 20rpx;
+    .inheritor-user {
+      margin-left: auto;
+    }
+    .icon-arrow {
+      @include element-size(30rpx, 30rpx, 0);
+      margin-left: 6rpx;
+    }
+  }
+  .team-wrap {
+    .team-item {
+      border-bottom: 2rpx solid #F5F5F5;
+      &:last-child { border-bottom: none; }
+      .team-user {
+        @include flex-xy-layout(flex-start);
+        min-height: 120rpx;
+        .icon-gou {
+          @include element-size(36rpx, 36rpx, 0);
+          margin-right: 24rpx;
+        }
+        .user-info-wrap {
+          flex: 1;
+          .user-info-box {
+            @include flex-xy-layout(flex-start);
+            .user-avatar {
+              @include element-size(80rpx, 80rpx, 10rpx);
+              margin-right: 20rpx;
+            }
+            .user-info {
+              .user-name {
+                @include flex-xy-layout(flex-start);
+                @include font-style(30rpx);
+                .user-tag {
+                  @include flex-xy-layout;
+                  @include element-size(96rpx, 32rpx, 8rpx);
+                  @include font-style(24rpx);
+                  color: $xs-color-f;
+                  background: #00D000;
+                  margin-left: 8rpx;
+                }
+              }
+              .user-phone {
+                @include font-style(26rpx);
+                color: $xs-color-9;
+              }
+            }
+          }
+          .selected-orderNum {
+            padding: 20rpx 0;
+            @include font-style(28rpx);
+          }
+        }
+        .icon-arrow {
+          @include element-size(30rpx, 30rpx, 0);
+          margin-left: auto;
+          transition: all .3s;
+          &.icon-arrow-active {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .team-user-data {
+        .order-wrap {
+          margin-left: 60rpx;
+          height: 450rpx;
+          overflow-y: auto;
+          .order-item {
+            @include flex-xy-layout(flex-start);
+            height: 80rpx;
+            border-bottom: 2rpx solid #F5F5F5;
+            &:last-child { border-bottom: none; }
+            .icon-gou {
+              @include element-size(36rpx, 36rpx, 0);
+              margin-right: 24rpx;
+            }
+            .order-name {
+              @include multi-line-ellipsis;
+              @include font-style(28rpx);
+              flex: 1;
+              color: $xs-color-9;
+            }
+            .order-status {
+              @include font-style(28rpx);
+              color: $xs-color-9;
+              margin-left: 6rpx;
+            }
+          }
+        }
+        .data-wrap {
+          background: #FAFAFA;
+          border-radius: 12rpx 0 0 12rpx;
+          .data-item-line {
+            @include flex-xy-layout(flex-start);
+            height: 108rpx;
+            .data-item {
+              @include flex-y-layout;
+              flex: 1;
+              .data-num {
+                @include font-style(32rpx, 500);
+              }
+              .data-title {
+                @include font-style(26rpx);
+                color: $xs-color-6;
+              }
+            }
+            .ver-line {
+              @include element-size(2rpx, 40rpx, 0);
+              background: #D8D8D8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 底部按钮
+.bottom-btns {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  background: $xs-color-f;
+  .tip-wrap {
+    @include flex-xy-layout(flex-start);
+    @include font-style(28rpx);
+    padding: 0 24rpx;
+    height: 70rpx;
+    background: #F5F5F5;
+    .del-tip-wrap {
+      @include multi-line-ellipsis;
+      flex: 1;
+    }
+  }
+  .btn-wrap {
+    padding: 0 24rpx;
+    padding-top: 20rpx;
+    @include flex-xy-layout(flex-start);
+    .cancel-btn {
+      @include element-size(200rpx, 90rpx, 12rpx);
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      border: 2rpx solid #EDEDED;
+      margin-right: 24rpx;
+    }
+    .confirm-btn {
+      @include element-size(auto, 90rpx, 12rpx);
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      flex: 1;
+      color: $xs-color-f;
+      background: #0085FF;
+    }
+  }
+}
+
+// 转移管理员 modal
+.umodal-transfer-box {
+  @include flex-y-layout;
+  @include font-style(32rpx);
+  padding: 32rpx;
+}
+
+// 删除团队成员 modal
+.umodal-del-box {
+  @include flex-y-layout;
+  @include font-style(32rpx);
+  padding: 32rpx;
+  .del-user-wrap {
+    @include multi-line-ellipsis(2);
+  }
+}
+
+// 继承订单 modal
+.umodal-inherit-box {
+  @include flex-y-layout;
+  padding: 30rpx;
+}
+
+// 继承人 popup
+.upopup-inheritor-box {
+  padding: 30rpx;
+  .header-title {
+    @include flex-xy-layout;
+    @include font-style(32rpx, 500);
+    height: 66rpx;
+  }
+  .inheritor-wrap {
+    height: 500rpx;
+    overflow-y: auto;
+    .inheritor-item {
+      @include flex-xy-layout(flex-start);
+      height: 120rpx;
+      border-bottom: 2rpx solid #F5F5F5;
+      &:last-child { border-bottom: none; }
+      .user-avatar {
+        @include element-size(80rpx, 80rpx, 10rpx);
+        margin-right: 20rpx;
+      }
+      .user-info {
+        .user-name {
+          @include flex-xy-layout(flex-start);
+          @include font-style(30rpx);
+          .user-tag {
+            @include flex-xy-layout;
+            @include element-size(96rpx, 32rpx, 8rpx);
+            @include font-style(24rpx);
+            color: $xs-color-f;
+            background: #00D000;
+            margin-left: 8rpx;
+          }
+        }
+        .user-phone {
+          @include font-style(26rpx);
+          color: $xs-color-9;
+        }
+      }
+      .icon-gou {
+        @include element-size(36rpx, 36rpx, 0);
+        margin-left: auto;
+      }
+    }
+  }
+  .set-inheritor-btn {
+    @include element-size(auto, 90rpx, 12rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx, 500);
+    color: $xs-color-f;
+    background: #0085FF;
+    margin-top: 20rpx;
+  }
+}
+
+// 添加成员 modal
+.umodal-plus-box {
+  padding: 32rpx;
+  .input-item {
+    @include flex-xy-layout(flex-start);
+    @include element-size(100%, 72rpx, 4rpx);
+    padding: 0 28rpx;
+    margin-bottom: 28rpx;
+    border: 2rpx solid #EDEDED;
+    .input {
+      @include font-style(28rpx);
+      flex: 1;
+    }
+    .code-btn {
+      @include font-style(28rpx);
+      color: #0085FF;
+      &.code-btn-disable {
+        color: $xs-color-9;
+      }
+    }
+  }
+  .radio-item {
+    @include flex-xy-layout(flex-start);
+  }
+}
+
+.mask-black {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background:rgba(0, 0, 0, .2);
+}

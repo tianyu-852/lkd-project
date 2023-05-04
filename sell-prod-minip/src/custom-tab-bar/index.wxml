@@ -1,0 +1,14 @@
+<view class="tab-bar" style="padding-bottom: {{ safeAreaHeight }}px">
+  <view class="tab-bar-wrap">
+    <block wx:for="{{ tabbarList }}" wx:key="index">
+      <view wx:if="{{ item.isSpecial }}" class="tab-bar-item" data-path="{{ item.pagePath }}" data-click="{{ false }}" data-index="{{ index }}" bindtap="switchTab">
+        <image class="special-image" mode="aspectFit" src="{{ selected === index ? item.selectedIconPath : item.iconPath }}"></image>
+      </view>
+
+      <view wx:else class="tab-bar-item" data-path="{{ item.pagePath }}" data-click="{{ true }}" data-index="{{ index }}" bindtap="switchTab">
+        <image class="tab-bar-icon" mode="aspectFit" src="{{ selected === index ? item.selectedIconPath : item.iconPath }}"></image>
+        <view class="tab-text" style="color: {{ selected === index ? selectedColor : color }}">{{ item.text }}</view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,360 @@
+.divider-hor {
+  @include element-size(auto, 16rpx, 0);
+  background: #F5F5F5;
+}
+
+.header-module {
+  .header-bg {
+    @include element-size(auto, 332rpx, 0);
+  }
+  .header-info-wrap {
+    position: relative;
+    margin-top: -24rpx;
+    padding: 30rpx 24rpx;
+    padding-top: 114rpx;
+    border-radius: 24rpx 24rpx 0 0;
+    background: $qy-color-f;
+    .lawyer-avatar {
+      @include element-size(160rpx, 160rpx, 0);
+      position: absolute;
+      top: 0;
+      left: 24rpx;
+      transform: translateY(-50%);
+    }
+    .share-btn {
+      @include element-size(148rpx, 44rpx, 22rpx);
+      @include flex-xy-layout;
+      @include font-style(28rpx, 500);
+      position: absolute;
+      top: 38rpx;
+      right: 24rpx;
+      color: #0085FF;
+      border: 2rpx solid #0085FF;
+    }
+    .lawyer-name-wrap {
+      @include flex-xy-layout(flex-start);
+      @include font-style(40rpx, 500);
+      margin-bottom: 30rpx;
+      .badge-img {
+        @include element-size(34rpx, 34rpx, 0);
+        margin-left: 16rpx;
+      }
+      .work-year {
+        @include font-style(32rpx, 500);
+        margin-left: 16rpx;
+      }
+    }
+    .company-name {
+      @include font-style(32rpx);
+      color: $qy-color-6;
+      margin-bottom: 24rpx;
+    }
+    .serve-data-wrap {
+      @include font-style(30rpx);
+      color: $qy-color-9;
+      margin-bottom: 24rpx;
+      .data-num {
+        @include font-style(30rpx, 500);
+        color: $qy-color-3;
+        margin-right: 7rpx;
+      }
+    }
+    // 信息认证
+    .info-prove-wrap {
+      @include flex-xy-layout(flex-start);
+      margin-bottom: 30rpx;
+      .prove-item {
+        @include element-size(148rpx, 36rpx, 0);
+        margin-right: 36rpx;
+        &:last-child { margin-right: 0; }
+      }
+    }
+    .safe-prove-wrap {
+      @include flex-xy-layout(flex-start);
+      color: $qy-color-9;
+      .safe-prove-text {
+        @include font-style(28rpx);
+      }
+      .ver-divider {
+        @include element-size(2rpx, 28rpx, 0);
+        background: $qy-color-9;
+      }
+      .safe-prove-img {
+        @include element-size(30rpx, 30rpx, 0);
+        margin: 0 20rpx;
+      }
+    }
+  }
+}
+
+.content-module {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 24rpx 24rpx 0 0;
+  .base-wrap {
+    padding: 32rpx 24rpx;
+    padding-bottom: 30rpx;
+    .title-wrap {
+      @include flex-xy-layout(space-between);
+      @include font-style(36rpx, 500);
+      margin-bottom: 24rpx;
+      .title-right {
+        @include flex-xy-layout;
+        @include font-style(24rpx);
+        color: $qy-color-9;
+        padding-left: 20rpx;
+        .arrow-left-img {
+          @include element-size(20rpx, 20rpx, 0);
+        }
+      }
+    }
+    // 档案信息
+    &.archives-wrap {
+      .archives-item-wrap {
+        .archives-item {
+          @include flex-xy-layout(flex-start, flex-start);
+          margin-bottom: 40rpx;
+          &:last-child { margin-bottom: 0; }
+          .archives-left {
+            @include font-style(30rpx, 500);
+            min-width: 140rpx;
+          }
+          .archives-right {
+            @include font-style(30rpx);
+            line-height: 42rpx;
+            flex: 1;
+            width: 0;
+            color: $qy-color-6;
+            &.tag-right-wrap {
+              @include flex-xy-layout(flex-start);
+              flex-wrap: wrap;
+              .tag-item {
+                @include flex-xy-layout;
+                @include font-style(28rpx, 500);
+                color: #0085FF;
+                height: 52rpx;
+                padding: 0 20rpx;
+                background: #EEF7FF;
+                margin-right: 16rpx;
+                border-radius: 8rpx;
+                margin-bottom: 20rpx;
+                &:last-child { margin-right: 0; }
+              }
+            }
+            &.loc-right-wrap {
+              @include flex-xy-layout(flex-start);
+              .locnav-img {
+                @include element-size(30rpx, 30rpx, 0);
+                margin-left: 8rpx;
+              }
+            }
+            &.intro-right-wrap {
+              line-height: 42rpx;
+              .intro-wrap {
+                .more-btn {
+                  color: #0085FF;
+                  padding-left: 10rpx;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // 荣誉墙
+    &.honor-wrap {
+      padding: 32rpx 0;
+      .title-wrap {
+        padding: 0 24rpx;
+      }
+      .scroll-x.honor-scroll-x {
+        .scroll-x-item {
+          margin-right: 16rpx;
+          &:first-child { margin-left: 24rpx; }
+          &:last-child { margin-right: 24rpx; }
+          .honor-item-wrap {
+            width: 320rpx;
+          }
+        }
+      }
+    }
+    // 律师动态
+    &.dynamic-wrap {
+      .dynamic-item-list {
+        .dynamic-item {
+          padding-bottom: 32rpx;
+          margin-bottom: 32rpx;
+          border-bottom: 2rpx solid #EDEDED;
+          &:last-child { margin-bottom: 0; padding-bottom: 0; border: none; }
+          .dynamic-top {
+            @include flex-xy-layout(flex-start, flex-start);
+            .dynamic-top-left {
+              @include element-size(60rpx, 60rpx, 10rpx);
+              margin-right: 24rpx;
+            }
+            .dynamic-top-right {
+              flex: 1;
+              .dynamic-lawyer {
+                @include flex-xy-layout(flex-start);
+                margin-bottom: 20rpx;
+                .lawyer-name {
+                  @include font-style(30rpx, 500);
+                }
+                .dynamic-time {
+                  @include font-style(30rpx);
+                  color: $qy-color-9;
+                  margin-left: auto;
+                }
+              }
+              .dynamic-content {
+                @include font-style(30rpx);
+                line-height: 48rpx;
+                margin-bottom: 24rpx;
+              }
+            }
+          }
+          .dynamic-bottom {
+            @include flex-xy-layout(flex-start);
+            height: 88rpx;
+            padding: 0 24rpx;
+            border-radius: 16rpx;
+            background: #F5F5F5;
+            .dynamic-tag {
+              @include flex-xy-layout;
+              @include element-size(80rpx, 44rpx, 8rpx);
+              @include font-style(28rpx);
+              color: $qy-color-f;
+              background: #0085FF;
+              margin-right: 14rpx;
+            }
+            .dynamic-raw {
+              @include font-style(32rpx, 500);
+              @include multi-line-ellipsis;
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+    // 全部好评
+    &.comment-wrap {
+      .comment-item-wrap {
+        .comment-item {
+          @include flex-xy-layout(flex-start, flex-start);
+          padding-bottom: 30rpx;
+          margin-bottom: 30rpx;
+          border-bottom: 2rpx solid #EDEDED;
+          &:last-child { margin-bottom: 0; padding-bottom: 0; border: none; }
+          .comment-left {
+            margin-right: 16rpx;
+            .user-avatar {
+              @include element-size(60rpx, 60rpx, 10rpx);
+            }
+          }
+          .comment-right {
+            flex: 1;
+            .comment-header {
+              @include flex-xy-layout(space-between, flex-start);
+              margin-bottom: 10rpx;
+              .header-left {
+                @include font-style(30rpx);
+                color: $qy-color-6;
+              }
+              .header-right {
+                @include font-style(30rpx);
+                color: $qy-color-9;
+              }
+            }
+            .comment-content {
+              @include font-style(30rpx);
+              line-height: 44rpx;
+            }
+            .comment-tag-wrap {
+              @include flex-xy-layout(flex-start);
+              flex-wrap: wrap;
+              margin-top: 20rpx;
+              .comment-tag-item {
+                @include flex-xy-layout;
+                @include font-style(24rpx);
+                color: $qy-color-6;
+                height: 40rpx;
+                padding: 0 12rpx;
+                background: #F5F5F5;
+                margin-right: 16rpx;
+                margin-bottom: 16rpx;
+                border-radius: 4rpx;
+                &:last-child { margin-right: 0; }
+              }
+            }
+            .comment-type {
+              @include font-style(24rpx);
+              color: #0085FF;
+              margin-top: 30rpx;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 按钮组
+.bottom-btns {
+  @include flex-xy-layout(flex-start);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 24rpx;
+  padding-top: 20rpx;
+  background: $qy-color-f;
+  .bottom-btn {
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    flex: 1;
+    color: $qy-color-f;
+    background: linear-gradient(90deg, #48A8FF 0%, #0085FF 100%, #0085FF 100%);
+    height: 80rpx;
+    border-radius: 40rpx;
+    &:last-child {
+      margin-left: 24rpx;
+      background: linear-gradient(90deg, #FE6D53 0%, #F7402C 100%, #F7402C 100%);
+    }
+    .icon-img {
+      @include element-size(48rpx, 48rpx, 0);
+      margin-right: 16rpx;
+    }
+  }
+}
+
+.upopup-safeprove-box {
+  padding: 40rpx 52rpx;
+  .safeprove-header {
+    @include font-style(36rpx, 500);
+    text-align: center;
+    margin-bottom: 18rpx;
+  }
+  .safeprove-item {
+    .safeprove-item-title {
+      @include flex-xy-layout(flex-start);
+      @include font-style(32rpx, 500);
+      margin-bottom: 18rpx;
+      .icon-safeprove {
+        @include element-size(34rpx, 34rpx, 0);
+        margin-right: 8rpx;
+      }
+    }
+    .safeprove-item-content {
+      @include font-style(28rpx);
+      color: $qy-color-9;
+    }
+  }
+  .know-btn {
+    @include flex-xy-layout;
+    @include element-size(auto, 80rpx, 40rpx);
+    @include font-style(32rpx, 500);
+    color: $qy-color-f;
+    background: linear-gradient(90deg, #FE6D53 0%, #F7402C 100%, #F7402C 100%);
+    margin-top: 72rpx;
+  }
+}

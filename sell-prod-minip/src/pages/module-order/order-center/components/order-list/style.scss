@@ -1,0 +1,243 @@
+.header-module {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #F5F5F5;
+  padding: 0 24rpx;
+  z-index: 2;
+  .factor-nav-wrap {
+    @include flex-xy-layout(flex-start);
+    height: 88rpx;
+    .factor-item {
+      @include font-style(28rpx);
+      @include flex-xy-layout;
+      height: 100%;
+      color: $xs-color-6;
+      .icon-triangle {
+        @include element-size(11rpx, 8rpx, 0);
+        margin-left: 16rpx;
+        transition: all .3s;
+        &.icon-triangle-active {
+          transform: rotate(180deg);
+        }
+      }
+      .icon-sort {
+        @include element-size(28rpx, 28rpx, 0);
+        margin-left: 8rpx;
+      }
+    }
+  }
+  .factor-filter-popup {
+    @include element-size(100%, auto, 0);
+    position: absolute;
+    top: 88rpx;
+    left: 0;
+    border-radius: 0 0 24rpx 24rpx;
+    background: #F5F5F5;
+    // 套餐类型
+    .price-factor-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 24rpx;
+      padding: 24rpx;
+      .price-factor-item {
+        @include flex-y-layout;
+        flex: 1;
+        height: 100rpx;
+        border-radius: 20rpx;
+        background: #EDEDED;
+        &.price-factor-item-active {
+          color: $xs-color-f;
+          background: #0085FF;
+          .price-title {
+            color: $xs-color-f;
+          }
+        }
+        .price-title {
+          @include font-style(24rpx);
+          color: $xs-color-6;
+        }
+        .price {
+          @include font-style(28rpx);
+        }
+      }
+    }
+    // 支付状态
+    .pay-factor-wrap {
+      .pay-factor-item {
+        @include flex-xy-layout(flex-start);
+        @include font-style(28rpx);
+        height: 80rpx;
+        &.pay-factor-item-active {
+          @include font-style(28rpx);
+          color: #0085FF;
+          .pay-status-name {
+            padding-left: 24rpx;
+            border-left-color: #0085FF;
+          }
+        }
+        .pay-status-name {
+          padding-left: 24rpx;
+          border-left: 10rpx solid transparent;
+        }
+      }
+    }
+    // 时间条件
+    .time-factor-wrap {
+      .time-factor-item {
+        @include flex-xy-layout(flex-start);
+        @include font-style(28rpx);
+        height: 80rpx;
+        &.time-factor-item-active {
+          @include font-style(28rpx);
+          color: #0085FF;
+          .time-status-name {
+            padding-left: 24rpx;
+            border-left-color: #0085FF;
+          }
+        }
+        .time-status-name {
+          padding-left: 24rpx;
+          border-left: 10rpx solid transparent;
+        }
+      }
+    }
+  }
+}
+
+// factor mask
+.factor-popup-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .2);
+}
+
+.order-module {
+  margin: 0 24rpx;
+  .order-item {
+    padding: 0 24rpx;
+    background: $xs-color-f;
+    border-radius: 24rpx;
+    margin-bottom: 16rpx;
+    &:last-child { margin-bottom: 0; }
+    .order-header {
+      @include flex-xy-layout(flex-start);
+      @include font-style(32rpx, 500);
+      height: 100rpx;
+      border-bottom: 2rpx solid #EDEDED;
+      .icon-price {
+        @include element-size(48rpx, 48rpx, 0);
+        margin-right: 16rpx;
+      }
+      .client-name {
+        @include multi-line-ellipsis;
+        flex: 1;
+      }
+      .pay-status {
+        @include font-style(30rpx);
+        color: $xs-color-6;
+      }
+    }
+    .order-sell-item {
+      @include flex-xy-layout(flex-start);
+      height: 80rpx;
+      .vip-name {
+        @include font-style(28rpx);
+        @include multi-line-ellipsis;
+        flex: 1;
+      }
+      .sell-name {
+        @include font-style(28rpx);
+        color: #0085FF;
+      }
+    }
+    .order-time-item {
+      @include flex-xy-layout(flex-start);
+      height: 120rpx;
+      .order-time-wrap {
+        .client-phone {
+          @include font-style(28rpx);
+          margin-bottom: 16rpx;
+        }
+        .order-time {
+          color: $xs-color-9;
+        }
+      }
+      .order-btn {
+        @include element-size(168rpx, 72rpx, 40rpx);
+        @include flex-xy-layout;
+        @include font-style(28rpx);
+        margin-left: auto;
+        color: $xs-color-f;
+        background: #0085FF;
+      }
+    }
+  }
+}
+
+.upopup-share-box {
+  .type-item {
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    height: 100rpx;
+    border-bottom: 2rpx solid #F5F5F5;
+    &.type-item-active {
+      color: #0085FF;
+    }
+  }
+  .divide-ver {
+    background: #F5F5F5;
+    height: 16rpx;
+  }
+  .share-btn {
+    @include element-size(auto, 80rpx, 40rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    margin: 0 24rpx;
+    margin-top: 8rpx;
+    margin-bottom: 30rpx;
+    color: $xs-color-f;
+    background: #0085FF;
+  }
+}
+
+.upopup-bankinfo-box {
+  padding: 30rpx;
+  .bankinfo-item {
+    @include font-style(30rpx);
+    margin-bottom: 30rpx;
+  }
+  .copy-btn {
+    @include font-style(32rpx);
+    @include flex-xy-layout;
+    height: 90rpx;
+    border-radius: 16rpx;
+    color: $xs-color-f;
+    background: #0085FF;
+  }
+}
+
+.upopup-payimg-box {
+  padding: 30rpx;
+  .pay-img {
+    width: 100%;
+    height: 500rpx;
+  }
+  .save-btn {
+    @include font-style(32rpx);
+    @include flex-xy-layout;
+    color: $xs-color-6;
+    margin-top: 30rpx;
+  }
+}
+
+.empty-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

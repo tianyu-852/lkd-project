@@ -1,0 +1,88 @@
+.profile-header-module {
+  position: relative;
+  height: 360rpx;
+  margin-bottom: -24rpx;
+  background: $qy-color-f;
+  .profile-info-wrap {
+    @include flex-xy-layout(flex-start);
+    position: absolute;
+    left: 32rpx;
+    right: 32rpx;
+    bottom: 60rpx;
+    .profile-info-left {
+      @include element-size(140rpx, 140rpx);
+      border: 10rpx solid #EFEFEF;
+      margin-right: 30rpx;
+    }
+    .profile-info-middle {
+      flex: 1;
+      .profile-name {
+        @include font-style(32rpx, 500);
+        max-width: 420rpx;
+        margin-bottom: 5rpx;
+      }
+      .vip-expire {
+        @include font-style(24rpx);
+        color: $qy-color-9;
+      }
+    }
+    .profile-info-right {
+      @include flex-xy-layout(flex-start);
+      @include font-style(28rpx, 500);
+      padding: 20rpx 0;
+      .arrow-img {
+        @include element-size(30rpx, 30rpx, 0);
+        padding-left: 20rpx;
+      }
+    }
+  }
+}
+
+.profile-menu-module {
+  position: relative;
+  padding: 0 24rpx;
+  padding-top: 40rpx;
+  background: $qy-color-f;
+  // border-radius: 24rpx 24rpx 0 0;
+  // 菜单项
+  .menu-tab-wrap {
+    @include flex-xy-layout(space-between);
+    margin: 0 64rpx;
+    margin-bottom: 25rpx;
+    .menu-tab-item {
+      @include flex-y-layout;
+      @include font-style(28rpx);
+      .menu-tab-img {
+        @include element-size(90rpx, 90rpx, 0);
+        margin-bottom: 20rpx;
+      }
+    }
+  }
+  .call-ceo-banner {
+    @include element-size(auto, 159rpx, 0);
+  }
+}
+
+.profile-cell-module {
+  background: $qy-color-f;
+  margin-top: 16rpx;
+  padding: 0 36rpx;
+  .cell-item {
+    @include flex-xy-layout(flex-start);
+    @include font-style(32rpx);
+    height: 90rpx;
+    .cell-left {
+      margin-right: 36rpx;
+      @include element-size(48rpx, 48rpx, 0);
+    }
+    .cell-middle {
+      flex: 1;
+    }
+    .cell-right {
+      @include element-size(30rpx, 30rpx, 0);
+      .arrow-img {
+        @include element-size(30rpx, 30rpx, 0);
+      }
+    }
+  }
+}

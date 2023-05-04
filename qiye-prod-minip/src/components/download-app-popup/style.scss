@@ -1,0 +1,22 @@
+.upopup-tips-box {
+  position: relative;
+  height: 616rpx;
+  .download-app-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .known-btn {
+    @include flex-xy-layout;
+    @include element-size(260rpx, 80rpx, 40rpx);
+    @include font-style(32rpx);
+    position: absolute;
+    bottom: 30rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $qy-color-f;
+    background: linear-gradient(135deg, #00BBFF 0%, #0085FF 100%);
+  }
+}

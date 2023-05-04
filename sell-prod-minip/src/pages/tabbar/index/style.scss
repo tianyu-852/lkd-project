@@ -1,0 +1,173 @@
+.profile-module {
+  background: #0085FF;
+  .profile-wrap {
+    @include flex-y-layout(flex-start, flex-end);
+    @include font-style(32rpx, 500);
+    height: 250rpx;
+    color: $xs-color-f;
+    padding: 24rpx;
+  }
+  .account-wrap {
+    @include font-style(30rpx);
+    background: #DAEEFF;
+    height: 106rpx;
+    padding: 0 24rpx;
+    border-radius: 24rpx 24rpx 0 0;
+    margin-bottom: -24rpx;
+  }
+  .menu-item-wrap {
+    // @include flex-xy-layout(flex-start);
+    @include flex-xy-layout(space-between);
+    height: 216rpx;
+    border-radius: 24rpx 24rpx 0 0;
+    padding: 0 60rpx;
+    background: $xs-color-f;
+    .menu-item {
+      @include font-style(28rpx);
+      color: $xs-color-6;
+      .icon-menu {
+        @include flex-y-layout;
+        @include element-size(100rpx, 100rpx, 0);
+        margin-bottom: 16rpx;
+      }
+    }
+  }
+}
+
+.base-module {
+  padding: 24rpx;
+  margin-top: 16rpx;
+  background: $xs-color-f;
+  .title-wrap {
+    @include flex-xy-layout(space-between);
+    @include font-style(32rpx, 500);
+    margin-bottom: 20rpx;
+  }
+  &.activity-module {
+    .title-wrap {
+      .activity-nav {
+        @include flex-xy-layout;
+        @include font-style(28rpx);
+        color: $xs-color-9;
+        .icon-arrow-right {
+          @include element-size(24rpx, 24rpx, 0);
+          margin-left: 8rpx;
+        }
+      }
+    }
+    .activity-wrap {
+      @include flex-xy-layout(flex-start);
+      .activity-item {
+        @include flex-xy-layout(space-between);
+        flex: 1;
+        padding: 0 24rpx;
+        border-radius: 16rpx;
+        height: 124rpx;
+        .activity-left {
+          @include font-style(30rpx);
+        }
+        .icon-arrow-right {
+          @include element-size(48rpx, 48rpx, 0);
+        }
+      }
+    }
+  }
+  &.data-module {
+    .title-wrap {
+      .data-filter-nav {
+        @include flex-xy-layout;
+        @include font-style(28rpx);
+        position: relative;
+        height: 44rpx;
+        padding: 0 24rpx;
+        background: #F6FBFF;
+        color: #0085FF;
+        border-radius: 12rpx;
+        .icon-arrow-bottom {
+          @include element-size(14rpx, 8rpx, 0);
+          margin-left: 8rpx;
+        }
+        .time-filter-popup {
+          position: absolute;
+          width: 200rpx;
+          top: calc(100% + 30rpx);
+          right: 0;
+          background: $xs-color-f;
+          box-shadow: 0 0 14rpx 0 rgba(0, 0, 0, .1);
+          border-radius: 10rpx;
+          .time-filter-item {
+            @include flex-xy-layout;
+            @include font-style(28rpx);
+            height: 80rpx;
+            color: $xs-color-3;
+            border-bottom: 2rpx solid #EDEDED;
+            &.time-filter-item-active {
+              color: #0085FF;
+            }
+          }
+        }
+      }
+    }
+    .data-wrap {
+      .data-item-line {
+        @include flex-xy-layout(flex-start);
+        height: 108rpx;
+        .data-item {
+          @include flex-y-layout;
+          flex: 1;
+          .data-num {
+            @include font-style(32rpx, 500);
+          }
+          .data-title {
+            @include font-style(26rpx);
+            color: $xs-color-6;
+          }
+        }
+        .ver-line {
+          @include element-size(2rpx, 40rpx, 0);
+          background: #D8D8D8;
+        }
+      }
+    }
+  }
+  &.todo-module {
+    .todo-wrap {
+      .todo-item {
+        @include flex-xy-layout(flex-start);
+        @include font-style(28rpx);
+        margin-bottom: 20rpx;
+        &:last-child { margin-bottom: 0; }
+        .todo-name {
+          flex: 1;
+        }
+        .icon-todo {
+          @include element-size(28rpx, 28rpx, 0);
+          margin-right: 24rpx;
+        }
+        .todo-status {
+          color: #0085FF;
+          margin-left: 4rpx;
+        }
+        .icon-arrow {
+          @include element-size(30rpx, 30rpx, 0);
+          margin-left: 6rpx;
+        }
+      }
+    }
+  }
+  &.more-module {
+    .more-wrap {
+      @include flex-xy-layout(flex-start);
+      .more-item {
+        @include flex-y-layout;
+        @include font-style(28rpx);
+        margin-right: 60rpx;
+        &:first-child { margin-left: 30rpx; }
+        &:last-child { margin-right: 0; }
+        .icon-more {
+          @include element-size(56rpx, 56rpx, 0);
+        }
+      }
+    }
+  }
+}

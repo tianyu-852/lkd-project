@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c9ced9;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="dw_icon" transform="translate(-382 -118)">
+    <path id="nav_dw_icon" class="cls-1" d="M1181.069,1246.924a8.719,8.719,0,0,0-8.9,8.529c0,5.085,6.377,11.246,8.334,13.016a.845.845,0,0,0,1.127,0c1.956-1.77,8.333-7.931,8.333-13.016A8.719,8.719,0,0,0,1181.069,1246.924Zm0,12.339a4.309,4.309,0,1,1,4.49-4.3A4.4,4.4,0,0,1,1181.069,1259.262Z" transform="translate(-788.172 -1128.924)"/>
+    <rect id="矩形_3475" data-name="矩形 3475" class="cls-2" width="22" height="22" transform="translate(382 118)"/>
+  </g>
+</svg>

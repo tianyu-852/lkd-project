@@ -1,0 +1,80 @@
+
+.team-module {
+  padding-bottom: 160rpx;
+  .team-item {
+    @include flex-xy-layout(flex-start, stretch);
+    padding: 24rpx 0;
+    margin: 0 32rpx;
+    border-bottom: 2rpx solid #EDEEF2;
+    .team-left {
+      @include element-size(100rpx, 100rpx, 10rpx);
+      margin-right: 20rpx;
+    }
+    .team-right {
+      flex: 1;
+      .team-name {
+        @include flex-xy-layout(flex-start);
+        margin-bottom: 6rpx;
+        .team-tag {
+          @include flex-xy-layout;
+          @include element-size(96rpx, 32rpx, 8rpx);
+          @include font-style(24rpx);
+          color: $xs-color-f;
+          background: #00D157;
+          margin-left: 12rpx;
+        }
+      }
+      .team-info {
+        @include font-style(28rpx);
+        color: $xs-color-9;
+      }
+    }
+  }
+}
+
+.empty-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plus-btn {
+  @include element-size(auto, 90rpx, 45rpx);
+  @include flex-xy-layout;
+  @include font-style(32rpx);
+  position: fixed;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 65rpx;
+  border: 1rpx solid #D8D8D8;
+  .icon-plus {
+    @include element-size(22rpx, 22rpx, 0);
+    margin-right: 20rpx;
+  }
+}
+
+.umodal-plus-box {
+  padding: 32rpx;
+  .input-item {
+    @include flex-xy-layout(flex-start);
+    @include element-size(100%, 72rpx, 4rpx);
+    padding: 0 28rpx;
+    margin-bottom: 28rpx;
+    border: 2rpx solid #EDEDED;
+    .input {
+      @include font-style(28rpx);
+      flex: 1;
+    }
+    .code-btn {
+      @include font-style(28rpx);
+      color: #0085FF;
+      &.code-btn-disable {
+        color: $xs-color-9;
+      }
+    }
+  }
+  .radio-item {
+    @include flex-xy-layout(flex-start);
+  }
+}

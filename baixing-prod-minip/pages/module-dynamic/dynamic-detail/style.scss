@@ -1,0 +1,351 @@
+
+.owner-tag {
+  @include element-size(52rpx, 28rpx, 2rpx);
+  @include flex-xy-layout;
+  @include font-style(20rpx);
+  border: 2rpx solid #999;
+  color: #999;
+}
+
+// 空状态
+.empty-wrap {
+  @include flex-y-layout;
+  margin: 0 auto;
+  padding-top: 100rpx;
+  .empty-text {
+    @include font-style(30rpx);
+    color: $bx-color-9;
+  }
+}
+
+.detail-module {
+  padding: 40rpx 24rpx;
+  padding-bottom: 24rpx;
+  .detail-header {
+    @include flex-xy-layout(flex-start);
+    margin-bottom: 16rpx;
+    .user-avatar {
+      @include element-size(80rpx, 80rpx, 10rpx);
+      position: relative;
+      margin-right: 20rpx;
+    }
+    .user-info-wrap {
+      .user-info {
+        @include flex-xy-layout(flex-start);
+        .user-name {
+          @include font-style(28rpx, 500);
+          margin-right: 8rpx;
+        }
+      }
+      .date-info {
+        @include flex-xy-layout(flex-start);
+        @include font-style(24rpx);
+        color: #999;
+      }
+    }
+  }
+  .detail-content {
+    @include font-style(34rpx);
+    line-height: 56rpx;
+    .detail-tag {
+      color: #457DB4;
+      margin-right: 10rpx;
+    }
+  }
+  .detail-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15rpx;
+    margin-top: 20rpx;
+    .detail-image {
+      position: relative;
+    }
+  }
+  .division-hor {
+    @include element-size(auto, 2rpx, 0);
+    background: #F3F3F3;
+    margin: 24rpx 0;
+  }
+  .phone-zixun-wrap {
+    @include flex-xy-layout(flex-start);
+    @include font-style(28rpx);
+    color: #0085FF;
+    .phone-zixun-icon {
+      @include element-size(72rpx, 72rpx, 0);
+      margin-right: 20rpx;
+    }
+    .phone-zixun-info {
+      flex: 1;
+      .zixun-info-title {
+        @include font-style(32rpx, 500);
+      }
+      .zixun-info-desc {
+        @include font-style(28rpx);
+        color: #999;
+      }
+    }
+  }
+}
+
+.division-line {
+  height: 16rpx;
+  background: #F5F5F5;
+}
+
+.comment-module {
+  padding: 33rpx 24rpx;
+  .comment-title {
+    @include font-style(28rpx, 500);
+    margin-bottom: 30rpx;
+  }
+  .comment-wrap {
+    .comment-item {
+      @include flex-xy-layout(flex-start, flex-start);
+      margin-bottom: 65rpx;
+      &:last-child { margin-bottom: 0; }
+      .comment-left {
+        margin-right: 20rpx;
+        .user-avatar {
+          @include element-size(80rpx, 80rpx, 10rpx);
+        }
+      }
+      .comment-right {
+        flex: 1;
+        .user-name-wrap {
+          @include flex-xy-layout(flex-start);
+          .user-name {
+            @include font-style(28rpx, 500);
+            color: $bx-color-3;
+            margin-right: 8rpx;
+          }
+          .user-work {
+            @include flex-xy-layout;
+            @include element-size(105rpx, 28rpx, 14rpx);
+            @include font-style(20rpx, 500);
+            border: 1rpx solid #FE5F48;
+            color: #FE5F48;
+            margin-left: 8rpx;
+          }
+        }
+        .user-addr {
+          @include font-style(24rpx);
+          color: $bx-color-9;
+          margin-bottom: 10rpx;
+        }
+        .comment-content {
+          @include font-style(32rpx);
+          line-height: 50rpx;
+        }
+        .comment-footer {
+          @include flex-xy-layout(flex-start);
+          margin-top: 20rpx;
+          .time-wrap {
+            @include font-style(24rpx);
+            color: $bx-color-9;
+          }
+          .like-wrap {
+            @include flex-xy-layout;
+            margin-left: auto;
+            .icon-comment {
+              @include flex-xy-layout;
+              @include element-size(84rpx, 36rpx, 18rpx);
+              @include font-style(24rpx);
+              color: #0085FF;
+              background: #F5F5F5;
+              margin-right: 24rpx;
+            }
+            .icon-like {
+              @include flex-xy-layout;
+              @include font-style(28rpx);
+              color: $bx-color-9;
+            }
+          }
+        }
+        // 子评论
+        .subComment-wrap {
+          margin-top: 30rpx;
+          margin-left: 24rpx;
+          .subComment-item {
+            @include flex-xy-layout(flex-start, flex-start);
+            margin-bottom: 36rpx;
+            &:last-child { margin-bottom: 0; }
+            .subComment-left {
+              margin-right: 20rpx;
+              .user-avatar {
+                @include element-size(50rpx, 50rpx);
+              }
+            }
+            .subComment-right {
+              flex: 1;
+              .user-name-wrap {
+                @include flex-xy-layout(flex-start);
+                .user-name {
+                  @include font-style(28rpx, 500);
+                  color: $bx-color-3;
+                  margin-right: 8rpx;
+                }
+              }
+              .subComment-content {
+                @include font-style(32rpx);
+                line-height: 50rpx;
+              }
+              .subComment-footer {
+                @include flex-xy-layout(flex-start);
+                margin-top: 20rpx;
+                .time-wrap {
+                  @include font-style(24rpx);
+                  color: $bx-color-9;
+                }
+                .like-wrap {
+                  @include flex-xy-layout;
+                  margin-left: auto;
+                  .icon-comment {
+                    @include flex-xy-layout;
+                    @include element-size(84rpx, 36rpx, 18rpx);
+                    @include font-style(24rpx);
+                    color: #0085FF;
+                    background: #F5F5F5;
+                    margin-right: 24rpx;
+                  }
+                  .icon-like {
+                    @include flex-xy-layout;
+                    @include font-style(28rpx);
+                    color: $bx-color-9;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.advert-module {
+  padding: 24rpx;
+  background: linear-gradient(180deg, #E6F3FF 0%, #FFFFFF 100%);
+  .advert-header {
+    @include flex-xy-layout(flex-start);
+    @include font-style(32rpx, 500);
+    margin-bottom: 26rpx;
+    .advert-header-icon {
+      @include element-size(44rpx, 44rpx, 0);
+      margin-right: 12rpx;
+    }
+  }
+  .scroll-x.recommend-scroll-x {
+    .scroll-x-item {
+      margin-right: 56rpx;
+      &:last-child { margin-right: 0; }
+      .recommend-item-wrap {
+        @include flex-y-layout;
+        .lawyer-avatar {
+          @include element-size(120rpx, 120rpx, 20rpx);
+        }
+        .lawyer-nickname {
+          @include flex-xy-layout(flex-start);
+          @include font-style(28rpx, 500);
+          margin-top: 10rpx;
+          .youxuan-tag {
+            @include element-size(28rpx, 28rpx, 8rpx);
+            @include flex-xy-layout;
+            @include font-style(20rpx, 500);
+            color: #fff;
+            background: #FE5F48;
+            margin-left: 4rpx;
+          }
+        }
+        .lawyer-loc {
+          @include font-style(24rpx);
+          color: #999;
+        }
+      }
+    }
+  }
+  .advert-wrap {
+    @include flex-xy-layout(space-between);
+    padding: 0 26rpx;
+    .recommend-item-wrap {
+      @include flex-y-layout;
+      .lawyer-avatar {
+        @include element-size(120rpx, 120rpx, 20rpx);
+      }
+      .lawyer-nickname {
+        @include flex-xy-layout(flex-start);
+        @include font-style(28rpx, 500);
+        margin-top: 10rpx;
+        .youxuan-tag {
+          @include element-size(28rpx, 28rpx, 8rpx);
+          @include flex-xy-layout;
+          @include font-style(20rpx, 500);
+          color: #fff;
+          background: #FE5F48;
+          margin-left: 4rpx;
+        }
+      }
+      .lawyer-loc {
+        @include font-style(24rpx);
+        color: #999;
+      }
+    }
+  }
+}
+
+.footer-module {
+  color: $bx-color-6;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20rpx;
+  z-index: 99;
+  background: $bx-color-f;
+  .footer-reply-wrap {
+    @include multi-line-ellipsis;
+    border-radius: 10rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 20rpx;
+    background: #F5F5F5;
+    margin-bottom: 20rpx;
+  }
+  .footer-inuput-wrap {
+    @include flex-xy-layout(flex-start);
+    @include font-style(28rpx);
+    .icon-record {
+      @include element-size(56rpx, 56rpx, 0);
+    }
+    .comment-input-wrap {
+      @include flex-xy-layout(flex-start);
+      flex: 1;
+      margin: 0 20rpx;
+      padding: 20rpx 30rpx;
+      border-radius: 40rpx;
+      background: #F5F5F5;
+      .comment-input {
+        @include font-style(30rpx);
+        flex: 1;
+        width: auto;
+        height: 40rpx;
+        max-height: 200rpx;
+        // #ifdef MP-KUAISHOU
+        height: auto;
+        min-height: 60rpx;
+        // #endif
+        color: #333;
+      }
+    }
+    .comment-recorder-wrap {
+      flex: 1;
+      margin: 0 20rpx;
+    }
+    .send-btn {
+      @include flex-xy-layout;
+      @include font-style(28rpx, 500);
+      @include element-size(100rpx, 56rpx, 10rpx);
+      color: #fff;
+      background: #ddd;
+    }
+  }
+}

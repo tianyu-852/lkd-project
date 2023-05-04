@@ -1,0 +1,7 @@
+.picker-view {
+  // @include element-size(100%, 480rpx, 0);
+  height: 480rpx;
+  .item-time {
+    @include flex-xy-layout;
+  }
+}

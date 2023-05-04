@@ -1,0 +1,31 @@
+
+.img-module {
+  width: 100%;
+  .img {
+    width: 100%;
+  }
+}
+
+.btn-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background: $qy-color-f;
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+  .pay-btn {
+    @include element-size(auto, 96rpx, 48rpx);
+    @include flex-xy-layout;
+    @include font-style(36rpx, 500);
+    margin: 0 24rpx;
+    color: $qy-color-f;
+    background: #FE5F48;
+    margin-bottom: 20rpx;
+  }
+  .pay-protocol {
+    @include font-style(22rpx, 500);
+    text-align: center;
+  }
+}

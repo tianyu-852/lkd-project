@@ -1,0 +1,160 @@
+
+.banner-module {
+  @include element-size(100%, 730rpx, 0);
+}
+
+.pay-option-module {
+  position: relative;
+  margin-top: -24rpx;
+  padding: 0 30rpx;
+  border-radius: 24rpx 24rpx 0 0;
+  background: $qy-color-f;
+  padding-top: 10rpx;
+  .option-wrap {
+    margin-bottom: 30rpx;
+    .option-item {
+      @include element-size(auto, 214rpx, 0);
+      .option-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .custom-pay-btn {
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    margin-bottom: 80rpx;
+    .arrow-img {
+      @include element-size(30rpx, 30rpx, 0);
+      margin-left: 10rpx;
+    }
+  }
+  .rule-wrap {
+    position: relative;
+    padding: 60rpx 30rpx;
+    color: #FF6C18;
+    border-radius: 20rpx;
+    border: 2rpx dashed #FE7738;
+    .rule-header {
+      @include font-style(32rpx);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      padding: 0 36rpx;
+      transform: translate(-50%, -50%);
+      color: #FF6C18;
+      background: $qy-color-f;
+    }
+    .rule-title {
+      @include font-style(32rpx);
+      margin-bottom: 20rpx;
+    }
+    .rule-items {
+      margin-bottom: 52rpx;
+      .rule-item {
+        @include font-style(28rpx);
+        margin-bottom: 20rpx;
+      }
+    }
+  }
+}
+
+.upopup-customPay-box {
+  padding: 30rpx 36rpx;
+  padding-bottom: 100rpx;
+  .upopup-title {
+    @include font-style(32rpx);
+    @include flex-xy-layout;
+    margin-bottom: 30rpx;
+  }
+  .pay-input-wrap {
+    @include flex-xy-layout;
+    @include element-size(auto, 88rpx, 10rpx);
+    padding: 0 30rpx;
+    margin-bottom: 12rpx;
+    border: 2rpx solid #999;
+    .icon-money {
+      @include font-style(32rpx);
+      margin-right: 26rpx;
+    }
+    .input-text {
+      @include font-style(32rpx);
+      flex: 1;
+      color: $qy-color-3;
+    }
+    .input-tips {
+      @include font-style(28rpx);
+      color: #FE5F48;
+    }
+  }
+  .pay-tips {
+    @include flex-xy-layout(space-between);
+    @include font-style(28rpx);
+  }
+  .pay-btn {
+    @include flex-xy-layout;
+    @include element-size(auto, 88rpx, 48rpx);
+    @include font-style(36rpx, 500);
+    background: linear-gradient(135deg, #98E3FF 0%, #86C5FF 100%);
+    color: $qy-color-f;
+    margin-top: 20rpx;
+    &.pay-btn-active {
+      background: linear-gradient(135deg, #00BBFF 0%, #0085FF 100%);
+    }
+  }
+  .pay-protocol {
+    @include font-style(24rpx);
+    text-align: center;
+    margin-top: 16rpx;
+  }
+}
+
+.share-module {
+  @include element-size(100rpx, 100rpx);
+  @include flex-y-layout;
+  @include font-style(24rpx);
+  position: fixed;
+  top: 300rpx;
+  right: 10rpx;
+  color: $qy-color-f;
+  background: rgba(0, 0, 0, .5);
+  .share-img {
+    @include element-size(48rpx, 48rpx, 0);
+  }
+}
+
+.upopup-vip-box {
+  position: relative;
+  .del-img {
+    @include element-size(30rpx, 30rpx, 0);
+    position: absolute;
+    top: 10rpx;
+    right: 10rpx;
+    padding: 10rpx;
+  }
+  .upopup-vip-header {
+    .upopup-vip-title {
+      @include font-style(28rpx);
+      text-align: center;
+      padding-top: 58rpx;
+    }
+    .upopup-vip-subtitle {
+      @include font-style(40rpx);
+      text-align: center;
+      color: #FE5F48;
+      padding-bottom: 58rpx;
+    }
+  }
+  .upopup-bottom-btns {
+    @include flex-xy-layout(flex-start, stretch);
+    height: 87rpx;
+    border-top: 2rpx solid #EDEDED;
+    .upopup-bottom-btn {
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      flex: 1;
+      color: #0085FF;
+      &:last-child { border-left: 2rpx solid #EDEDED; }
+    }
+  }
+}

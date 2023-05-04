@@ -1,0 +1,117 @@
+.banner-momdule {
+  @include element-size(100%, 440rpx, 0);
+  position: relative;
+  .banner-bgImg {
+    width: 100%;
+    height: 100%;
+  }
+  .info-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $qy-color-f;
+    padding: 0 24rpx;
+    .server-name {
+      @include font-style(36rpx, 500);
+      @include multi-line-ellipsis;
+      max-width: 540rpx
+    }
+    .server-timeout {
+      @include font-style(28rpx);
+      color: #8BC8FF;
+    }
+    .manage-wrap {
+      @include element-size(auto, 120rpx, 0);
+      @include flex-xy-layout(flex-start);
+      position: absolute;
+      left: 24rpx;
+      right: 24rpx;
+      bottom: 24rpx;
+      border-radius: 24rpx 24rpx 0 0;
+      background: #0E6DC5;
+      padding: 20rpx 24rpx;
+      .manage-left {
+        @include element-size(80rpx, 80rpx);
+        margin-right: 24rpx;
+      }
+      .manage-middle {
+        flex: 1;
+        .manage-name {
+          @include font-style(32rpx, 500);
+          color: #F5F5F5;
+        }
+        .manage-desc {
+          @include font-style(28rpx);
+          color: #D6E3EE;
+        }
+      }
+      .manage-right {
+        @include element-size(150rpx, 44rpx, 22rpx);
+        @include flex-xy-layout;
+        @include font-style(28rpx);
+        color: #F5F5F5;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+.content-module {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 420rpx + 24rpx);
+  margin-top: -24rpx;
+  border-radius: 24rpx 24rpx 0 0;
+  background: $qy-color-f;
+  overflow: hidden;
+  .scroll-y.content-scroll-y {
+    width: 100%;
+    height: 100%;
+    padding: 40rpx 24rpx;
+    .rights-wrap {
+      .rights-title {
+        @include font-style(28rpx, 500);
+        margin-bottom: 24rpx;
+      }
+      .rights-item-list {
+        .rights-item {
+          @include flex-xy-layout(flex-start);
+          @include element-size(auto, 140rpx, 16rpx);
+          position: relative;
+          margin-bottom: 16rpx;
+          padding: 0 24rpx;
+          border: 1rpx solid #EDEDED;
+          .noopen-img {
+            @include element-size(92rpx, 28rpx, 0);
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          .rights-left {
+            @include element-size(64rpx, 64rpx);
+            margin-right: 24rpx;
+          }
+          .rights-middle {
+            flex: 1;
+            .rights-name {
+              @include font-style(32rpx, 500);
+              @include multi-line-ellipsis;
+            }
+            .rights-desc {
+              @include font-style(24rpx);
+              @include multi-line-ellipsis;
+              color: $qy-color-9;
+            }
+          }
+          .rights-right {
+            .arrow-img {
+              @include element-size(12rpx, 22rpx, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}

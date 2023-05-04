@@ -1,0 +1,18 @@
+<svg id="ygz_icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #49516c;
+      }
+    </style>
+  </defs>
+  <circle id="椭圆_173" data-name="椭圆 173" class="cls-1" cx="10" cy="10" r="10"/>
+  <g id="组_3676" data-name="组 3676" transform="matrix(0.755, -0.656, 0.656, 0.755, 4.261, 10.069)">
+    <rect id="矩形_2468" data-name="矩形 2468" class="cls-2" width="9.613" height="2.262" rx="1.131" transform="translate(1.027 4.648)"/>
+    <rect id="矩形_2469" data-name="矩形 2469" class="cls-2" width="6.786" height="2.262" rx="1.131" transform="translate(2.24 0) rotate(82)"/>
+  </g>
+</svg>

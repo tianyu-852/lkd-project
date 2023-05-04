@@ -1,0 +1,221 @@
+{
+  "easycom": {
+		"autoscan": true,
+		"custom": {
+      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+		}
+	},
+  "globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "企业律云",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#fff",
+    "navigationStyle": "custom"
+	},
+  "tabBar": {
+    "borderStyle": "black",
+		"color": "#666",
+		"selectedColor": "#0085FF",
+    "backgroundColor": "#fff",
+		"list": [{
+				"text": "首页",
+				"pagePath": "pages/tabbar/index/index"
+			},
+			{
+        "text": "公司法务",
+				"pagePath": "pages/tabbar/center/center"
+			},
+			{
+        "text": "我的",
+				"pagePath": "pages/tabbar/profile/profile"
+			}
+		]
+	},
+	"pages": [
+		{
+			"path": "pages/tabbar/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+        "enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/tabbar/center/center",
+			"style": {
+				"navigationBarTitleText": "法律中心",
+        "navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/tabbar/profile/profile",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+    {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "授权登录"
+			}
+		}
+	],
+  "subPackages": [
+    {
+      "root": "pages/module-lawyer",
+      "pages": [
+        {
+          "path": "lawyer-strict-list/lawyer-strict-list",
+          "style": {
+            "navigationBarTitleText": "严选律师"
+          }
+        },
+        {
+          "path": "lawyer-detail/lawyer-detail",
+          "style": {
+            "navigationBarTitleText": "律师详情",
+            "navigationBarTextStyle": "white",
+            "enablePullDownRefresh": true
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/module-profile",
+      "pages": [
+        {
+          "path": "profile-wallet/profile-wallet",
+          "style": {
+            "navigationBarTitleText": "我的钱包"
+          }
+        },
+        {
+          "path": "profile-wallet-pay/profile-wallet-pay",
+          "style": {
+            "navigationBarTitleText": "充值",
+            "navigationBarTextStyle": "white"
+          }
+        },
+        {
+          "path": "profile-wallet-withdraw/profile-wallet-withdraw",
+          "style": {
+            "navigationBarTitleText": "零钱提现"
+          }
+        },
+        {
+          "path": "profile-pay-password/profile-pay-password",
+          "style": {
+            "navigationBarTitleText": "支付密码修改"
+          }
+        },
+        {
+          "path": "profile-wallet-bill/profile-wallet-bill",
+          "style": {
+            "navigationBarTitleText": "账单列表"
+          }
+        },
+        {
+          "path": "profile-company-prove/profile-company-prove",
+          "style": {
+            "navigationBarTitleText": "企业认证"
+          }
+        },
+        // {
+        //   "path": "profile-lawyer-proveInfo/profile-lawyer-proveInfo",
+        //   "style": {
+        //     "navigationBarTitleText": "律师认证"
+        //   }
+        // },
+        // {
+        //   "path": "profile-lawyer-idcard/profile-lawyer-idcard",
+        //   "style": {
+        //     "navigationBarTitleText": "律师认证"
+        //   }
+        // },
+        {
+          "path": "profile-about-us/profile-about-us",
+          "style": {
+            "navigationBarTitleText": "关于律快答"
+          }
+        }
+      ]
+    },
+    {
+			"root": "pages/module-price",
+			"pages": [
+				{
+					"path": "price-center/price-center",
+					"style": {
+						"navigationBarTitleText": "价格分享",
+            "usingComponents": {
+              "painter" : "/wxcomponents/painter/painter"
+            }
+					}
+				},
+				{
+					"path": "price-diff/price-diff",
+					"style": {
+						"navigationBarTitleText": "对比图片"
+					}
+				},
+        {
+					"path": "product-center/product-center",
+					"style": {
+						"navigationBarTitleText": "产品分享"
+					}
+				}
+			]
+		},
+    {
+      "root": "pages/module-common",
+      "pages": [
+        {
+          "path": "web-view/web-view",
+          "style": {
+            "navigationBarTitleText": ""
+          }
+        },
+        {
+          "path": "vip-pay-detail/vip-pay-detail",
+          "style": {
+            "navigationBarTitleText": "vip购买",
+            "navigationBarTextStyle": "white"
+          }
+        },
+        {
+          "path": "service-contact/service-contact",
+          "style": {
+            "navigationBarTitleText": "客服联系",
+            "navigationBarTextStyle": "white"
+          }
+        },
+        {
+          "path": "order-detail/order-detail",
+          "style": {
+            "navigationBarTitleText": "订单详情",
+            "navigationBarTextStyle": "white"
+          }
+        },
+        {
+          "path": "vip-pay/vip-pay",
+          "style": {
+            "navigationBarTitleText": "VIP支付",
+            "navigationBarTextStyle": "white"
+          }
+        },
+        {
+          "path": "product-pay/product-pay",
+          "style": {
+            "navigationBarTitleText": "产品支付",
+            "navigationBarTextStyle": "white"
+          }
+        }
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/tabbar/index/index" : {
+      "network" : "all",
+      "packages" : [ "pages/module-lawyer" ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="sr_icon" transform="translate(-1587.596 -938.031)">
+    <rect id="矩形_1414" data-name="矩形 1414" class="cls-1" width="17.472" height="2.851" rx="0.195" transform="translate(1598.105 963.149)"/>
+    <path id="路径_1534" data-name="路径 1534" class="cls-1" d="M1608.346,938.367l-20.307,20.284a1.508,1.508,0,0,0-.441,1.14l.257,5.189a1.106,1.106,0,0,0,1.105,1.051h4.894a1.509,1.509,0,0,0,1.067-.442l20.338-20.315a1.146,1.146,0,0,0,0-1.622l-5.291-5.285A1.149,1.149,0,0,0,1608.346,938.367Zm-3.929,5.012,1.969-1.968,5.8,5.8-1.97,1.968Z" transform="translate(0 0)"/>
+  </g>
+</svg>

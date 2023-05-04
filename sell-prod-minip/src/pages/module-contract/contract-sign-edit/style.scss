@@ -1,0 +1,169 @@
+// .contract-module {
+//   @include flex-xy-layout;
+//   margin-top: 400rpx;
+//   .preview-btn {
+//     @include element-size(200rpx, 80rpx, 10rpx);
+//     @include flex-xy-layout;
+//     @include font-style(32rpx);
+//     color: $xs-color-f;
+//     background: #0085FF;
+//     .icon-eye {
+//       @include element-size(30rpx, 30rpx, 0);
+//       margin-right: 10rpx;
+//     }
+//   }
+// }
+
+.contract-module {
+  .contract-img {
+    width: 100%;
+    // height: 100%;
+  }
+}
+
+.btns-module {
+  @include flex-xy-layout(flex-end);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 24rpx;
+  padding-top: 20rpx;
+  background: $xs-color-f;
+  .submit-btn {
+    @include element-size(339rpx, 80rpx, 40rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    color: $xs-color-f;
+    background: #0085FF;
+  }
+}
+
+.rights-module {
+  @include element-size(460rpx, auto, 0);
+  @include flex-y-layout(stretch, flex-start);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  background: $xs-color-f;
+  transform: translate3d(100%, 0, 0);
+  transition: all .2s ease-out;
+  &.rights-module-active {
+    transform: translate3d(0, 0, 0);
+    box-shadow: -8rpx 0 28rpx 0 rgba(0, 0, 0, 0.16);
+  }
+  .view-btn {
+    @include element-size(140rpx, 53rpx, 0);
+    @include flex-y-center;
+    @include font-style(28rpx, 500);
+    padding-left: 24rpx;
+    position: absolute;
+    top: 30rpx;
+    left: 0;
+    color: #0085FF;
+    background: #F5F5F5;
+    border-radius: 100rpx 0 0 100rpx;
+    transform: translateX(-100%);
+    &.view-btn-active {
+      width: 80rpx;
+      box-shadow: -8rpx 0 28rpx 0 rgba(0, 0, 0, 0.16);
+      background: $xs-color-f;
+    }
+    .icon-view {
+      @include element-size(28rpx, 28rpx, 0);
+    }
+  }
+  .btn-wrap {
+    margin: 0 32rpx;
+    .finish-btn {
+      @include element-size(140rpx, 53rpx, 27rpx);
+      @include font-style(28rpx, 500);
+      @include flex-y-layout;
+      color: $xs-color-f;
+      background: #0085FF;
+      margin-left: auto;
+    }
+  }
+  .rights-wrap {
+    flex: 1;
+    margin: 32rpx;
+    box-sizing: border-box;
+    overflow-y: auto;
+    .rights-item {
+      @include flex-xy-layout(space-between);
+      @include font-style(28rpx, 500);
+      margin-bottom: 24rpx;
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
+  background: rgba(0, 0, 0, .1);
+}
+
+.upopup-submit-box {
+  background: #0085FF;
+  .submit-header {
+    position: relative;
+    height: 120rpx;
+    .icon-del {
+      @include element-size(30rpx, 30rpx, 0);
+      position: absolute;
+      top: 20rpx;
+      right: 20rpx;
+      padding: 10rpx;
+    }
+    .contract-name {
+      @include multi-line-ellipsis;
+      @include font-style(32rpx);
+      position: absolute;
+      left: 32rpx;
+      right: 32rpx;
+      bottom: 15rpx;
+      color: $xs-color-f;
+    }
+  }
+  .input-wrap {
+    padding: 0 32rpx;
+    background: $xs-color-f;
+    border-radius: 24rpx;
+    padding-bottom: 32rpx;
+    .input-item {
+      @include flex-xy-layout(flex-start);
+      height: 102rpx;
+      border-bottom: 2rpx solid #EDEDED;
+      .input-key {
+        @include font-style(30rpx);
+        color: $xs-color-9;
+        width: 150rpx;
+        margin-right: 32rpx;
+      }
+      .input-value {
+        @include flex-xy-layout(flex-start);
+        @include font-style(30rpx);
+        flex: 1;
+        .input {
+          flex: 1;
+          @include font-style(30rpx);
+        }
+      }
+    }
+    .confirm-btn {
+      @include element-size(auto, 80rpx, 16rpx);
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      color: $xs-color-f;
+      background: #0085FF;
+      margin-top: 30rpx;
+    }
+  }
+}

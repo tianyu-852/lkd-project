@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.24;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="gb_icon" transform="translate(-39.344 -1380.344)">
+    <circle id="椭圆_143" data-name="椭圆 143" class="cls-1" cx="15" cy="15" r="15" transform="translate(39.344 1380.344)"/>
+    <path id="gb_icon-2" data-name="gb_icon" class="cls-2" d="M2207.852,974.774l6.5-6.5a.992.992,0,1,0-1.4-1.4l-6.5,6.5-6.5-6.5a.992.992,0,0,0-1.4,1.4l6.5,6.5-6.5,6.5a.992.992,0,0,0,1.4,1.4l6.5-6.5,6.5,6.5a.992.992,0,0,0,1.4-1.4Z" transform="translate(-2152.106 420.569)"/>
+  </g>
+</svg>

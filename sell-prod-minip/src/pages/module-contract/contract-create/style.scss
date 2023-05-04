@@ -1,0 +1,387 @@
+.main {
+  padding-bottom: 160rpx;
+}
+
+.divide-ver {
+  height: 16rpx;
+  background: #F5F5F5;
+}
+
+.base-module {
+  padding: 0 24rpx;
+}
+
+// 选择器项
+.select-item {
+  @include flex-xy-layout(flex-start);
+  height: 100rpx;
+  .select-key {
+    @include font-style(30rpx);
+    min-width: 120rpx;
+    margin-right: 32rpx;
+  }
+  .type-wrap {
+    @include flex-xy-layout(flex-start);
+    .type-item {
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      @include element-size(120rpx, 60rpx, 16rpx);
+      color: $xs-color-9;
+      background: #F5F5F5;
+      margin-right: 24rpx;
+      &.type-item-active {
+        color: $xs-color-f;
+        background: #0085FF;
+      }
+    }
+  }
+}
+
+.order-item {
+  @include flex-xy-layout(flex-start);
+  position: relative;
+  height: 90rpx;
+  &:last-child { margin-bottom: 0; }
+  .search-wrap {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    height: 400rpx;
+    overflow-y: auto;
+    background: $xs-color-f;
+    .search-item {
+      @include flex-y-layout(flex-end);
+      border-bottom: 2rpx solid #EDEDED;
+      height: 100rpx;
+      .search-name {
+        @include font-style(28rpx);
+        // text-align: left;
+      }
+      .search-num {
+        @include font-style(24rpx);
+        // text-align: left;
+        color: $xs-color-9;
+      }
+    }
+  }
+  .order-title {
+    @include font-style(30rpx);
+    margin-right: 20rpx;
+  }
+  .order-value {
+    @include font-style(30rpx);
+    flex: 1;
+    text-align: right;
+  }
+  .input {
+    @include font-style(30rpx);
+    flex: 1;
+    text-align: right;
+  }
+  .radio-wrap {
+    @include flex-xy-layout(flex-start);
+    @include font-style(30rpx);
+    margin-left: auto;
+    .radio-item {
+      @include flex-xy-layout(flex-start);
+      &:last-child { margin-left: 80rpx; }
+      .icon-radio {
+        @include element-size(36rpx, 36rpx);
+        margin-right: 20rpx;
+      }
+    }
+  }
+  .select-wrap {
+    @include flex-xy-layout(flex-start);
+    @include font-style(30rpx);
+    color: #bbb;
+    margin-left: auto;
+    .icon-arrow {
+      @include element-size(30rpx, 30rpx, 0);
+      margin-left: 6rpx;
+    }
+  }
+}
+
+.contract-module {
+  padding: 0 24rpx;
+  padding-bottom: 30rpx;
+  .contract-nav-wrap {
+    @include flex-xy-layout(flex-start);
+    height: 100rpx;
+    border-bottom: 2rpx solid #F5F5F5;
+    .contract-nav-item {
+      @include flex-xy-layout;
+      position: relative;
+      flex: 1;
+      height: 100%;
+      color: $xs-color-9;
+      &.contract-nav-item-active {
+        color: #0085FF;
+      }
+      .bottom-line {
+        @include element-size(50rpx, 4rpx, 2rpx);
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        background: #0085FF;
+      }
+    }
+  }
+  .contract-option-wrap {
+    @include font-style(30rpx);
+    padding-top: 50rpx;
+    // .one-option-wrap {
+    //   .serial-option {}
+    // }
+    .two-option-wrap {
+      .bianhao-option {
+        @include flex-xy-layout(flex-end);
+        margin-bottom: 12rpx;
+        .bianhao-select {
+          @include flex-xy-layout(space-between);
+          @include element-size(490rpx, 70rpx, 12rpx);
+          @include font-style(30rpx);
+          padding: 0 20rpx;
+          border: 2rpx solid #BBB;
+          .icon-arrow {
+            @include element-size(30rpx, 30rpx, 0);
+            margin-left: 6rpx;
+          }
+        }
+      }
+      .rawmail-option {
+        @include flex-xy-layout(flex-end);
+        .rawmail-input {
+          @include flex-xy-layout(flex-start);
+          @include element-size(490rpx, 70rpx, 12rpx);
+          @include font-style(30rpx);
+          padding: 0 20rpx;
+          border: 2rpx solid #BBB;
+          .icon-scan {
+            @include element-size(30rpx, 30rpx, 0);
+            padding-right: 6rpx;
+          }
+        }
+      }
+      .express-option {
+        padding: 24rpx;
+        border-radius: 12rpx;
+        background: #F5F5F5;
+        margin-top: 26rpx;
+        .express-header {
+          @include flex-xy-layout(flex-start);
+          color: #0085FF;
+          margin-bottom: 10rpx;
+          .header-left {
+            @include font-style(28rpx, 500);
+          }
+          .header-right {
+            @include font-style(28rpx);
+            margin-left: auto;
+          }
+        }
+        .express-content {
+          @include font-style(24rpx);
+        }
+      }
+    }
+  }
+  .payment-wrap {
+    margin-top: 40rpx;
+    .payment-title {
+      @include font-style(30rpx);
+      margin-bottom: 18rpx;
+    }
+    .payment-status-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 24rpx;
+      .payment-status-item {
+        @include flex-xy-layout;
+        @include font-style(28rpx);
+        height: 80rpx;
+        border-radius: 12rpx;
+        color: $xs-color-9;
+        border: 2rpx solid #D0D0D0;
+        &.payment-status-item-active {
+          color: #0085FF;
+          border-color: #0085FF;
+        }
+      }
+      .payment-invite-item {
+        color: $xs-color-f;
+        background: #4FCC83;
+        border: none;
+      }
+    }
+  }
+}
+
+.upload-module {
+  background: $xs-color-f;
+  .upload-title {
+    @include font-style(30rpx);
+    margin-bottom: 24rpx;
+  }
+  .image-wrap {
+    // @include flex-xy-layout(flex-start);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20rpx;
+    .image-item {
+      @include flex-xy-layout;
+      @include element-size(auto, 140rpx, 16rpx);
+      position: relative;
+      background: #F5F5F5;
+      .icon-del {
+        @include element-size(34rpx, 34rpx, 0);
+        position: absolute;
+        top: -18rpx;
+        right: -18rpx;
+        padding: 10rpx;
+      }
+      .image {
+        width: 100%;
+        height: 100%;
+        border-radius: 16rpx;
+      }
+    }
+    .image-empty {
+      @include flex-y-layout;
+      @include element-size(140rpx, 140rpx, 16rpx);
+      background: #F5F5F5;
+      .icon-camera {
+        @include element-size(80rpx, 80rpx, 0);
+      }
+    }
+  }
+}
+
+.bottom-btns {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: $xs-color-f;
+  padding: 40rpx 0;
+  padding-top: 8rpx;
+  .create-btn {
+    @include element-size(auto, 80rpx, 12rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    margin: 0 40rpx;
+    color: $xs-color-f;
+    background: #0085FF;
+  }
+}
+
+// 套餐服务 popup
+.upopup-contractServe-box {
+  .contractServe-header {
+    @include flex-xy-layout;
+    @include font-style(28rpx);
+    height: 100rpx;
+    color: $xs-color-9;
+    border-bottom: 2rpx solid #EDEDED;
+  }
+  .contractServe-body {
+    padding: 30rpx 24rpx;
+    .contractServe-title {
+      @include font-style(32rpx);
+      margin-bottom: 24rpx;
+    }
+    .contractServe-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 24rpx;
+      .contractServe-item {
+        @include flex-y-layout;
+        height: 100rpx;
+        border-radius: 20rpx;
+        background: #F5F5F5;
+        .contractServe-name {
+          @include font-style(24rpx);
+          color: $xs-color-6;
+        }
+        .contractServe-price {
+          @include font-style(28rpx);
+        }
+        &.contractServe-item-active {
+          background: #0085FF;
+          .contractServe-name {
+            color: $xs-color-f;
+          }
+          .contractServe-price {
+            color: $xs-color-f;
+          }
+        }
+      }
+    }
+  }
+  .divide-ver {
+    height: 16rpx;
+    background: #F5F5F5;
+  }
+  .contractServe-cancel-btn {
+    @include flex-xy-layout;
+    @include font-style(28rpx);
+    height: 100rpx;
+    color: $xs-color-9;
+  }
+}
+
+// 合同编号 popup
+.upopup-serialnum-box {
+  .serialnum-header {
+    @include flex-xy-layout;
+    @include font-style(28rpx);
+    position: relative;
+    height: 100rpx;
+    padding: 0 24rpx;
+    color: $xs-color-9;
+    border-bottom: 2rpx solid #EDEDED;
+    .confirm-btn {
+      @include element-size(100rpx, 48rpx, 8rpx);
+      @include flex-xy-layout;
+      @include font-style(28rpx);
+      position: absolute;
+      right: 24rpx;
+      color: $xs-color-f;
+      background: #0085FF;
+    }
+  }
+  .serialnum-wrap {
+    height: 700rpx;
+    .serialnum-item {
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      position: relative;
+      height: 100rpx;
+      padding: 0 20rpx;
+      border-bottom: 2rpx solid #EDEDED;
+      &:last-child { border-bottom: none; }
+      &.serialnum-item-active {
+        color: #0085FF;
+      }
+      .icon-gou {
+        @include element-size(40rpx, 40rpx, 0);
+        position: absolute;
+        right: 20rpx;
+      }
+    }
+  }
+  .divide-ver {
+    height: 16rpx;
+    background: #F5F5F5;
+  }
+  .serialnum-cancel-btn {
+    @include flex-xy-layout;
+    @include font-style(28rpx);
+    height: 100rpx;
+    color: $xs-color-9;
+  }
+}

@@ -1,0 +1,655 @@
+// 初始化开发：项建隆
+// 二次开发： 汪帆（猛男）
+// 二次开发结束时间： 2022年02月11日
+// 备注：代码逻辑混乱，其中有部分已弃用的代码，老板很善变，所以不敢删，框架有坑，快手坑更多，去年Q3季度刚发布,如果你看到这个，那么说明你现在已经在负责我以前的项目了，我感到非常抱歉，我也是二开，愿上帝保佑你。
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
+			"voicePlay": "@/components/voicePlay/voicePlay.vue",
+			"banners": "@/components/banners.vue",
+			"vipHint": "@/components/vipHint.vue",
+			"lawyerListItem":"@/components/lawyerListItem.vue"
+		}
+	},
+	"globalStyle": {
+		// #ifndef MP-TOUTIAO
+		"navigationStyle": "custom",
+		// #endif
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "百姓律师",
+		"enablePullDownRefresh": false,
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"backgroundColor": "#FFFFFF",
+		"selectedColor": "#0061FF",
+		"color": "#888D98",
+		"custom": true,
+		"list": [
+			{
+				"pagePath": "pages/tabbar/index/index",
+				"text": "首页",
+				"iconPath": "static/images/tab_sy_icon.png",
+				"selectedIconPath": "static/images/tab_sy_icon_sel.png"
+			},
+			{
+				"pagePath": "pages/tabbar/find/find",
+				// "pagePath": "pages/v1/find",
+				"text": "找律师",
+				"iconPath": "static/images/tab_ls_icon.png",
+				"selectedIconPath": "static/images/tab_ls_icon_sel.png"
+			},
+			{
+				// "pagePath": "pages/v1/need",
+				"pagePath": "pages/tabbar/center/center",
+				"text": "法律中心",
+				"iconPath": "static/images/wtgc_icon.png",
+				"selectedIconPath": "static/images/wtgc_icon.png"
+			},
+			{
+				"pagePath": "pages/tabbar/msg/msg",
+				"text": "消息",
+				"iconPath": "static/images/tab_xx_icon.png",
+				"selectedIconPath": "static/images/tab_xx_icon_sel.png"
+			},
+			{
+				"pagePath": "pages/tabbar/profile/profile",
+				"text": "我的",
+				"iconPath": "static/images/tab_wd_icon.png",
+				"selectedIconPath": "static/images/tab_wd_icon_sel.png"
+			}
+		]
+	},
+	// #ifndef MP-KUAISHOU
+	"permission": {
+	  "scope.userLocation": {
+	    "desc": "您的位置信息将用于获取位置信息"
+	  }
+	},
+	// #endif
+	"pages": [
+		{
+			"path": "pages/tabbar/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/tabbar/find/find",
+			"style": {
+				"navigationBarTitleText": "找律师",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/tabbar/center/center",
+			"style": {
+				"navigationBarTitleText": "法律中心",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/tabbar/msg/msg",
+			"style": {
+				"navigationBarTitleText": "我的消息",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/tabbar/profile/profile",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor": "#F5F7FA",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/message/qrcode",
+			"style": {
+				"navigationBarTitleText": "添加客服",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		}
+	],
+	"subPackages": [
+		// 分包 pagesV2
+		{
+			"root": "pagesV2",
+			"pages": [
+				{
+					"path": "h5/login",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "h5/bind",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "h5/logoutPolicy",
+					"style": {
+						"navigationBarTitleText": "百姓律师注销须知",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+						"path" : "pay/pay",
+						"style" : {
+							"navigationStyle": "default",
+							"navigationBarTitleText": "支付",
+							"navigationBarBackgroundColor":"#FFFFFF",
+							"enablePullDownRefresh": false
+						}
+				},
+				{
+						"path" : "h5/privacyPolicy",
+						"style" : {
+							"navigationBarTitleText": "百姓律师隐私政策",
+							"enablePullDownRefresh": false
+					}
+				},
+				{
+						"path" : "lawyerStore/setStore",
+						"style": {
+							"navigationBarTitleText": "开通属于自己的法律小铺",
+							"enablePullDownRefresh": false,
+							"navigationBarBackgroundColor":"#F5F7FA"
+					}
+				},
+				{
+					"path" : "callApplyList",
+					"style" : {
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTitleText": "电话咨询申请列表",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		},
+		// 分包 my
+		{
+			"root": "my",
+			"pages": [{
+					"path": "settings/reaction",
+					"style": {
+						// #ifdef MP-TOUTIAO
+						"navigationStyle": "default",
+						// #endif
+						"navigationBarTitleText": "意见反馈",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "settings/about",
+					"style": {
+						"navigationBarTitleText": "关于我们",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "settings/setPassword",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "支付密码修改",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "common/search",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "搜索",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "idCardUpLoad",
+					"style": {
+						"navigationBarTitleText": "申请认证第二步",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "getMoney",
+					"style": {
+						"navigationBarTitleText": "提现",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "identification",
+					"style": {
+						"navigationBarTitleText": "认证律师",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "client/heLookPage",
+					"style": {
+						"navigationBarTitleText": "用户主页",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "blacklist",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "黑名单",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "BountyList",
+					"style": {
+						"navigationBarTitleText": "悬赏问答",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "client/myLawyer",
+					"style": {
+						"navigationBarTitleText": "我的律师",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "client/orderForm",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "全部订单",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "community",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "问答动态",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "faceAndAttention",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "粉丝或关注",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "client/orderDetail",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "订单详情",
+						"navigationBarBackgroundColor": "#F5F7FA"
+					}
+				},
+				{
+					"path": "payVip",
+					"style": {
+						"navigationBarTitleText": "开通会员",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "client/mypage",
+					"style": {
+						"navigationBarTitleText": "编辑个人资料",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "settings/outLogin",
+					"style": {
+						"navigationBarTitleText": "设置",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "walletPay",
+					"style": {
+						"navigationBarTitleText": "充值",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "wallet",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "我的钱包"
+					}
+				},
+				{
+					"path": "walletList",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "钱包明细",
+						"navigationBarBackgroundColor": "#FFFFFF"
+
+					}
+				},
+				{
+					"path": "enterprise",
+					"style": {
+						"navigationBarTitleText": "企业认证"
+					}
+				},
+				{
+					"path": "settings/userProtocol",
+					"style": {
+						"navigationBarTitleText": "用户协议",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "settings/privacyProtocol",
+					"style": {
+						"navigationBarTitleText": "隐私协议",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				}
+			]
+		},
+		// 分包 pagesV1
+		{
+			"root": "pagesV1",
+			"pages": [
+				{
+					"path": "info/infoDetails",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "对方",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "common/districts",
+					"style": {
+						"navigationBarTitleText": "选择地区"
+					}
+				},
+				{
+					"path": "common/login",
+					"style": {
+						"navigationBarTitleText": "登录",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "common/search",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "搜索"
+					}
+				},
+				{
+					"path": "common/webview",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "common/searchTab",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "搜索结果",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "common/ItsAnswer",
+					"style": {
+						"navigationBarTitleText": "他的",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "index/phoneAdvisory",
+					"style": {
+						"navigationBarTitleText": "百姓律师",
+						"navigationBarBackgroundColor": "#FFFFFF",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "index/lawyerPage",
+					"style": {
+						// #ifndef MP-TOUTIAO
+						"navigationBarTextStyle": "white",
+						// #endif
+						"navigationBarTitleText": "律师资料",
+						"navigationBarBackgroundColor": "#FFFFFF",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "index/commentDetails",
+					"style": {
+						"navigationBarTitleText": "评论详情"
+					}
+				},
+
+				{
+					"path": "index/match",
+					"style": {
+						"navigationBarTitleText": "匹配律师",
+						"navigationBarBackgroundColor": "#FFFFFF",
+						"onReachBottomDistance": 50
+					}
+				},
+				{
+					"path": "index/askDetails",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "问答详情",
+						"navigationBarBackgroundColor": "#FFFFFF",
+						"enablePullDownRefresh":true
+					}
+				},
+				{
+					"path": "need/orderDetail",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "需求详情",
+						"navigationBarBackgroundColor": "#FFFFFF",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "need/release",
+					"style": {
+						"navigationStyle": "default",
+						"navigationBarTitleText": "发布订单",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				},
+				{
+					"path": "need/addRecipient",
+					"style": {
+						"navigationBarTitleText": "添加收件人",
+						"navigationBarBackgroundColor": "#FFFFFF",
+						"enablePullDownRefresh":true
+					}
+				}
+			]
+		},
+		// 分包 pages/module-profile
+		{
+			"root": "pages/module-profile",
+			"pages": [
+				{
+          "path": "profile-enterprise-approve/profile-enterprise-approve",
+          "style": {
+						// #ifndef MP-TOUTIAO
+						"navigationBarTextStyle": "white",
+						// #endif
+            "navigationBarTitleText": "企业认证"
+          }
+        },
+				{
+          "path": "profile-enterprise-approveIdentity/profile-enterprise-approveIdentity",
+          "style": {
+            "navigationBarTitleText": "完成身份认证"
+          }
+        },
+				{
+          "path": "profile-enterprise-approveVerify/profile-enterprise-approveVerify",
+          "style": {
+						"navigationBarTitleText": "打款验证"
+          }
+        }
+			]
+		},
+		// 分包 pages/module-order
+		{
+			"root": "pages/module-order",
+			"pages": [
+				{
+          "path": "order-create/order-create",
+          "style": {
+            "navigationBarTitleText": "发布订单"
+          }
+        },
+				{
+					"path": "order-file-list/order-file-list",
+					"style": {
+						"navigationBarTitleText": "文件列表"
+					}
+				},
+				{
+					"path": "exclude-lawyer/exclude-lawyer",
+					"style": {
+						"navigationBarTitleText": "屏蔽律师"
+					}
+				},
+				{
+					"path": "order-pay/order-pay",
+					"style": {
+						"navigationBarTitleText": "订单支付",
+						"navigationBarTextStyle": "white"
+					}
+				},
+				{
+          "path": "order-detail/order-detail",
+          "style": {
+						// #ifndef MP-TOUTIAO
+						"navigationBarTextStyle": "white",
+						// #endif
+            "navigationBarTitleText": "订单详情"
+          }
+        }
+			]
+		},
+		// 分包 pages/module-dynamic
+		{
+      "root": "pages/module-dynamic",
+      "pages": [
+        {
+          "path": "dynamic-create/dynamic-create",
+          "style": {
+            "navigationBarTitleText": "动态发布"
+          }
+        },
+        {
+          "path": "dynamic-detail/dynamic-detail",
+          "style": {
+            "navigationBarTitleText": "动态详情"
+          }
+        }
+      ]
+    },
+		// 分包 pages/module-common
+		{
+      "root": "pages/module-common",
+      "pages": [
+        {
+          "path": "web-view/web-view",
+          "style": {
+            "navigationBarTitleText": ""
+          }
+        },
+				// {
+        //   "path": "vip-lawyer-serve/vip-lawyer-serve",
+        //   "style": {
+        //     "navigationBarTitleText": "律师套餐"
+        //   }
+        // },
+				{
+          "path": "vip-caseSource-serve/vip-caseSource-serve",
+          "style": {
+            "navigationBarTitleText": "案源套餐",
+						"navigationBarTextStyle": "white"
+          }
+        },
+        {
+          "path": "vip-enterprise-serve/vip-enterprise-serve",
+          "style": {
+						// #ifndef MP-TOUTIAO
+						"navigationBarTextStyle": "white",
+						// #endif
+            "navigationBarTitleText": "企业套餐"
+          }
+        },
+        {
+          "path": "vip-enterprise-serve-sell/vip-enterprise-serve-sell",
+          "style": {
+            "navigationBarTitleText": "企业套餐",
+						"navigationBarTextStyle": "white"
+          }
+        },
+        {
+          "path": "entrust-lawsuit/entrust-lawsuit",
+          "style": {
+            "navigationBarTitleText": "委托打官司"
+          }
+        },
+				{
+					"path": "mp_ecard_sdk/index/index",
+					"style": {
+						"navigationBarTitleText": "腾讯云E证通授权"
+					}
+				},
+				{
+					"path": "mp_ecard_sdk/protocol/eid/eid",
+					"style": {
+						"navigationBarTitleText": "eID数字身份⼩程序服务协议",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "mp_ecard_sdk/protocol/privacy/privacy",
+					"style": {
+					"navigationBarTitleText": "腾讯隐私政策",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "mp_ecard_sdk/protocol/service/service",
+					"style": {
+						"navigationBarTitleText": "腾讯云E证通服务协议",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "mp_ecard_sdk/protocol/userAccredit/userAccredit",
+					"style": {
+						"navigationBarTitleText": "⽤户授权协议",
+						"enablePullDownRefresh": false
+					}
+				}
+      ]
+    }
+	]
+}

@@ -1,0 +1,27 @@
+
+.img-module {
+  .img {
+    width: 100%;
+    height: 1000rpx;
+  }
+  .btn-wrap {
+    @include flex-xy-layout(flex-start);
+    margin: 0 24rpx;
+    margin-top: 40rpx;
+    .btn-item {
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      flex: 1;
+      color: $qy-color-f;
+      height: 90rpx;
+      border-radius: 10rpx;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.16);
+      &:last-child { margin-left: 24rpx; }
+      .icon-img {
+        @include element-size(40rpx, 40rpx, 0);
+        margin-right: 8rpx;
+      }
+    }
+  }
+}

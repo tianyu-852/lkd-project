@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="340" height="235" viewBox="0 0 340 235">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #eff5ff;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: url(#pattern);
+      }
+
+      .cls-5 {
+        filter: url(#椭圆_37);
+      }
+
+      .cls-6 {
+        filter: url(#矩形_606);
+      }
+    </style>
+    <filter id="矩形_606" x="0" y="0" width="340" height="235" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#0d2b8f" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#317cfe"/>
+      <stop offset="1" stop-color="#3e69ff"/>
+    </linearGradient>
+    <filter id="椭圆_37" x="110" y="51" width="121" height="123" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-color="#194eff" flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 163 198">
+      <image width="163" height="198" xlink:href="data:image/png;base64,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"/>
+    </pattern>
+  </defs>
+  <g id="khba_image" transform="translate(18.254 12)">
+    <g id="khba_image-2" data-name="khba_image" transform="translate(0 0)">
+      <g class="cls-6" transform="matrix(1, 0, 0, 1, -18.25, -12)">
+        <rect id="矩形_606-2" data-name="矩形 606" class="cls-1" width="304" height="199" rx="16" transform="translate(18 12)"/>
+      </g>
+      <rect id="矩形_613" data-name="矩形 613" class="cls-2" width="61" height="10" rx="4" transform="translate(208.746 42)"/>
+      <rect id="矩形_614" data-name="矩形 614" class="cls-2" width="54" height="10" rx="4" transform="translate(138.746 42)"/>
+      <rect id="矩形_611" data-name="矩形 611" class="cls-2" width="61" height="10" rx="4" transform="translate(208.746 68)"/>
+      <rect id="矩形_612" data-name="矩形 612" class="cls-2" width="54" height="10" rx="4" transform="translate(138.746 68)"/>
+      <rect id="矩形_608" data-name="矩形 608" class="cls-2" width="61" height="10" rx="4" transform="translate(208.746 95)"/>
+      <rect id="矩形_609" data-name="矩形 609" class="cls-2" width="54" height="10" rx="4" transform="translate(138.746 95)"/>
+      <rect id="矩形_610" data-name="矩形 610" class="cls-2" width="233" height="10" rx="4" transform="translate(36.746 153)"/>
+      <g id="组_1037" data-name="组 1037" transform="translate(121.498 62.563)">
+        <g class="cls-5" transform="matrix(1, 0, 0, 1, -139.75, -74.56)">
+          <ellipse id="椭圆_37-2" data-name="椭圆 37" class="cls-3" cx="30.5" cy="31.5" rx="30.5" ry="31.5" transform="translate(140 75)"/>
+        </g>
+        <g id="组_479" data-name="组 479" transform="translate(17.869 20.456)">
+          <ellipse id="椭圆_38" data-name="椭圆 38" class="cls-1" cx="3.886" cy="3.886" rx="3.886" ry="3.886" transform="translate(9.461 8.157)"/>
+          <path id="路径_335" data-name="路径 335" class="cls-1" d="M902.526,1370.414h-4.15a1.227,1.227,0,0,1-.969-.474l-1.534-1.974a.546.546,0,0,0-.426-.213h-7.758a.545.545,0,0,0-.412.226l-1.4,1.93a1.227,1.227,0,0,1-.993.506h-4.5a2.009,2.009,0,0,0-2.009,2v14.637a2.009,2.009,0,0,0,2.009,2h22.141a2.009,2.009,0,0,0,2.009-2V1372.41A2.009,2.009,0,0,0,902.526,1370.414Zm-10.844,15.528a6.161,6.161,0,1,1,6.2-6.121A6.174,6.174,0,0,1,891.681,1385.943Zm8.516-10.951a.8.8,0,1,1,.8-.8A.8.8,0,0,1,900.2,1374.992Z" transform="translate(-878.375 -1367.753)"/>
+        </g>
+      </g>
+      <rect id="图层_1" data-name="图层 1" class="cls-4" width="63" height="77" transform="translate(36.746 32)"/>
+    </g>
+  </g>
+</svg>

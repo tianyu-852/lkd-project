@@ -1,0 +1,92 @@
+.divider-hor {
+  @include element-size(auto, 16rpx, 0);
+  background: #F5F5F5;
+}
+
+.header-module {
+  position: relative;
+  height: 300rpx;
+  background: #0085FF;
+  .title {
+    @include font-style(54rpx, 500);
+    position: absolute;
+    left: 40rpx;
+    bottom: 30rpx;
+    color: $xs-color-f;
+  }
+}
+
+.base-module {
+  padding: 40rpx;
+  .title-wrap {
+    @include flex-xy-layout(flex-start);
+    @include font-style(32rpx, 500);
+    margin-bottom: 30rpx;
+    .divider-ver {
+      @include element-size(6rpx, 24rpx, 3rpx);
+      background: #0085FF;
+      margin-right: 20rpx;
+    }
+  }
+  .input-item {
+    margin-bottom: 30rpx;
+    &:last-child { margin-bottom: 0; }
+    .input-title {
+      @include font-style(28rpx);
+      color: $xs-color-6;
+    }
+    .input-wrap {
+      @include flex-xy-layout(flex-start);
+      height: 80rpx;
+      border-bottom: 2rpx solid #EDEDED;
+      padding-bottom: 12rpx;
+      .input {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.umodal-type-box {
+  padding: 60rpx;
+  .signType-wrap {
+    @include flex-xy-layout(space-between);
+    .signType-item {
+      @include flex-xy-layout(flex-start);
+      @include font-style(32rpx);
+      // margin-right: 100rpx;
+      color: $xs-color-9;
+      &:last-child { margin-right: 0; }
+      .circle-outer {
+        @include element-size(32rpx, 32rpx);
+        @include flex-xy-layout;
+        margin-right: 16rpx;
+        border: 3rpx solid $xs-color-9;
+        .circle-inner {
+          @include element-size(20rpx, 20rpx);
+          background: $xs-color-f;
+        }
+      }
+      &.signType-item-active {
+        color: $xs-color-3;
+        .circle-outer {
+          border-color: #0085FF;
+          .circle-inner {
+            background: #0085FF;
+          }
+        }
+      }
+    }
+  }
+}
+
+.submit-btn {
+  @include flex-xy-layout;
+  @include font-style(32rpx);
+  margin: 0 40rpx;
+  // margin-top: 40rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  color: $xs-color-f;
+  background: #0085FF;
+}

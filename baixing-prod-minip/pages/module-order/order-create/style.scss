@@ -1,0 +1,487 @@
+.main {
+  margin-top: 30rpx;
+}
+
+.base-module {
+  margin: 0 24rpx;
+  margin-bottom: 24rpx;
+  border-radius: 24rpx;
+  padding: 0 24rpx;
+  background: $bx-color-f;
+  overflow: hidden;
+  .base-item {
+    @include flex-xy-layout(flex-start);
+    min-height: 80rpx;
+    .base-left {
+      @include flex-xy-layout(flex-start);
+      .data-title {
+        @include font-style(30rpx, 500);
+      }
+      .icon-img-b {
+        @include element-size(32rpx, 32rpx, 0);
+        margin-right: 24rpx;
+      }
+      .input {
+        width: 100%;
+        height: 60rpx;
+      }
+    }
+    .base-right {
+      @include flex-xy-layout;
+      margin-left: auto;
+      .data-value {
+        @include font-style(30rpx);
+      }
+      .icon-arrow {
+        @include element-size(30rpx, 30rpx, 0);
+        margin-left: 6rpx;
+      }
+      .input {
+        text-align: right;
+      }
+      .image-wrap {
+        @include element-size(80rpx, 80rpx, 8rpx);
+        position: relative;
+        margin-bottom: 10rpx;
+        .icon-del {
+          @include element-size(34rpx, 34rpx, 0);
+          position: absolute;
+          padding: 10rpx;
+          top: -20rpx;
+          right: -20rpx;
+        }
+      }
+    }
+  }
+}
+
+.type-module {
+  padding: 0;
+  background: #eee;
+  // 父类型导航
+  .type-nav-wrap {
+    @include flex-xy-layout(flex-start);
+    background: #eee;
+    .type-nav-item {
+      flex: 1;
+      height: 72rpx;
+      background: #eee;
+      .type-nav-inner {
+        @include font-style(30rpx);
+        @include flex-xy-layout;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        color: $bx-color-6;
+        background: #eee;
+        .bottom-line {
+          @include element-size(40rpx, 4rpx, 2rpx);
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          background: #0085FF;
+        }
+      }
+      &.type-nav-item-active {
+        .type-nav-inner {
+          @include font-style(30rpx, 500);
+          color: #0085FF;
+          background: $bx-color-f;
+          border-top-left-radius: 24rpx;
+          border-top-right-radius: 24rpx;
+        }
+      }
+      &.type-nav-item-prev {
+        background: $bx-color-f;
+        .type-nav-inner {
+          border-bottom-right-radius: 24rpx;
+        }
+      }
+      &.type-nav-item-next {
+        background: $bx-color-f;
+        .type-nav-inner {
+          border-bottom-left-radius: 24rpx;
+        }
+      }
+    }
+  }
+  // 电话咨询
+  .type-telNav-wrap {
+    @include flex-y-layout;
+    padding: 24rpx;
+    padding-top: 30rpx;
+    background: $bx-color-f;
+    border-radius: 0 0 24rpx 24rpx;
+    .tel-desc-box {
+      @include flex-xy-layout;
+      @include element-size(500rpx, 48rpx, 24rpx);
+      @include font-style(26rpx);
+      color: $bx-color-6;
+      background: #F5F5F5;
+      margin-bottom: 18rpx;
+    }
+    .tel-item-box {
+      @include flex-xy-layout;
+      .tel-item {
+        @include font-style(28rpx);
+        @include flex-xy-layout;
+        color: #0085FF;
+        .icon-gou {
+          @include element-size(30rpx, 30rpx, 0);
+          margin-right: 12rpx;
+        }
+      }
+    }
+  }
+  // 子类型导航
+  .type-subNav-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24rpx;
+    grid-row-gap: 20rpx;
+    padding: 0 24rpx;
+    padding-top: 30rpx;
+    padding-bottom: 20rpx;
+    border-radius: 24rpx 24rpx 0 0;
+    background: $bx-color-f;
+    &.type-subNav-wrap-left { border-top-left-radius: 0; }
+    &.type-subNav-wrap-right { border-top-right-radius: 0; }
+    .type-subNav-item {
+      @include flex-xy-layout;
+      @include font-style(28rpx);
+      height: 60rpx;
+      border-radius: 8rpx;
+      color: $bx-color-6;
+      background: #F5F5F5;
+      &.type-subNav-item-active {
+        color: $bx-color-f;
+        background: #0085FF;
+      }
+    }
+  }
+  // 电话咨询描述
+  .type-tel-desc {
+    @include flex-xy-layout;
+    @include font-style(28rpx);
+    color: $bx-color-6;
+    height: 72rpx;
+  }
+  .type-desc {
+    @include font-style(28rpx);
+    color: $bx-color-6;
+    padding: 0 24rpx;
+    padding-bottom: 28rpx;
+    line-height: 44rpx;
+    background: $bx-color-f;
+  }
+}
+
+// 案件描述
+.desc-module {
+  padding: 24rpx;
+  margin-bottom: 0;
+  .title {
+    @include font-style(30rpx, 500);
+    margin-bottom: 30rpx;
+  }
+  .desc-wrap {
+    background: #F5F5F5;
+    padding: 24rpx;
+    border-radius: 16rpx;
+    .textarea {
+      width: 100%;
+      height: 200rpx;
+    }
+    .image-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 24rpx;
+      .image-item {
+        @include element-size(130rpx, 130rpx, 8rpx);
+        position: relative;
+        .icon-del {
+          @include element-size(34rpx, 34rpx, 0);
+          position: absolute;
+          padding: 10rpx;
+          top: -20rpx;
+          right: -20rpx;
+        }
+      }
+      &.file-wrap {
+        margin-top: 30rpx;
+        .file-item {
+          @include flex-xy-layout;
+          .file-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+          }
+          .file-name {
+            @include multi-line-ellipsis(2);
+            @include font-style(22rpx);
+            position: absolute;
+            top: 50%;
+            left: 6rpx;
+            right: 6rpx;
+            z-index: 1;
+            transform: translateY(-50%);
+            color: $bx-color-f;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .upload-wrap {
+      @include flex-xy-layout(flex-start);
+      margin-top: 24rpx;
+      .upload-item {
+        @include flex-y-layout;
+        @include element-size(130rpx, 130rpx, 8rpx);
+        @include font-style(24rpx);
+        border: 2rpx dashed #bbb;
+        color: $bx-color-9;
+        margin-right: 24rpx;
+        .icon-upload {
+          @include element-size(48rpx, 48rpx, 0);
+        }
+      }
+    }
+  }
+  .desc-tips {
+    @include font-style(28rpx);
+    text-align: center;
+    color: #0085FF;
+    margin-top: 20rpx;
+  }
+}
+
+// 服务过的律师
+// .served-module {
+  
+// }
+
+// 联系人
+.contact-module {
+  .contract-phone {
+    .base-right {
+      @include font-style(30rpx);
+      .divide-ver {
+        color: $bx-color-9;
+        margin: 0 20rpx;
+      }
+      .text-btn {
+        @include font-style(30rpx);
+        color: #0085FF;
+      }
+    }
+  }
+}
+
+
+// 收件人信息
+.addressee-module {
+  .addressee-wrap {
+    background: #F5F5F5;
+    border-radius: 16rpx;
+    padding: 30rpx 24rpx;
+    margin-bottom: 24rpx;
+    .addressee-item {
+      @include flex-xy-layout(flex-start);
+      margin-bottom: 30rpx;
+      &:last-child { margin-bottom: 0; }
+      .addressee-left {
+        @include font-style(30rpx);
+        color: $bx-color-6;
+        margin-right: 30rpx;
+      }
+      .addressee-right {
+        @include font-style(30rpx, 500);
+        flex: 1;
+      }
+    }
+  }
+}
+
+// 底部按钮
+.bottom-btns {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 24rpx;
+  padding-top: 20rpx;
+  z-index: 999;
+  background: $bx-color-f;
+  .btn-wrap {
+    @include flex-xy-layout(flex-start);
+    width: 100%;
+    .btn-item {
+      @include flex-xy-layout(flex-start);
+      @include font-style(32rpx, 500);
+      color: $bx-color-f;
+      background: #003C74;
+      height: 90rpx;
+      padding: 0 40rpx;
+      &:first-child {
+        @include font-style(32rpx);
+        border-radius: 100rpx 0 0 100rpx;
+        flex: 1;
+      }
+      &:last-child {
+        @include flex-xy-layout;
+        width: 238rpx;
+        border-radius: 0 100rpx 100rpx 0;
+        background: #FE5F48;
+      }
+    }
+  }
+  .bottom-protocol {
+    @include font-style(22rpx);
+    text-align: center;
+    color: $bx-color-9;
+    margin-top: 18rpx;
+  }
+}
+
+// 更换联系人 popup
+.upopup-contact-box {
+  padding: 30rpx 24rpx;
+  .upopup-title {
+    @include flex-xy-layout;
+    @include font-style(32rpx, 500);
+    margin-bottom: 30rpx;
+  }
+  .contact-info-item {
+    @include flex-xy-layout(flex-start);
+    @include font-style(30rpx);
+    height: 100rpx;
+    border-radius: 16rpx;
+    padding: 0 24rpx;
+    border: 2rpx solid #F5F5F5;
+    margin-bottom: 30rpx;
+    .divide-ver {
+      color: $bx-color-9;
+      margin: 0 20rpx;
+    }
+    .code-btn {
+      @include font-style(30rpx);
+      color: #0085FF;
+      &.code-btn-disable {
+        color: $bx-color-9;
+      }
+    }
+  }
+  .upopup-btns {
+    @include flex-xy-layout;
+    .upopup-btn {
+      @include font-style(32rpx);
+      @include flex-xy-layout;
+      flex: 1;
+      height: 90rpx;
+      border-radius: 16rpx;
+      color: $bx-color-6;
+      background: #F5F5F5;
+      &:last-child {
+        margin-left: 24rpx;
+        color: $bx-color-f;
+        background: #0085FF;
+      }
+    }
+  }
+}
+
+// 收件人 popup
+.upopup-receive-box {
+  padding: 30rpx 24rpx;
+  .upopup-title {
+    @include flex-xy-layout;
+    @include font-style(32rpx, 500);
+    margin-bottom: 30rpx;
+  }
+  .receive-info-item {
+    @include flex-xy-layout(flex-start);
+    height: 100rpx;
+    border-radius: 16rpx;
+    padding: 0 24rpx;
+    border: 2rpx solid #F5F5F5;
+    margin-bottom: 30rpx;
+    .receive-info-right {
+      @include flex-xy-layout(flex-start);
+      flex: 1;
+      margin-left: 20rpx;
+      .input {
+        @include font-style(30rpx);
+        flex: 1;
+        text-align: right;
+      }
+      .divide-ver {
+        color: $bx-color-9;
+        margin: 0 20rpx;
+      }
+      .text-btn {
+        @include font-style(30rpx);
+        color: #0085FF;
+      }
+    }
+  }
+  .upopup-btns {
+    @include flex-xy-layout;
+    .upopup-btn {
+      @include font-style(32rpx);
+      @include flex-xy-layout;
+      flex: 1;
+      height: 90rpx;
+      border-radius: 16rpx;
+      color: $bx-color-6;
+      background: #F5F5F5;
+      &:last-child {
+        margin-left: 24rpx;
+        color: $bx-color-f;
+        background: #0085FF;
+      }
+    }
+  }
+}
+
+// 分类 popup
+.upopup-category-box {
+  .upopup-category-header {
+    @include flex-xy-layout;
+    @include font-style(30rpx, 500);
+    height: 88rpx;
+    border-bottom: 2rpx solid #F5F5F5
+  }
+  .upopup-category-content {
+    padding: 0 30rpx;
+    .category-content-scrollYView {
+      max-height: 660rpx;
+    }
+    .category-group {
+      padding-bottom: 30rpx;
+      &:first-child { padding-top: 30rpx; }
+      .category-group-name {
+        @include font-style(30rpx, 500);
+        margin-bottom: 30rpx;
+      }
+      .category-item-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24rpx;
+        .category-item {
+          @include flex-xy-layout;
+          @include font-style(28rpx);
+          height: 80rpx;
+          background: #F5F5F5;
+          border-radius: 40rpx;
+          &.category-item-active {
+            color: $bx-color-f;
+            background:#0085FF;
+          }
+        }
+      }
+    }
+  }
+}

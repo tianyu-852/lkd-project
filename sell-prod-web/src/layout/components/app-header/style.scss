@@ -1,0 +1,28 @@
+.app-header {
+  @include flex-xy-layout(flex-start);
+  @include font-style(22px);
+  padding: 0 20px;
+  height: 60px;
+  background: $xs-color-f;
+  .header-left {
+    .collapse-icon {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+  .header-right {
+    @include flex-xy-layout;
+    margin-left: auto;
+    .fullscreen-btn {
+      margin-right: 10px;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+    .account-wrap {
+      cursor: pointer;
+      .el-dropdown-link {
+        @include flex-xy-layout(flex-start);
+      }
+    }
+  }
+}

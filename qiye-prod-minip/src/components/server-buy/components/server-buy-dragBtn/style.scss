@@ -1,0 +1,24 @@
+@keyframes dragAnimateScale {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(.8, .8);
+  }
+}
+
+.drag {
+  @include flex-xy-layout(flex-start);
+  position: fixed;
+  z-index: 999;
+  animation: dragAnimateScale 1s linear infinite alternate;
+  &.drag-transition {
+    transition: left .3s ease, top .3s ease;
+  }
+  &.drag-opacity {
+    opacity: .5;
+  }
+  .drag-img{
+    @include element-size(140rpx, 151rpx, 0);
+  }
+}

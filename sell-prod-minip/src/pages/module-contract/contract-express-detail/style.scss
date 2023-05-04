@@ -1,0 +1,54 @@
+
+.express-module {
+  margin: 0 24rpx;
+  margin-left: 48rpx;
+  .express-info-wrap {
+    @include flex-xy-layout(flex-start);
+    height: 90rpx;
+    border-bottom: 2rpx solid #EDEDED;
+    margin-bottom: 30rpx;
+    @include font-style(30rpx);
+    .copy-btn {
+      margin-left: auto;
+      color: $xs-color-9;
+    }
+  }
+  .express-timeline {
+    .u-node-left {
+      .icon-node {
+        @include element-size(48rpx, 48rpx, 0)
+      }
+      .icon-dot {
+        height: 16rpx;
+        width: 16rpx;
+        border-radius: 50%;
+        background: #D8D8D8;;
+      }
+    }
+    .u-node-right {
+      margin-bottom: 40rpx;
+      &.u-node-right-one {
+        .u-order-time, .u-order-desc{
+          color: #0085FF;
+        }
+      }
+      .u-order-time {
+        @include font-style(30rpx);
+        color: $xs-color-9;
+        margin-bottom: 16rpx;
+      }
+      .u-order-desc {
+        @include font-style(26rpx);
+        line-height: 36rpx;
+        color: $xs-color-9;
+      }
+    }
+  }
+}
+
+.empty-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

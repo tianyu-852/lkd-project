@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #888d98;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="sj_icon" transform="translate(-69.901 -552.902)">
+    <g id="组_2808" data-name="组 2808" transform="translate(70.922 553.922)">
+      <g id="组_2806" data-name="组 2806" transform="translate(10.981 4.762)">
+        <path id="路径_2056" data-name="路径 2056" class="cls-1" d="M286.651,1551.237a1.083,1.083,0,0,1-.773-.322l-2.856-2.884a1.088,1.088,0,0,1-.315-.765V1539.9a1.088,1.088,0,1,1,2.175,0v6.917l2.541,2.566a1.088,1.088,0,0,1-.773,1.853Z" transform="translate(-282.708 -1538.813)"/>
+      </g>
+      <g id="组_2807" data-name="组 2807">
+        <path id="路径_2057" data-name="路径 2057" class="cls-1" d="M264.535,1549.911a12.117,12.117,0,1,1,12.117-12.117A12.131,12.131,0,0,1,264.535,1549.911Zm0-22.059a9.942,9.942,0,1,0,9.942,9.942A9.953,9.953,0,0,0,264.535,1527.852Z" transform="translate(-252.418 -1525.677)"/>
+      </g>
+    </g>
+    <rect id="矩形_2121" data-name="矩形 2121" class="cls-2" width="26" height="26" transform="translate(69.901 552.902)"/>
+  </g>
+</svg>

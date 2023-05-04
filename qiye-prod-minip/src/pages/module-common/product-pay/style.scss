@@ -1,0 +1,156 @@
+.banner-momdule {
+  @include element-size(100%, 330rpx, 0);
+}
+
+.company-content-module {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 330rpx + 24rpx);
+  margin-top: -24rpx;
+  border-radius: 24rpx 24rpx 0 0;
+  background: $qy-color-f;
+  overflow: hidden;
+  .scroll-y.content-scroll-y {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 200rpx;
+    .divider-hor {
+      @include element-size(auto, 16rpx, 0);
+      background: #F5F5F5;
+    }
+    .person-product-module {
+      padding: 24rpx;
+      .product-title {
+        @include flex-xy-layout(flex-start);
+        @include font-style(36rpx, 500);
+        margin-bottom: 20rpx;
+      }
+      .person-product-items {
+        .person-product-item {
+          @include element-size(auto, 120rpx, 16rpx);
+          @include font-style(32rpx);
+          @include flex-xy-layout;
+          color: $qy-color-9;
+          border: 2rpx solid #EDEDED;
+          margin-bottom: 20rpx;
+          // &:first-child {
+          // }
+          &.person-product-item-active {
+            color: #0085FF;
+            border-color: #0085FF;
+          }
+          .icon-vip {
+            @include element-size(80rpx, 36rpx, 0);
+            margin-right: 30rpx;
+          }
+        }
+      }
+    }
+    .company-product-module {
+      padding: 24rpx;
+      padding-bottom: 0;
+      .product-title {
+        @include flex-xy-layout(flex-start);
+        @include font-style(36rpx, 500);
+        margin-bottom: 20rpx;
+      }
+      .company-product-items {
+        @include flex-xy-layout(flex-start);
+        margin-bottom: 20rpx;
+        .company-product-item {
+          @include flex-xy-layout;
+          @include font-style(28rpx);
+          flex: 1;
+          height: 100rpx;
+          color: $qy-color-9;
+          border: 2rpx solid #EDEDED;
+          border-radius: 16rpx;
+          margin-right: 13rpx;
+          &:last-child { margin-right: 0; }
+          &.company-product-item-active {
+            color: #0085FF;
+            border-color: #0085FF;
+          }
+        }
+      }
+      .company-product-img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.person-content-module {
+  padding: 36rpx 24rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  .person-vip-title {
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    height: 70rpx;
+    color: $qy-color-f;
+    background: #0085FF;
+    border-radius: 20rpx 20rpx 0 0;
+  }
+  .person-vip-footer {
+    @include flex-xy-layout(space-between);
+    @include font-style(32rpx);
+    height: 85rpx;
+    padding: 0 24rpx;
+    color: #0085FF;
+    background: #F5F5F5;
+    border-top: 2rpx solid #E8E8E8;
+    border-radius: 0 0 20rpx 20rpx;
+  }
+  .person-vip-wrap {
+    padding: 0 20rpx;
+    background: #F5F5F5;
+    .person-vip-item {
+      @include flex-xy-layout(flex-start);
+      padding: 40rpx 0;
+      &:first-child { border-top: 2rpx solid #E8E8E8; }
+      .icon-vip {
+        @include element-size(80rpx, 36rpx, 0);
+        margin-right: 36rpx;
+      }
+      .person-vip {
+        @include flex-y-layout(flex-start);
+        @include font-style(30rpx);
+        flex: 1;
+        color: $qy-color-9;
+        .person-vip-price {
+          @include font-style(36rpx, 500);
+          color: $qy-color-3;
+        }
+      }
+      .icon-gou {
+        @include element-size(36rpx, 36rpx, 0);
+        margin-right: 8rpx;
+      }
+    }
+  }
+}
+
+.btn-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background: $qy-color-f;
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+  .pay-btn {
+    @include element-size(auto, 90rpx, 45rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx, 500);
+    margin: 0 24rpx;
+    color: $qy-color-f;
+    background: #FE5F48;
+    margin-bottom: 20rpx;
+  }
+  .pay-protocol {
+    @include font-style(22rpx, 500);
+    text-align: center;
+  }
+}

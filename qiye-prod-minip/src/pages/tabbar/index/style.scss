@@ -1,0 +1,650 @@
+.title-wrap {
+  @include flex-xy-layout(space-between);
+  margin: 0 24rpx;
+  margin-bottom: 24rpx;
+  .title-left {
+    @include font-style(36rpx, 500);
+  }
+  .title-right {
+    @include flex-xy-layout;
+    @include font-style(32rpx, 500);
+    color: #0085FF;
+    .location-img {
+      @include element-size(26rpx, 30rpx, 0);
+      margin-right: 12rpx;
+    }
+    .arrow-left-img {
+      @include element-size(20rpx, 20rpx, 0);
+      margin-left: 8rpx;
+    }
+  }
+}
+
+.logo-navbar-slot {
+  padding: 0 26rpx;
+  .logo-img {
+    @include element-size(156rpx, 32rpx, 0);
+  }
+  .divider-ver {
+    @include element-size(2rpx, 24rpx, 0);
+    background: $qy-color-6;
+    margin: 0 18rpx;
+  }
+  .explain {
+    @include font-style(28rpx);
+    color: $qy-color-6;
+  }
+}
+
+.header-module {
+  padding: 24rpx;
+  padding-bottom: 34rpx;
+  padding-top: 0;
+  margin-bottom: 16rpx;
+  background: $qy-color-f;
+  .swiper-wrap {
+    position: relative;
+    margin-bottom: 34rpx;
+    .swiper {
+      height: 180rpx;
+      border-radius: 20rpx;
+      .swiper-item {
+        border-radius: 20rpx;
+        .swiper-img {
+          @include element-size(100%, 100%, 20rpx);
+        }
+      }
+    }
+    // swiper 指示器
+    .swiper-indicator {
+      @include flex-xy-layout;
+      position: absolute;
+      bottom: 12rpx;
+      right: 10rpx;
+      .indicator-item {
+        @include element-size(10rpx, 10rpx);
+        background: rgba(255, 255, 255, 0.5);
+        margin-right: 10rpx;
+        transition: all .3s;
+        &:last-child { margin-right: 0; }
+        &.indicator-item-active {
+          background: $qy-color-f;
+        }
+      }
+    }
+  }
+  .data-wrap {
+    @include flex-xy-layout(flex-start);
+    .data-item {
+      @include flex-y-layout;
+      flex: 1;
+      color: #0085FF;
+      .data-num {
+        @include font-style(32rpx, bold);
+      }
+      .data-title {
+        @include font-style(32rpx, bold);
+        margin-top: 4rpx;
+      }
+      .data-desc {
+        @include font-style(20rpx);
+        color: $qy-color-6;
+      }
+    }
+  }
+}
+
+.dynamic-module {
+  @include flex-xy-layout(flex-start);
+  margin-bottom: 16rpx;
+  background-color: $qy-color-f;
+  .dynamic-server {
+    @include element-size(178rpx, 120rpx, 0);
+    position: relative;
+    margin-right: 20rpx;
+    .server-bgImg {
+      @include element-size(100%, 100%, 0);
+    }
+    .server-data {
+      @include element-size(100%, 100%, 0);
+      @include flex-y-layout;
+      position: absolute;
+      top: 0;
+      left: 0;
+      .server-num {
+        @include font-style(32rpx, 500);
+      }
+      .server-text {
+        @include font-style(20rpx, 500);
+        color: $qy-color-6;
+      }
+    }
+  }
+  .dynamic-swiper {
+    flex: 1;
+    height: 80rpx;
+    .dynamic-item {
+      @include flex-xy-layout(flex-start);
+      margin-bottom: 12rpx;
+      &:last-child { margin-bottom: 0; }
+      .gray-dot {
+        @include element-size(6rpx, 6rpx);
+        background: $qy-color-6;
+        margin-right: 23rpx;
+      }
+      .dynamic-content {
+        @include font-style(26rpx);
+        @include multi-line-ellipsis;
+        flex: 1;
+        color: $qy-color-6;
+      }
+    }
+  }
+}
+
+// 严选律师
+.strict-module {
+  padding: 32rpx 0;
+  margin-bottom: 16rpx;
+  background: $qy-color-f;
+  .scroll-x.strict-scroll-x {
+    min-height: 356rpx;
+    .scroll-x-item {
+      margin-right: 60rpx;
+      &:first-child { margin-left: 24rpx; }
+      // &:last-child { margin-right: 24rpx; }
+      .strict-item-wrap {
+        .strict-item {
+          @include flex-xy-layout(flex-start, stretch);
+          margin-bottom: 36rpx;
+          &:last-child { margin-bottom: 0; }
+          .lawyer-avatar {
+            @include element-size(160rpx, 160rpx, 20rpx);
+            position: relative;
+            margin-right: 24rpx;
+            .work-year {
+              @include font-style(24rpx);
+              @include flex-xy-layout;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              height: 40rpx;
+              color: $qy-color-f;
+              border-bottom-right-radius: 20rpx;
+              border-bottom-left-radius: 20rpx;
+              background: rgba(0, 0, 0, .3)
+            }
+          }
+          .lawyer-info-wrap {
+            .lawyer-name-wrap {
+              @include flex-xy-layout(flex-start);
+              @include font-style(28rpx, 500);
+              margin-bottom: 5rpx;
+              .badge-img {
+                @include element-size(28rpx, 28rpx, 0);
+                margin-left: 8rpx;
+              }
+            }
+            .lawyer-loc {
+              @include font-style(24rpx);
+              color: $qy-color-9;
+              margin-bottom: 8rpx;
+            }
+            .lawyer-evaluate {
+              @include font-style(24rpx);
+              color: $qy-color-9;
+              margin-bottom: 8rpx;
+            }
+            .lawyer-server {
+              @include font-style(24rpx);
+              color: $qy-color-9;
+            }
+          }
+        }
+      }
+      &.scroll-more-btnWrap {
+        background: #F5F5F5;
+        border-radius: 16rpx 0 0 16rpx;
+        margin-right: 0;
+        .scroll-more-btn {
+          @include element-size(80rpx, 356rpx);
+          @include flex-y-layout;
+          @include font-style(24rpx);
+          .icon-arrow-right {
+            @include element-size(24rpx, 24rpx);
+            margin-bottom: 12rpx;
+          }
+          .icon-arrow-more {
+            @include element-size(24rpx, 168rpx, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 服务保障
+// FIXME: 待删除
+.safe-module {
+  padding: 32rpx 0;
+  margin-bottom: 16rpx;
+  background: $qy-color-f;
+  .safe-scroll-x {
+    height: 224rpx;
+    .scroll-x-item {
+      margin-right: 24rpx;
+      &:first-child { margin-left: 24rpx; }
+      .safe-imgWrap {
+        height: 224rpx;
+      }
+    }
+  }
+}
+
+.nav-module {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 2;
+  background: $qy-color-f;
+  .nav-div {
+    @include element-size(2rpx, 32rpx, 0);
+    background: #D8D8D8;
+  }
+  .nav-wrap {
+    @include flex-xy-layout(flex-start);
+    .nav-item {
+      @include flex-xy-layout;
+      @include font-style(36rpx, 500);
+      flex: 1;
+      height: 114rpx;
+      color: $qy-color-9;
+      transition: all .3s;
+      .icon-sort {
+        @include element-size(30rpx, 30rpx, 0);
+        margin-left: 6rpx;
+      }
+      &.nav-item-active {
+        color: $qy-color-3;
+      }
+    }
+  }
+  // .sub-filter-wrap {
+  //   @include flex-xy-layout(flex-start);
+  //   @include font-style(28rpx);
+  //   padding-left: 24rpx;
+  //   padding-bottom: 20rpx;
+  //   color: $qy-color-6;
+  //   .icon-triangle-bottom {
+  //     @include element-size(11rpx, 8rpx, 0);
+  //     margin-left: 12rpx;
+  //   }
+  // }
+}
+
+// 服务中心
+.server-order-module {
+  padding: 0 24rpx;
+  padding-bottom: 0;
+  .server-order-wrap {
+    padding-bottom: 16rpx;
+    .server-order-item {
+      margin-bottom: 24rpx;
+      border-radius: 24rpx;
+      background: #E0E7ED;
+      &:first-child { margin-top: 24rpx; }
+      &:last-child { margin-bottom: 0; }
+      .server-order-box {
+        padding: 0 24rpx;
+        padding-top: 20rpx;
+        // padding-bottom: 30rpx;
+        border-radius: 24rpx;
+        background: $qy-color-f;
+        .server-header {
+          @include flex-xy-layout(flex-start);
+          padding-bottom: 20rpx;
+          margin-bottom: 24rpx;
+          border-bottom: solid 2rpx #EDEDED;
+          .user-avatar {
+            @include element-size(64rpx, 64rpx, 10rpx);
+            position: relative;
+            margin-right: 24rpx;
+            .vip-badge {
+              @include element-size(86rpx, 30rpx, 0);
+              position: absolute;
+              left: -11rpx;
+              bottom: -10rpx;
+            }
+          }
+          .user-info {
+            flex: 1;
+            margin-right: 20rpx;
+            .user-name {
+              @include font-style(28rpx);
+              color: #14284A;
+            }
+            .user-time {
+              @include font-style(24rpx);
+              color: #6E7695;
+            }
+          }
+          .order-status {
+            @include element-size(120rpx, 44rpx, 22rpx);
+            @include font-style(24rpx, 500);
+            @include flex-xy-layout;
+            margin-left: auto;
+            color: $qy-color-9;
+            background: #F5F5F5;
+            &.order-status-active {
+              color: #FFA024;
+              background: #FFF4E6;
+            }
+          }
+        }
+        .order-info {
+          @include flex-xy-layout(flex-start);
+          padding-bottom: 24rpx;
+          .order-demand {
+            @include font-style(30rpx, 500);
+            @include multi-line-ellipsis;
+            color: #14284A;
+          }
+          .vip-price {
+            @include font-style(32rpx, 500);
+            margin-left: auto;
+            color: #FE5F48;
+          }
+        }
+        .order-type {
+          @include flex-xy-layout(flex-start);
+          @include font-style(30rpx);
+          color: #6E7695;
+          padding-bottom: 24rpx;
+          .type-value {
+            @include multi-line-ellipsis;
+            @include font-style(30rpx, 500);
+            flex: 1;
+            color: #14284A;
+          }
+        }
+        .order-status-info {
+          padding-bottom: 24rpx;
+          .give-count-down {
+            @include font-style(30rpx);
+            color: #6E7695;
+          }
+          .give-finish {
+            @include flex-xy-layout(flex-start, flex-start);
+            .timeline-img {
+              @include element-size(16rpx, 82rpx, 0);
+              margin-right: 16rpx;
+              margin-top: 16rpx;
+            }
+            .give-step-wrap {
+              .give-step {
+                @include font-style(30rpx);
+                color: #6E7695;
+                margin-bottom: 24rpx;
+                &:last-child { margin-bottom: 0; }
+              }
+            }
+          }
+        }
+      }
+      // 订单匹配律师
+      .server-order-lawyer {
+        @include flex-xy-layout(flex-start);
+        height: 86rpx;
+        padding: 0 24rpx;
+        .lawyer-left {
+          @include flex-xy-layout(flex-start);
+          .user-avatar {
+            @include element-size(50rpx, 50rpx, 10rpx);
+            margin-left: -14rpx;
+            &:first-child { margin-left: 0; }
+          }
+          .lawyer-name {
+            @include font-style(30rpx, 500);
+            color: #0060FF;
+            margin-left: 20rpx;
+          }
+        }
+        .lawyer-right {
+          @include flex-xy-layout(flex-start);
+          @include font-style(28rpx);
+          margin-left: auto;
+          color: #005FFF;
+          .icon-arrow-right {
+            @include element-size(20rpx, 20rpx, 0);
+            margin-left: 12rpx;
+          }
+        }
+      }
+    }
+  }
+  // 空状态
+  .empty-wrap {
+    @include flex-y-layout;
+    margin: 0 auto;
+    padding-top: 120rpx;
+    padding-bottom: 30rpx;
+    .null-text {
+      @include font-style(30rpx);
+      color: $qy-color-9;
+    }
+    .null-btn {
+      @include element-size(400rpx, 70rpx, 40rpx);
+      @include font-style(30rpx);
+      @include flex-xy-layout;
+      color: $qy-color-f;
+      margin-top: 30rpx;
+      background: linear-gradient(90deg, #48A8FF 0%, #0085FF 100%, #0085FF 100%);
+    }
+  }
+}
+
+// 企业普法
+.popularize-module {
+  padding: 0 24rpx;
+  padding-bottom: 0;
+  // height: 100vh;
+  background: $qy-color-f;
+  .popularize-wrap {
+    .popularize-item {
+      padding-bottom: 24rpx;
+      margin-bottom: 40rpx;
+      border-bottom: 2rpx solid #EDEDED;
+      &:first-child { padding-top: 24rpx; }
+      &:last-child { margin-bottom: 0; border: none; }
+      .popularize-header {
+        @include flex-xy-layout(flex-start);
+        margin-bottom: 16rpx;
+        .user-avatar {
+          @include element-size(60rpx, 60rpx, 10rpx);
+          margin-right: 16rpx;
+        }
+        .user-name {
+          @include font-style(28rpx);
+        }
+        .popularize-read {
+          @include font-style(28rpx);
+          margin-left: auto;
+          color: $qy-color-9;
+        }
+      }
+      .popularize-body {
+        .popularize-titleWrap {
+          @include font-style(32rpx, 500);
+          margin-bottom: 12rpx;
+        }
+        .popularize-content {
+          @include font-style(30rpx);
+          color: $qy-color-6;
+          line-height: 50rpx;
+        }
+        .more-btn {
+          margin-left: 12rpx;
+          color: #0085FF;
+        }
+      }
+    }
+  }
+}
+
+.upopup-evaluate-box {
+  padding: 30rpx;
+  .evaluate-header {
+    @include flex-xy-layout(flex-start);
+    margin-bottom: 25rpx;
+    .evaluate-left {
+      @include element-size(60rpx, 60rpx, 0);
+      margin-right: 16rpx;
+    }
+    .evaluate-middle {
+      @include font-style(24rpx);
+      color: $qy-color-6;
+    }
+  }
+  .evaluate-content {
+    @include font-style(28rpx);
+    line-height: 44rpx;
+    margin-bottom: 20rpx;
+  }
+  .evaluate-bottom {
+    @include flex-xy-layout(space-between);
+    @include font-style(24rpx);
+    color: $qy-color-9;
+    padding-bottom: 20rpx;
+    border-bottom: 2rpx solid #EDEDED;
+  }
+  .evaluate-call-btn {
+    @include flex-xy-layout;
+    @include font-style(28rpx, 500);
+    @include element-size(300rpx, 68rpx, 16rpx);
+    color: $qy-color-f;
+    margin: 0 auto;
+    margin-top: 40rpx;
+    background: linear-gradient(90deg, #FE6D53 0%, #F7402C 100%, #F7402C 100%);
+  }
+}
+
+.black-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, .4);
+}
+
+// 已买服务的弹框
+.kefu-buyed-popup {
+  @include element-size(520rpx, auto, 20rpx);
+  position: fixed;
+  top: calc(100vh / 2 + 180px);
+  transform: translateY(-110%);
+  right: 34rpx;
+  z-index: 99999;
+  padding: 30rpx;
+  background: $qy-color-f;
+  .icon-del {
+    @include element-size(44rpx, 44rpx, 0);
+    position: absolute;
+    padding-left: 30rpx;
+    right: 0;
+    top: -64rpx;
+  }
+  .bottom-triangle {
+    @include element-size(24rpx, 20rpx);
+    position: absolute;
+    bottom: -16rpx;
+    right: 40rpx;
+  }
+  .kefu-wrap {
+    @include flex-xy-layout(flex-start, flex-start);
+    margin-bottom: 23rpx;
+    .kufu-left {
+      @include element-size(70rpx, 70rpx);
+      margin-right: 20rpx;
+    }
+    .kefu-right {
+      flex: 1;
+      .kefu-right-key {
+        @include font-style(28rpx);
+        color: $qy-color-6;
+        margin-bottom: 20rpx;
+      }
+      .kefu-right-value {
+        @include font-style(28rpx);
+        padding: 20rpx;
+        background: #F5F5F5;
+        border-radius: 6rpx 12rpx 12rpx 12rpx;
+      }
+    }
+  }
+  .btn-wrap {
+    @include flex-xy-layout(flex-start);
+    margin-top: 30rpx;
+    .btn-item {
+      @include flex-xy-layout;
+      @include element-size(auto, 68rpx, 34rpx);
+      @include font-style(28rpx, 500);
+      flex: 1;
+      color: $qy-color-f;
+      background: #00D157;
+      &:last-child {
+        margin-left: 29rpx;
+        background: #0085FF;
+      }
+      .btn-icon {
+        @include element-size(36rpx, 36rpx, 0);
+        margin-right: 10rpx;
+      }
+    }
+  }
+}
+
+// 未买服务的弹框
+.kefu-nobuy-popup {
+  @include element-size(512rpx, auto, 20rpx);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: $qy-color-f;
+  .header-img {
+    @include element-size(100%, 400rpx, 0);
+  }
+  .upopup-content-wrap {
+    padding: 0 42rpx;
+    margin-bottom: 70rpx;
+    .phone-title {
+      @include font-style(28rpx);
+      text-align: left;
+      color: $qy-color-9;
+      margin-bottom: 16rpx;
+    }
+    .phone-call {
+      @include flex-xy-layout;
+      @include font-style(38rpx, 500);
+      height: 80rpx;
+      border-radius: 12rpx;
+      color: $qy-color-f;
+      background: #FE5F48;
+      .icon-call {
+        @include element-size(40rpx, 40rpx, 0);
+        margin-right: 12rpx;
+      }
+    }
+  }
+  .icon-del {
+    @include element-size(60rpx, 60rpx, 0);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120rpx;
+  }
+}

@@ -1,0 +1,280 @@
+.divider-ver {
+  height: 16rpx;
+  background: #f5f5f5;
+}
+
+.cell-module {
+  padding: 0 24rpx;
+  background: $bx-color-f;
+  .cell-item {
+    @include flex-xy-layout(flex-start);
+    height: 100rpx;
+    border-bottom: 2rpx solid #EDEDED;
+    overflow: hidden;
+    transition: all .3s;
+    &:last-child { border-bottom: none; }
+    .cell-left {
+      @include font-style(32rpx, 500);
+    }
+    .cell-right {
+      @include flex-xy-layout(flex-start);
+      margin-left: auto;
+    }
+  }
+}
+
+// 描述
+.desc-module {
+  padding: 24rpx;
+  margin-bottom: 0;
+  background: $bx-color-f;
+  .desc-title {
+    @include flex-xy-layout(flex-start);
+    @include font-style(32rpx, 500);
+    margin-bottom: 28rpx;
+    .edit-eg {
+      @include flex-xy-layout(flex-start);
+      @include font-style(28rpx);
+      color: #0085FF;
+      margin-left: auto;
+      .icon-eg {
+        @include element-size(24rpx, 24rpx, 0);
+        margin-right: 8rpx;
+      }
+    }
+  }
+  .desc-wrap {
+    background: #F5F5F5;
+    padding: 20rpx;
+    border-radius: 16rpx;
+    .textarea {
+      @include font-style(32rpx);
+      width: 100%;
+      height: 300rpx;
+      word-wrap: break-word;
+      white-space: pre-line;
+    }
+    .image-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 24rpx;
+      margin-top: 30rpx;
+      .image-item {
+        @include element-size(130rpx, 130rpx, 8rpx);
+        position: relative;
+        .icon-del {
+          @include element-size(34rpx, 34rpx, 0);
+          position: absolute;
+          padding: 10rpx;
+          top: -20rpx;
+          right: -20rpx;
+        }
+        &.upload-item {
+          @include flex-y-layout;
+          @include font-style(24rpx);
+          border: 2rpx dashed #bbb;
+          color: $bx-color-9;
+          .icon-upload {
+            @include element-size(48rpx, 48rpx, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 底部按钮
+.btn-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  background: $bx-color-f;
+  padding-top: 20rpx;
+  .btn-wrap {
+    @include flex-xy-layout(flex-start);
+    width: 100%;
+    margin-bottom: 10rpx;
+    padding: 0 24rpx;
+    .btn-item {
+      @include flex-xy-layout;
+      @include element-size(100%, 90rpx, 48rpx);
+      @include font-style(36rpx, 500);
+      color: $bx-color-f;
+      background: #0085FF;
+    }
+  }
+  .pay-protocol {
+    @include font-style(24rpx);
+    color: $bx-color-6;
+    text-align: center;
+  }
+}
+
+// 地区 popup
+.upopup-region-box {
+  @include flex-xy-layout(flex-start);
+  height: 100%;
+  .sidenav-wrap {
+    position: relative;
+    width: 200rpx;
+    background: #F3F5F8;
+    height: 100%;
+    // overflow-y: auto;
+    .sidenav-item {
+      @include font-style(32rpx, 500);
+      @include flex-xy-layout;
+      height: 100rpx;
+      padding: 0 10rpx;
+      text-align: center;
+      color: #888D98;
+      &.sidenav-item-active {
+        color: $bx-color-3;
+      }
+    }
+    .sidenav-line-outer {
+      @include flex-y-center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 6rpx;
+      height: 100rpx;
+      transition: all .3s;
+      .sidenav-line-inner {
+        width: 100%;
+        height: 40rpx;
+        border-radius: 6rpx;
+        background: #0085FF;
+      }
+    }
+  }
+  .region-wrap {
+    flex: 1;
+    height: 100%;
+    padding: 30rpx;
+    overflow-y: auto;
+    .city-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20rpx;
+      .city-item {
+        @include flex-xy-layout;
+        @include element-size(auto, 68rpx, 8rpx);
+        @include font-style(30rpx, 500);
+        color: #888D98;
+        background: #EEF0F3;
+        &.city-item-active {
+          position: relative;
+          border: 2rpx solid #0085FF;
+          background: $bx-color-f;
+          color: #0085FF;
+          .active-gou-img {
+            @include element-size(26rpx, 26rpx, 0);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 更换联系人 popup
+.upopup-contact-box {
+  padding: 30rpx 24rpx;
+  .upopup-title {
+    @include flex-xy-layout;
+    @include font-style(32rpx, 500);
+    margin-bottom: 30rpx;
+  }
+  .contact-info-item {
+    @include flex-xy-layout(flex-start);
+    @include font-style(30rpx);
+    height: 100rpx;
+    border-radius: 16rpx;
+    padding: 0 24rpx;
+    border: 2rpx solid #F5F5F5;
+    margin-bottom: 30rpx;
+    .divide-ver {
+      color: $bx-color-9;
+      margin: 0 20rpx;
+    }
+    .code-btn {
+      @include font-style(30rpx);
+      color: #0085FF;
+      &.code-btn-disable {
+        color: $bx-color-9;
+      }
+    }
+  }
+  .upopup-btns {
+    @include flex-xy-layout;
+    .upopup-btn {
+      @include font-style(32rpx);
+      @include flex-xy-layout;
+      flex: 1;
+      height: 90rpx;
+      border-radius: 16rpx;
+      color: $bx-color-6;
+      background: #F5F5F5;
+      &:last-child {
+        margin-left: 24rpx;
+        color: $bx-color-f;
+        background: #0085FF;
+      }
+    }
+  }
+}
+
+// 示例弹框
+.upopup-eg-box {
+  padding: 30rpx 24rpx;
+  .eg-title {
+    @include font-style(32rpx);
+    text-align: center;
+  }
+  .eg-subtitle {
+    @include font-style(28rpx);
+    color: $bx-color-9;
+    text-align: center;
+  }
+  .eg-wrap {
+    @include element-size(100%, auto, 30rpx);
+    padding: 40rpx 24rpx;
+    background: #F5F5F5;
+    margin: 20rpx 0;
+    .eg-item {
+      @include font-style(28rpx);
+      margin-bottom: 40rpx;
+      &:last-child { margin-bottom: 0; }
+      .eg-key {
+        color: #0085FF;
+      }
+    }
+  }
+  .eg-btn {
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    color: #0085FF;
+    text-align: center;
+  }
+}
+
+// 电话咨询订单发布成功
+.telConsult-suc-box {
+  @include flex-y-layout;
+  padding: 60rpx 30rpx;
+  .ok-img {
+    @include element-size(100rpx, 100rpx);
+  }
+  .ok-btn {
+    @include element-size(416rpx, 80rpx, 40rpx);
+    @include flex-xy-layout;
+    @include font-style(30rpx);
+    color: #fff;
+    background: #0085FF;
+    margin-top: 40rpx;
+  }
+}

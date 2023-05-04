@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: #222;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="sctp_icon" transform="translate(-424 -1249)">
+    <rect id="矩形_554" data-name="矩形 554" class="cls-1" width="88" height="88" transform="translate(424 1249)"/>
+    <g id="组_2555" data-name="组 2555" transform="translate(-446.595 -76.134)">
+      <path id="路径_1927" data-name="路径 1927" class="cls-2" d="M935.489,1353.825H921.143l-2.285-3.653a2.21,2.21,0,0,0-1.874-1.038H895.56a4.965,4.965,0,0,0-4.965,4.965v30.239a3.886,3.886,0,0,0,3.886,3.886h41.008a3.886,3.886,0,0,0,3.886-3.886v-26.627A3.886,3.886,0,0,0,935.489,1353.825Z"/>
+      <rect id="矩形_1901" data-name="矩形 1901" class="cls-3" width="41.728" height="3.129" rx="1.565" transform="translate(894.164 1362.568)"/>
+    </g>
+  </g>
+</svg>

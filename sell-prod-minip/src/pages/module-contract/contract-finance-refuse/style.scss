@@ -1,0 +1,83 @@
+.refuse-module {
+  background: $xs-color-f;
+  padding: 24rpx;
+  padding-top: 38rpx;
+  .refuse-header {
+    @include flex-xy-layout(flex-start);
+    margin-bottom: 20rpx;
+    .refuse-img {
+      @include element-size(40rpx, 40rpx, 0);
+    }
+    .refuse-key {
+      @include font-style(40rpx, 500);
+      margin-left: 16rpx;
+      color: #FE5F48;
+    }
+  }
+  .refuse-reason {
+    @include font-style(30rpx);
+    line-height: 48rpx;
+  }
+}
+
+.diveder-line {
+  height: 16rpx;
+  background: #F5F5F5;
+}
+
+.upload-module {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 500rpx;
+  background: $xs-color-f;
+  padding: 0 24rpx;
+  .upload-title {
+    @include font-style(28rpx, 500);
+    margin-top: 20rpx;
+    margin-bottom: 30rpx;
+  }
+  .image-wrap {
+    @include flex-xy-layout(flex-start);
+    .image-item {
+      @include flex-xy-layout;
+      @include element-size(200rpx, 200rpx, 16rpx);
+      position: relative;
+      background: #F5F5F5;
+      .icon-del {
+        @include element-size(34rpx, 34rpx, 0);
+        position: absolute;
+        top: -18rpx;
+        right: -18rpx;
+        padding: 10rpx;
+      }
+      .image {
+        width: 100%;
+        height: 100%;
+        border-radius: 16rpx;
+      }
+    }
+    .image-empty {
+      @include flex-y-layout;
+      @include element-size(200rpx, 200rpx, 16rpx);
+      background: #F5F5F5;
+      .icon-camera {
+        @include element-size(80rpx, 80rpx, 0);
+      }
+    }
+  }
+}
+
+.submit-btn {
+  @include flex-y-layout;
+  @include element-size(auto, 80rpx, 40rpx);
+  @include font-style(32rpx);
+  position: fixed;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 50rpx;
+  color: $xs-color-f;
+  background: #0085FF;
+}
+

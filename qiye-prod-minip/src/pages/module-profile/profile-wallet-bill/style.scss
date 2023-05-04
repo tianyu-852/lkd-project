@@ -1,0 +1,57 @@
+// 空状态
+.empty-wrap {
+  @include flex-y-layout;
+  margin: 0 auto;
+  padding-top: 120rpx;
+  .null-text {
+    @include font-style(30rpx);
+    color: $qy-color-9;
+  }
+}
+
+.bill-module {
+  .bill-item {
+    .bill-item-header {
+      @include flex-xy-layout(flex-start);
+      background: #f9f8fb;
+      padding: 0 30rpx;
+      height: 70rpx;
+      .bill-date {
+        @include font-style(28rpx, 500);
+        color: #6f7588;
+      }
+      .bill-total {
+        @include flex-xy-layout(flex-start);
+        @include font-style(28rpx, 500);
+        .icon-bill {
+          @include element-size(13rpx, 22rpx, 0);
+          margin-left: 6rpx;
+        }
+      }
+    }
+    .bill-item-wrap {
+      @include flex-xy-layout(flex-start);
+      height: 130rpx;
+      margin: 0 30rpx;
+      .bill-item-left {
+        @include element-size(60rpx, 60rpx, 45rpx);
+        margin-right: 20rpx;
+      }
+      .bill-item-middle {
+        flex: 1;
+        .bill-title {
+          @include font-style(34rpx, 500);
+          color: #76898e;
+        }
+        .bill-subtitle {
+          @include font-style(30rpx, 500);
+          color: #898989;
+        }
+      }
+      .bill-item-right {
+        @include font-style(34rpx, 500);
+        color: #f26b68;
+      }
+    }
+  }
+}

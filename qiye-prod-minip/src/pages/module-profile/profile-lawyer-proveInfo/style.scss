@@ -1,0 +1,172 @@
+.main {
+  padding-bottom: 180rpx;
+}
+
+.title {
+  @include font-style(32rpx, 500);
+  margin-bottom: 18rpx;
+}
+
+.subtitle {
+  @include font-style(24rpx);
+  color: $qy-color-9;
+  margin-bottom: 24rpx;
+}
+
+.lawyer-grade-module {
+  padding: 35rpx 24rpx;
+  background: $qy-color-f;
+  margin-bottom: 16rpx;
+  .lawyer-grade-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24rpx;
+    .lawyer-grade-item {
+      @include font-style(28rpx);
+      @include flex-xy-layout;
+      background: #F5F5F5;
+      height: 68rpx;
+      border-radius: 34rpx;
+      &.lawyer-grade-item-active {
+        color: $qy-color-f;
+        background: #0085FF;
+      }
+    }
+  }
+}
+
+.avatar-module {
+  padding: 30rpx 24rpx;
+  padding-bottom: 60rpx;
+  background: $qy-color-f;
+  margin-bottom: 16rpx;
+  .avatar-prove-wrap {
+    @include flex-xy-layout(space-between);
+    .avatar-prove-left {
+      .avatar-upload-wrap {
+        @include flex-y-layout;
+        @include font-style(24rpx);
+        @include element-size(180rpx, 180rpx, 16rpx);
+        background: #F5F5F5;
+        .icon-camera-up {
+          @include element-size(70rpx, 70rpx, 0);
+          margin-bottom: 18rpx;
+        }
+      }
+    }
+    .avatar-prove-right {
+      @include flex-xy-layout(flex-start);
+      .aProve-tip-item {
+        @include flex-y-layout;
+        margin-right: 12rpx;
+        &:last-child { margin-right: 0; }
+        .aProve-tip-img {
+          @include element-size(140rpx, 140rpx, 0);
+          margin-bottom: 10rpx;
+        }
+        .aProve-explain {
+          @include flex-xy-layout;
+          @include font-style(24rpx, 500);
+          .icon-prove-explain {
+            @include element-size(28rpx, 28rpx, 0);
+            margin-right: 10rpx;
+          }
+        }
+      }
+    }
+  }
+}
+
+.certificate-module {
+  position: relative;
+  padding: 30rpx 24rpx;
+  padding-bottom: 60rpx;
+  background: $qy-color-f;
+  margin-bottom: 16rpx;
+  .eg-btn {
+    @include element-size(140rpx, 34rpx, 23rpx);
+    @include font-style(24rpx);
+    @include flex-xy-layout;
+    position: absolute;
+    top: 34rpx;
+    right: 24rpx;
+    color: $qy-color-f;
+    background: #FE5F48;
+  }
+  .certificate-wrap {
+    @include flex-xy-layout(flex-start);
+    .certificate-item {
+      flex: 1;
+      &:first-child { margin-right: 24rpx; }
+      .certificate-bg {
+        width: 100%;
+        height: 220rpx;
+        margin-bottom: 20rpx;
+      }
+      .certificate-text {
+        @include font-style(28rpx);
+        text-align: center;
+      }
+    }
+  }
+}
+
+.cell-module {
+  padding: 10rpx 24rpx;
+  background: $qy-color-f;
+  .cell-item {
+    @include flex-xy-layout(space-between);
+    height: 80rpx;
+    .cell-left {
+      @include font-style(32rpx, 500);
+    }
+    .cell-right {
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      color: $qy-color-9;
+      .arrow-img {
+        @include element-size(30rpx, 30rpx, 0);
+        margin-left: 12rpx;
+      }
+    }
+  }
+}
+
+.next-btn {
+  @include font-style(36rpx, 500);
+  @include flex-xy-layout;
+  position: fixed;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 50rpx;
+  height: 96rpx;
+  border-radius: 48rpx;
+  color: $qy-color-f;
+  background: linear-gradient(90deg, #48A8FF 0%, #0085FF 100%, #0085FF 100%);
+}
+
+.black-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, .4);
+}
+
+.certificate-eg-popup {
+  @include flex-y-layout;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  .certificate-eg-img {
+    @include element-size(530rpx, 902rpx, 0);
+  }
+  .certificate-eg-del {
+    @include element-size(60rpx, 60rpx, 0);
+    margin-top: 40rpx;
+  }
+}

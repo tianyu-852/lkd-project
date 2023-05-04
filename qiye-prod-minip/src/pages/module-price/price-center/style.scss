@@ -1,0 +1,199 @@
+
+.person-vip-module {
+  padding: 0 24rpx;
+  margin-bottom: 50rpx;
+  .header-wrap {
+    @include font-style(32rpx);
+    margin-bottom: 20rpx;
+  }
+  .person-vip-wrap {
+    @include flex-xy-layout(flex-start);
+    .person-vip-item {
+      @include flex-xy-layout(flex-start);
+      @include font-style(32rpx, 500);
+      flex: 1;
+      height: 100rpx;
+      padding: 0 24rpx;
+      border-radius: 24rpx;
+      margin-right: 24rpx;
+      background: $qy-color-f;
+      border: 2rpx solid $qy-color-f;
+      &.person-vip-item-active {
+        border-color: #0085FF;
+        color: #0085FF;
+      }
+      &:last-child { margin-right: 0; }
+      .icon-price {
+        @include element-size(48rpx, 48rpx, 0);
+        margin-right: 9rpx;
+      }
+      .icon-feiji {
+        @include element-size(32rpx, 32rpx, 0);
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.company-vip-module {
+  padding: 0 24rpx;
+  .header-wrap {
+    @include flex-xy-layout(space-between);
+    @include font-style(32rpx);
+    margin-bottom: 20rpx;
+  }
+  .company-vip-wrap {
+    .company-vip-item {
+      padding: 24rpx;
+      border-radius: 24rpx;
+      background-color: $qy-color-f;
+      margin-bottom: 20rpx;
+      .vip-header {
+        @include flex-xy-layout(space-between);
+        margin-bottom: 24rpx;
+        .vip-header-left {
+          @include flex-xy-layout(flex-start);
+          @include font-style(32rpx, 500);
+          .icon-company-price {
+            @include element-size(48rpx, 48rpx, 0);
+            margin-right: 9rpx;
+          }
+        }
+        .vip-header-right {
+          @include flex-xy-layout(flex-start);
+          @include font-style(28rpx);
+          .icon-arrow-right {
+            @include element-size(30rpx, 30rpx, 0);
+          }
+        }
+      }
+      .vip-body {
+        @include flex-xy-layout(flex-start);
+        .vip-body-item {
+          @include flex-xy-layout;
+          @include font-style(28rpx);
+          flex: 1;
+          border-radius: 12rpx;
+          height: 68rpx;
+          color: $qy-color-6;
+          border: 2rpx solid #D0D0D0;
+          margin-right: 14rpx;
+          &.vip-body-item-active {
+            color: #0085FF;
+            border-color: #0085FF;
+          }
+          &:last-child { margin-right: 0; }
+          .icon-feiji {
+            @include element-size(32rpx, 32rpx, 0);
+            margin-left: 4rpx;
+          }
+        }
+      }
+    }
+  }
+}
+
+.upopup-share-box {
+  .type-item {
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    height: 100rpx;
+    border-bottom: 2rpx solid #F5F5F5;
+    &.type-item-active {
+      color: #0085FF;
+    }
+  }
+  .divide-ver {
+    background: #F5F5F5;
+    height: 16rpx;
+  }
+  .share-btn {
+    @include element-size(auto, 80rpx, 40rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx);
+    margin: 0 24rpx;
+    margin-top: 8rpx;
+    margin-bottom: 30rpx;
+    color: $qy-color-f;
+    background: #0085FF;
+  }
+}
+
+// .poster-popup {
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 600rpx;
+//   z-index: 10000;
+//   .poster-img {
+//     width: 100%;
+//     height: 700rpx;
+//     border-radius: 30rpx;
+//   }
+//   .save-poster-btn {
+//     @include element-size(240rpx, 80rpx, 40rpx);
+//     @include font-style(30rpx);
+//     @include flex-xy-layout;
+//     color: $qy-color-f;
+//     background: #0085FF;
+//     margin: 0 auto;
+//     margin-top: 30rpx;
+//   }
+// }
+
+// factor mask
+// .poster-popup-mask {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 9999;
+//   background: rgba(0, 0, 0, .4);
+// }
+
+.upopup-bankinfo-box {
+  padding: 30rpx;
+  .bankinfo-item {
+    @include font-style(30rpx);
+    margin-bottom: 30rpx;
+  }
+  .copy-btn {
+    @include font-style(32rpx);
+    @include flex-xy-layout;
+    height: 90rpx;
+    border-radius: 16rpx;
+    color: $qy-color-f;
+    background: #0085FF;
+  }
+}
+
+.upopup-payimg-box {
+  padding: 30rpx;
+  .pay-img {
+    width: 100%;
+    height: 500rpx;
+  }
+  .save-btn {
+    @include font-style(32rpx);
+    @include flex-xy-layout;
+    color: $qy-color-6;
+    margin-top: 30rpx;
+  }
+}
+
+.upopup-poster-box {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  .pay-img {
+    width: 100%;
+    height: 700rpx;
+  }
+  .save-btn {
+    @include font-style(32rpx);
+    @include flex-xy-layout;
+    color: $qy-color-6;
+    margin-top: 30rpx;
+  }
+}

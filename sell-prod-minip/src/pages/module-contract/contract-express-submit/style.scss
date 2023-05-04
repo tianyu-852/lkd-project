@@ -1,0 +1,96 @@
+.divider-hor {
+  @include element-size(auto, 16rpx, 0);
+  background: #F5F5F5;
+}
+
+.header-module {
+  position: relative;
+  height: 300rpx;
+  background: #0085FF;
+  .title {
+    @include font-style(54rpx, 500);
+    position: absolute;
+    left: 40rpx;
+    bottom: 30rpx;
+    color: $xs-color-f;
+  }
+}
+
+.base-module {
+  padding: 40rpx;
+  .input-item {
+    @include flex-xy-layout(flex-start);
+    position: relative;
+    height: 80rpx;
+    border-bottom: 2rpx solid #EDEDED;
+    margin-bottom: 30rpx;
+    &:last-child { margin-bottom: 0; }
+    .input-title {
+      @include font-style(32rpx);
+      color: $xs-color-6;
+      margin-right: 20rpx;
+    }
+    .input {
+      @include font-style(32rpx);
+      flex: 1;
+      text-align: right;
+    }
+    .search-wrap {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background: $xs-color-f;
+      box-shadow: -8rpx 0 28rpx 0 rgba(0, 0, 0, 0.16);
+      .search-item {
+        @include font-style(32rpx);
+        @include flex-xy-layout(flex-start);
+        padding: 0 20rpx;
+        height: 80rpx;
+      }
+    }
+  }
+  .express-method {
+    @include flex-xy-layout(flex-start);
+    .express-method-item {
+      @include flex-xy-layout(flex-start);
+      @include font-style(32rpx);
+      margin-right: 100rpx;
+      color: $xs-color-9;
+      &:last-child { margin-right: 0; }
+      .circle-outer {
+        @include element-size(32rpx, 32rpx);
+        @include flex-xy-layout;
+        margin-right: 16rpx;
+        border: 3rpx solid $xs-color-9;
+        .circle-inner {
+          @include element-size(20rpx, 20rpx);
+          background: $xs-color-f;
+        }
+      }
+      &.express-method-item-active {
+        color: $xs-color-3;
+        .circle-outer {
+          border-color: #0085FF;
+          .circle-inner {
+            background: #0085FF;
+          }
+        }
+      }
+    }
+  }
+}
+
+.submit-btn {
+  @include flex-xy-layout;
+  @include font-style(32rpx);
+  position: fixed;
+  left: 40rpx;
+  right: 40rpx;
+  bottom: 50rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  color: $xs-color-f;
+  background: #0085FF;
+}

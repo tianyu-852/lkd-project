@@ -1,0 +1,197 @@
+.banner-momdule {
+  @include element-size(100%, 363rpx, 0);
+}
+
+.content-module {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 363rpx + 24rpx);
+  margin-top: -24rpx;
+  border-radius: 24rpx 24rpx 0 0;
+  background: $bx-color-f;
+  overflow: auto;
+  .content-title {
+    @include font-style(36rpx, 500);
+    padding: 0 24rpx;
+    margin-top: 30rpx;
+    margin-bottom: 5rpx;
+  }
+  .content-subtitle {
+    @include font-style(28rpx);
+    color: $bx-color-6;
+    padding: 0 24rpx;
+  }
+  .share-vip-module {
+    @include element-size(auto, 100rpx, 16rpx);
+    @include font-style(30rpx, 500);
+    @include flex-xy-layout;
+    margin: 32rpx 24rpx;
+    position: relative;
+    border: 2rpx solid #FE5F48;
+    color: #FE5F48;
+    background: #FFFAF9;
+    .active-gou-img {
+      @include element-size(40rpx, 40rpx, 0);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  // vip scrollX
+  .vip-scroll-x {
+    margin: 32rpx 0;
+    .scroll-x-item {
+      margin-right: 24rpx;
+      &:first-child { margin-left: 24rpx; }
+      .vipServe-wrap {
+        @include flex-y-layout;
+        @include element-size(218rpx, 140rpx, 16rpx);
+        @include font-style(28rpx);
+        border: 2rpx solid #EDEDED;
+        color: $bx-color-6;
+        background: $bx-color-f;
+        &.vipServe-wrap-active {
+          position: relative;
+          border: 2rpx solid #FE5F48;
+          color: #FE5F48;
+          background: #FFFAF9;
+          .active-gou-img {
+            @include element-size(40rpx, 40rpx, 0);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  // 优惠输入区域
+  .discount-module {
+    padding: 32rpx 24rpx;
+    padding-top: 0;
+    .discount-item {
+      margin-bottom: 25rpx;
+      &:last-child { margin-bottom: 0; }
+      .discount-item-title {
+        @include font-style(30rpx, 500);
+        margin-bottom: 10rpx;
+      }
+      .discount-item-desc {
+        @include font-style(30rpx);
+        color: #FE5F48;
+      }
+      .discount-item-input {
+        padding-bottom: 10rpx;
+        border-bottom: 2rpx solid #EDEDED;
+      }
+    }
+  }
+  .pay-btns {
+    padding-bottom: 20rpx;
+    .pay-btn {
+      @include element-size(auto, 90rpx, 45rpx);
+      @include flex-xy-layout;
+      @include font-style(32rpx, 500);
+      margin: 0 24rpx;
+      color: $bx-color-f;
+      background: #FE5F48;
+      margin-bottom: 20rpx;
+    }
+    .pay-protocol {
+      @include font-style(22rpx, 500);
+      text-align: center;
+    }
+  }
+  // 用户评价
+  .comment-module {
+    padding: 32rpx 24rpx;
+    padding-bottom: 30rpx;
+    .title-wrap {
+      @include flex-xy-layout(space-between);
+      @include font-style(36rpx, 500);
+      margin-bottom: 24rpx;
+    }
+    .comment-item-wrap {
+      .comment-item {
+        @include flex-xy-layout(flex-start, flex-start);
+        padding-bottom: 30rpx;
+        margin-bottom: 30rpx;
+        border-bottom: 2rpx solid #EDEDED;
+        &:last-child { margin-bottom: 0; padding-bottom: 0; border: none; }
+        .comment-left {
+          margin-right: 16rpx;
+          .user-avatar {
+            @include element-size(60rpx, 60rpx);
+          }
+        }
+        .comment-right {
+          flex: 1;
+          .comment-header {
+            @include flex-xy-layout(space-between, flex-start);
+            margin-bottom: 10rpx;
+            .header-left {
+              @include font-style(24rpx);
+              color: $bx-color-6;
+              .user-name-wrap {
+                @include flex-xy-layout(flex-start);
+                .user-name {
+                  @include multi-line-ellipsis;
+                  max-width: 288rpx;
+                }
+              }
+            }
+            .header-right {
+              @include font-style(24rpx);
+              color: $bx-color-9;
+            }
+          }
+          .comment-content {
+            @include font-style(28rpx);
+            line-height: 44rpx;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background: $bx-color-f;
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+  .share-btn {
+    @include element-size(auto, 90rpx, 45rpx);
+    @include flex-xy-layout;
+    @include font-style(32rpx, 500);
+    margin: 0 24rpx;
+    color: $bx-color-f;
+    background: #0085FF;
+  }
+}
+
+.upopup-buySuc-box {
+  .header-img {
+    @include element-size(100%, 172rpx, 0);
+    display: block;
+  }
+  .buySuc-wrap {
+    @include element-size(100%, 350rpx, 24rpx);
+    @include flex-y-layout;
+    @include font-style(40rpx, 500);
+    background: $bx-color-f;
+    margin-top: -24rpx;
+    .buySuc-btn {
+      @include element-size(468rpx, 80rpx, 40rpx);
+      @include flex-xy-layout;
+      @include font-style(32rpx);
+      color: $bx-color-f;
+      margin-top: 40rpx;
+      background: #0085FF;
+    }
+  }
+}

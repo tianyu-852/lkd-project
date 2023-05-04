@@ -1,0 +1,104 @@
+.detail-image-wrap {
+  .u-wrap {
+    background: #fff !important;
+  }
+}
+
+.banner-momdule {
+  @include element-size(100%, 720rpx, 0);
+  position: relative;
+  background-image: url('https://lvkuaidaimages.oss-cn-hangzhou.aliyuncs.com/lkd-file/202319-1673231232124-rD7kTR.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  // background-size: cover;
+  .factor-module {
+    position: absolute;
+    left: 24rpx;
+    right: 24rpx;
+    bottom: 16rpx;
+    padding-bottom: 0;
+    border-radius: 24rpx;
+    background-color: #fff;
+    overflow: hidden;
+    .factor-title {
+      @include font-style(30rpx, 500);
+      padding: 0 24rpx;
+      padding-top: 30rpx;
+      margin-bottom: 6rpx;
+      background: linear-gradient(180deg, #D9EDFF 6%, #fff 100%);
+    }
+    .cell-item {
+      @include flex-xy-layout(flex-start);
+      padding: 0 24rpx;
+      height: 84rpx;
+      .cell-left {
+        @include font-style(30rpx);
+        color: #666;
+      }
+      .cell-right {
+        @include flex-xy-layout(flex-start);
+        @include font-style(30rpx, 500);
+        margin-left: auto;
+        .opt-item {
+          @include element-size(168rpx, 48rpx, 8rpx);
+          @include flex-xy-layout;
+          @include font-style(28rpx, 400);
+          color: #999;
+          background: #F8F8F8;
+          margin-left: 24rpx;
+          &:first-child { margin-left: 0; }
+          &.opt-item-active {
+            color: #0085FF;
+            background: #E6F3FF;
+            border: 2rpx solid #0085FF;
+          }
+        }
+      }
+    }
+  }
+}
+
+.base-module {
+  margin: 0 24rpx;
+  padding: 32rpx 24rpx;
+  border-radius: 24rpx;
+  margin-bottom: 16rpx;
+  background: #fff;
+  .base-title {
+    @include font-style(36rpx, 500);
+    margin-bottom: 32rpx;
+  }
+  // 优惠输入区域
+  &.discount-module {
+    .discount-item {
+      margin-bottom: 25rpx;
+      &:last-child { margin-bottom: 0; }
+      .discount-item-title {
+        @include font-style(30rpx, 500);
+        margin-bottom: 10rpx;
+      }
+      .discount-item-desc {
+        @include font-style(30rpx);
+        color: #FE5F48;
+      }
+      .discount-item-input {
+        padding-bottom: 10rpx;
+        border-bottom: 2rpx solid #EDEDED;
+      }
+    }
+    .pay-btn {
+      @include flex-xy-layout;
+      @include element-size(100%, 80rpx, 16rpx);
+      @include font-style(32rpx, 500);
+      color: #fff;
+      background: #0085FF;
+    }
+    .protocol-wrap {
+      @include font-style(24rpx);
+      text-align: center;
+      margin-top: 24rpx;
+      color: #999;
+    }
+  }
+}

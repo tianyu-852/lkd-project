@@ -1,0 +1,113 @@
+.banner-module {
+  @include element-size(100%, 400rpx, 0);
+}
+
+.content-module {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 400rpx + 24rpx);
+  margin-top: -24rpx;
+  border-radius: 24rpx 24rpx 0 0;
+  background: $bx-color-f;
+  padding: 30rpx 24rpx;
+  overflow-y: auto;
+  .content-item {
+    margin-bottom: 50rpx;
+    .item-title {
+      @include font-style(28rpx, 500);
+      color: $bx-color-6;
+    }
+    .enterprise-type-wrap {
+      @include flex-xy-layout(flex-start);
+      margin-top: 20rpx;
+      .enterprise-type-item {
+        @include flex-xy-layout;
+        @include font-style(28rpx);
+        @include element-size(160rpx, 60rpx, 4rpx);
+        color: $bx-color-9;
+        border: 2rpx solid #D8D8D8;
+        margin-right: 20rpx;
+        &.enterprise-type-item-active {
+          color: #0085FF;
+          border-color: #0085FF;
+        }
+      }
+    }
+    .input-wrap {
+      @include element-size(100%, 70rpx, 0);
+      @include flex-xy-layout(flex-start);
+      position: relative;
+      border-bottom: 2rpx solid #D8D8D8;
+      .search-wrap {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        height: 500rpx;
+        // overflow-y: auto;
+        background: $bx-color-f;
+        .search-item {
+          @include flex-y-layout(flex-start);
+          border-bottom: 2rpx solid #EDEDED;
+          height: 100rpx;
+          .search-name {
+            @include font-style(28rpx);
+          }
+          .search-num {
+            @include font-style(24rpx);
+            color: $bx-color-9;
+          }
+        }
+      }
+      .icon-search {
+        @include element-size(32rpx, 32rpx, 0);
+        margin-right: 12rpx;
+      }
+      .input-text {
+        @include font-style(30rpx);
+        flex: 1;
+      }
+      .icon-del {
+        @include element-size(44rpx, 44rpx, 0);
+        padding-left: 10rpx;
+      }
+      .code-btn {
+        @include font-style(24rpx);
+        color: #0085FF;
+        border: 2rpx solid #0085FF;
+        border-radius: 4rpx;
+        padding: 4rpx 14rpx;
+        &.code-btn-disable {
+          color: $bx-color-9;
+          border-color: $bx-color-9;
+        }
+      }
+    }
+  }
+}
+
+// 底部按钮
+.bottom-btns {
+  @include flex-xy-layout(flex-start);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 24rpx;
+  padding-top: 20rpx;
+  z-index: 999;
+  background: $bx-color-f;
+  .approve-btn {
+    @include flex-xy-layout;
+    @include font-style(36rpx, 500);
+    flex: 1;
+    color: $bx-color-f;
+    background: #DCDCDE;
+    height: 88rpx;
+    border-radius: 8rpx;
+    &.approve-btn-active {
+      background: #0085FF;
+    }
+  }
+}
