@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="686" height="400" viewBox="0 0 686 400">
+  <defs>
+    <style>
+      .cls-1, .cls-3, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        font-size: 40px;
+        font-family: PingFang SC-Medium, PingFang SC;
+        font-weight: 500;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 3px;
+        stroke-dasharray: 8;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="矩形_6123" data-name="矩形 6123" class="cls-1" width="686" height="400" transform="translate(-15 3606)"/>
+    </clipPath>
+  </defs>
+  <g id="xcx_icon" class="cls-2" transform="translate(15 -3606)">
+    <g id="组_6649" data-name="组 6649" transform="translate(-47)">
+      <text id="嘿_就差一步啦_点击右上角_选择在浏览器中打开" data-name="嘿~就差一步啦
+点击右上角
+选择在浏览器中打开" class="cls-3" transform="translate(375 3865)"><tspan x="-130" y="0">嘿~就差一步啦</tspan><tspan x="-100" y="60">点击右上角</tspan><tspan x="-180" y="120">选择在浏览器中打开</tspan></text>
+      <g id="组_6648" data-name="组 6648" transform="translate(4006 -5567.767)">
+        <path id="路径_4467" data-name="路径 4467" class="cls-4" d="M-3488.717,9387.007s65.576,10.711,98.72-106.763c3.457-12.928-8.2-23.924-22.1-15.354s-3.208,37.135,34.57,18.925,55.6-27.851,77.693-97.479"/>
+        <path id="路径_4468" data-name="路径 4468" class="cls-5" d="M9.512.388l8.309,20.323a.624.624,0,0,1-.805.817l-5.41-2.123a7.314,7.314,0,0,0-5.342,0L.853,21.528a.624.624,0,0,1-.805-.817L8.357.388A.624.624,0,0,1,9.512.388Z" transform="translate(-3304.994 9173.767) rotate(18)"/>
+        <circle id="椭圆_715" data-name="椭圆 715" class="cls-5" cx="5" cy="5" r="5" transform="translate(-3494 9381.767)"/>
+      </g>
+    </g>
+  </g>
+</svg>

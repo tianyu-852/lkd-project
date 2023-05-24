@@ -1,0 +1,11 @@
+.issue-module {
+  padding: 30rpx;
+  .issue-item {
+    @include flex-xy-layout(flex-start);
+    height: 100rpx;
+    .title {
+      @include font-style(30rpx);
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,351 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "成为百姓律师"
+			}
+		},
+		{
+			"path": "pages/index/lawyer",
+			"style": {
+				"navigationBarTitleText": "成为百姓律师"
+			}
+		},
+		{
+			"path": "pages/index/freeLanding",
+			"style": {
+				"navigationBarTitleText": "成为百姓律师"
+			}
+		},
+		{
+			"path" : "pages/index/userindex",
+			"style" : {
+					"navigationBarTitleText": "百姓律师",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/index/vipRoom",
+			"style" : {
+				"navigationBarTitleText": "百姓律师",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/index/empty",
+			"style" : {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/dsb/empty",
+			"style" : {
+					"navigationBarTitleText": "贷算宝",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/dsb/userindex",
+			"style" : {
+					"navigationBarTitleText": "贷算宝",
+					"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/dsb/freeLanding",
+			"style": {
+				"navigationBarTitleText": "成为律师"
+			}
+		},
+		{
+			"path": "pages/dsb/landing",
+			"style": {
+				"navigationBarTitleText": "成为律师"
+			}
+		},
+		{
+			"path": "pages/dsb/sincerityPlanUser",
+			"style": {
+				"navigationBarTitleText": "诚信计划"
+			}
+		},
+		{
+			"path": "pages/dsb/sincerityPlanLawyer",
+			"style": {
+				"navigationBarTitleText": "诚信计划"
+			}
+		},
+		{
+			"path": "pages/lfy/register",
+			"style": {
+				"navigationBarTitleText": "智慧法律生态"
+			}
+		},
+		{
+			"path": "pages/lfy/upgrade",
+			"style": {
+				"navigationBarTitleText": "升级"
+			}
+		},
+		{
+			"path": "pages/lfy/link",
+			"style": {
+				"navigationBarTitleText": "智慧法律生态"
+			}
+		},
+		{
+			"path": "pages/lfy/safeguard",
+			"style": {
+				"navigationBarTitleText": "保障计划说明"
+			}
+		},
+		{
+			"path": "pages/lfy/explanation",
+			"style": {
+				"navigationBarTitleText": "抢单说明"
+			}
+		},
+		{
+			"path": "pages/lfy/about",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		},
+		{
+			"path": "pages/lfy/logoutPolicy",
+			"style": {
+				"navigationBarTitleText": "注销协议"
+			}
+		},
+		{
+			"path": "pages/lfy/privacyPolicy",
+			"style": {
+				"navigationBarTitleText": "隐私协议"
+			}
+		},
+		{
+			"path": "pages/lfy/userPolicy",
+			"style": {
+				"navigationBarTitleText": "用户协议"
+			}
+		},
+		{
+			"path": "pages/lfy/consult",
+			"style": {
+				"navigationBarTitleText": "咨询须知"
+			}
+		},
+		{
+			"path": "pages/lfy/service",
+			"style": {
+				"navigationBarTitleText": "企业律云"
+			}
+		},
+		{
+			"path": "pages/qyly/register",
+			"style": {
+				"navigationBarTitleText": "企业律云"
+			}
+		},
+		{
+			"path": "pages/lfy/add",
+			"style": {
+				"navigationBarTitleText": "企业律云"
+			}
+		},
+		{
+			"path": "pages/lfy/link2",
+			"style": {
+				"navigationBarTitleText": "律快答-律师端"
+			}
+		},
+		{
+			"path": "pages/qyly/privacyPolicy",
+			"style": {
+				"navigationBarTitleText": "企业律云-隐私协议"
+			}
+		},
+		{
+			"path": "pages/qyly/userPolicy",
+			"style": {
+				"navigationBarTitleText": "企业律云-用户协议"
+			}
+		},
+		{
+			"path": "pages/qyly/qrcode",
+			"style": {
+				"navigationBarTitleText": "企业律云"
+			}
+		},
+		{
+			"path": "pages/qyly/about",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/qyly/lawyerPage",
+			"style": {
+				"navigationBarTitleText": "企业律云"
+			}
+		},
+		{
+			"path": "pages/index/addlawyer",
+			"style": {
+				"navigationBarTitleText": "律快答"
+			}
+		},
+		{
+			// 暂未使用
+			"path": "pages/index/orderDescription",
+			"style": {
+				"navigationBarTitleText": "抢单说明"
+			}
+		},
+		{
+			"path": "pages/index/upload",
+			"style": {
+				"navigationBarTitleText": "律快答-律师端APP"
+			}
+		},
+		{
+			"path": "pages/download/download-app-bxls/download-app-bxls",
+			"style": {
+				"navigationBarTitleText": "百姓律师APP"
+			}
+		},
+		{
+			"path": "pages/download/download-app-baixing/download-app-baixing",
+			"style": {
+				"navigationBarTitleText": "百姓律师APP"
+			}
+		},
+		{
+			"path": "pages/download/download-app-baixing2/download-app-baixing2",
+			"style": {
+				"navigationBarTitleText": "百姓律师APP"
+			}
+		},
+		{
+			"path": "pages/download/download-app-lawyer/download-app-lawyer",
+			"style": {
+				"navigationBarTitleText": "律师端APP"
+			}
+		},
+		{
+			"path": "pages/download/download-app-lawyer2/download-app-lawyer2",
+			"style": {
+				"navigationBarTitleText": "律师端APP"
+			}
+		},
+		{
+			"path": "pages/download/download-app-lawyer3/download-app-lawyer3",
+			"style": {
+				"navigationBarTitleText": "律师端APP"
+			}
+		},
+		{
+			"path": "pages/download/download-app-lawyer4/download-app-lawyer4",
+			"style": {
+				"navigationBarTitleText": "律师端APP"
+			}
+		},
+		{
+			"path": "pages/module-common/open-lawyerClient-list/open-lawyerClient-list",
+			"style": {
+				"navigationBarTitleText": "律师端APP"
+			}
+		},
+		{
+			"path": "pages/download/download-app-qiye/download-app-qiye",
+			"style": {
+				"navigationBarTitleText": "企业律云APP"
+			}
+		},
+		{
+			"path": "pages/download/share-download-qiye/share-download-qiye",
+			"style": {
+				"navigationBarTitleText": "企业律云APP"
+			}
+		},
+		{
+			"path": "pages/module-common/grab-order-explain/grab-order-explain",
+			"style": {
+				// "navigationBarTitleText": "抢单说明"
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/module-common/lawyer-privacy-protocol/lawyer-privacy-protocol",
+			"style": {
+				"navigationBarTitleText": "律师端隐私协议"
+			}
+		},
+		{
+			"path": "pages/module-common/lawyer-user-protocol/lawyer-user-protocol",
+			"style": {
+				"navigationBarTitleText": "律师端用户协议"
+			}
+		},
+		{
+			"path": "pages/module-common/lawyer-approve-protocol/lawyer-approve-protocol",
+			"style": {
+				"navigationBarTitleText": "律师端认证协议"
+			}
+		},
+		{
+			"path": "pages/module-common/enprister-approve-remitIssue/enprister-approve-remitIssue",
+			"style": {
+				"navigationBarTitleText": "常见问题"
+			}
+		},
+		{
+			"path": "pages/module-common/enprister-approve-remitIssueDetail/enprister-approve-remitIssueDetail",
+			"style": {
+				"navigationBarTitleText": "问题详情"
+			}
+		},
+		{
+			"path": "pages/module-common/baixing-dyn-publishRule/baixing-dyn-publishRule",
+			"style": {
+				"navigationBarTitleText": "咨询帖发布规则"
+			}
+		},
+		{
+			"path": "pages/module-common/baixing-entrust-publishRule/baixing-entrust-publishRule",
+			"style": {
+				"navigationBarTitleText": "案件委托发布规则"
+			}
+		},
+		{
+			"path": "pages/module-common/lawyer-income-rule/lawyer-income-rule",
+			"style": {
+				"navigationBarTitleText": "订单数量与收益规则"
+			}
+		},
+		{
+			"path": "pages/module-common/protocol-tmp/protocol-tmp",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/module-common/cause-source-union/cause-source-union",
+			"style": {
+				"navigationBarTitleText": "案源合伙人"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "百姓律师",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationStyle": "custom",
+		"backgroundColor": "#F8F8F8"
+	}
+}

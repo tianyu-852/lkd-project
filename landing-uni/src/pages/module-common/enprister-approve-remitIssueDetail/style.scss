@@ -1,0 +1,16 @@
+.issue-module {
+  padding: 30rpx;
+  .issue-title {
+    @include font-style(34rpx);
+  }
+  .issue {
+    @include font-style(28rpx);
+    color: #666;
+  }
+}
+
+.kefu-btn {
+  @include font-style(30rpx);
+  text-align: center;
+  margin-top: 40rpx;
+}

@@ -1,0 +1,31 @@
+.apply-btn {
+  position: fixed;
+  left: 18rpx;
+  right: 18rpx;
+  bottom: 66rpx;
+  height: 112rpx;
+}
+
+.upopup-signup-box {
+  padding: 30rpx;
+  padding-top: 20rpx;
+  .upopup-header {
+    @include flex-xy-layout;
+    @include font-style(34rpx, 500);
+    height: 90rpx;
+  }
+  .upopup-body {
+    @include font-style(32rpx);
+    @include flex-xy-layout;
+    text-align: center;
+    min-height: 140rpx;
+  }
+  .upopup-btn {
+    @include flex-xy-layout;
+    @include font-style(32rpx, 500);
+    background: #0085FF;
+    color: #fff;
+    height: 80rpx;
+    border-radius: 44rpx;
+  }
+}
